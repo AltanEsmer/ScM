@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "hashes": {
-    "scm.py": "6d163bd2b684e667bc4ac7daa96e96392eaf34da1d8f63a0f33f486fd6774441",
+    "scm.py": "5b2193a32fba7cfbffe46de0ce912998e49de8aa235c3f92257d23ec31b7b7d7",
     "grading.py": "38f9ecb9ad99209b20eb7dadbd525068db95545ce934850d78ebc1d9924d7c17",
     "experiment/protocol.json": "b265a05f881a7d21d673959491aaa5250b050c81c61a98b6a306793f1364a48e",
     "experiment/tasks.json": "6417fcd7471e91e233fe4cfb49347a429d0dc2e00c4bbf1598a43f0ca3334e78",

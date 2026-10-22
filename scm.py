@@ -125,10 +125,13 @@ def grade(root):
     tasks = {t['id']: t for t in load(root / 'experiment/tasks.json')}
     image = load(root / 'experiment/protocol.json')['docker_image']
     rows = []
+    infrastructure_error = None
     for record in records:
         trial = record.trial
         status, passed, detail = record.status, 0, ''
-        if status == 'collected':
+        if status == 'collected' and infrastructure_error is not None:
+            status, detail = 'not_evaluated', 'Stopped after Docker infrastructure failure'
+        elif status == 'collected':
             status, passed, detail = grading.evaluate(tasks[trial.task], (root / 'records' / trial.trial_id / 'answer.txt').read_text(), image)
         rows.append(dict(trial_id=trial.trial_id, task=trial.task, variant=trial.variant, repeat=trial.repeat,
                          session_id=record.session_id or '', status=status, passed=passed,
@@ -137,7 +140,7 @@ def grade(root):
                          response_sha256=sha(root / 'records' / trial.trial_id / 'answer.txt') if record.session_id else '',
                          manifest_sha256=sha(root / 'manifest.json')))
         if status == 'infrastructure_error':
-            raise RuntimeError('Docker infrastructure failed: ' + detail)
+            infrastructure_error = detail
     results = root / 'results'
     results.mkdir(exist_ok=True)
     with (results / 'trials.csv').open('w', newline='') as file:
@@ -145,6 +148,8 @@ def grade(root):
         writer.writeheader()
         writer.writerows(rows)
     report(root)
+    if infrastructure_error is not None:
+        raise RuntimeError('Docker infrastructure failed: ' + infrastructure_error)
 
 
 def report(root):
@@ -153,22 +158,34 @@ def report(root):
         rows = list(csv.DictReader(file))
     if len(rows) != 45 or {r['trial_id'] for r in rows} != {r.trial.trial_id for r in records}:
         raise ValueError('derived results have invalid schedule')
+    schedule = {record.trial.trial_id: record for record in records}
+    failures = {'fail', 'syntax_error', 'runtime_error', 'timeout', 'invalid_output', 'output_limit'}
+    statuses = failures | {'pass', 'missing', 'infrastructure_error', 'not_evaluated'}
     for row in rows:
+        record = schedule[row['trial_id']]
+        trial = record.trial
+        if (row['task'], row['variant'], row['repeat']) != (trial.task, trial.variant, str(trial.repeat)) or row['status'] not in statuses:
+            raise ValueError('derived results have invalid identity or status')
+        if (row['status'] == 'missing') != (record.status == 'missing') or row['session_id'] != (record.session_id or ''):
+            raise ValueError('derived results do not match collection')
         path = root / 'records' / row['trial_id'] / 'answer.txt'
         if row['manifest_sha256'] != sha(root / 'manifest.json') or row['response_sha256'] != (sha(path) if path.exists() else ''):
             raise ValueError('derived results are stale; run grade')
-    lines = ['# Prompt sensitivity pilot', '', '| Task | Variant | Pass | Collected | Missing | Fail / error |',
-             '| --- | --- | ---: | ---: | ---: | ---: |']
+    lines = ['# Prompt sensitivity pilot', '',
+             '| Task | Variant | Collected | Evaluated | Pass | Failure | Infrastructure | Not evaluated | Missing |',
+             '| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |']
     for task, variant in itertools.product(('deduplicate', 'merge_intervals', 'word_counts'), 'ABC'):
         group = [r for r in rows if r['task'] == task and r['variant'] == variant]
-        passed = sum(r['status'] == 'pass' for r in group)
-        missing = sum(r['status'] == 'missing' for r in group)
-        lines.append(f'| {task} | {variant} | {passed} | {5 - missing} | {missing} | {5 - missing - passed} |')
-    lines += ['', 'Missing trials are excluded from collected denominators. Execution errors remain collected failures.',
+        counts = {status: sum(r['status'] == status for r in group) for status in statuses}
+        failed = sum(counts[status] for status in failures)
+        evaluated = counts['pass'] + failed
+        lines.append(f"| {task} | {variant} | {5 - counts['missing']} | {evaluated} | {counts['pass']} | {failed} | {counts['infrastructure_error']} | {counts['not_evaluated']} | {counts['missing']} |")
+    lines += ['', 'Functional pass denominator is Evaluated. Missing, infrastructure failures, and not evaluated trials are excluded.',
+              'Candidate execution errors count as functional failures. Collected includes infrastructure failures and not evaluated trials.',
               'Five repetitions per cell provide limited evidence. All-pass results do not establish wording invariance.',
               'Requested model and reasoning are not provider-confirmed metadata. Full tool traces are unavailable.',
               'Fresh no-history agents retain system instructions and filesystem/tool access.',
-              'Host scoring compares actual values. A candidate-controlled interpreter could lie about input mutation or identity.',
+              'Host scoring compares returned observations. Deliberate candidate interpreter tampering can fabricate all observations.',
               'The threat model is ordinary generated code, not a fully malicious candidate.', '']
     (root / 'results/report.md').write_text('\n'.join(lines))
 
