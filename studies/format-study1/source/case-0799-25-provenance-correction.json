@@ -1,0 +1,15 @@
+{
+  "task_id": "taco-test-0799",
+  "source_case_index": 25,
+  "input_valid": true,
+  "input": "6 -2\n-5 -4 -3 -2 -1 0\n",
+  "expected": "6 5 4 0 0 0 ",
+  "input_sha256": "883b6d7cd48bca7368637617d84f4c116b7113b121179dc303a8f72421c7f409",
+  "expected_sha256": "8740cba18bb9409fda3e7150b109944d9e7bf152265534418ce692dd25397f91",
+  "correct_reason": "Malformed expected-output arity: n=6 requires 7 integer tokens, but supplied expected contains 6. The generic parser reason Input truncated occurs while reading expected-output tokens, not input tokens.",
+  "required_expected_tokens": 7,
+  "supplied_expected_tokens": 6,
+  "retention_changed": false,
+  "validator_or_evaluation_files_changed": false,
+  "target_model_outcomes_used": false
+}

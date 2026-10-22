@@ -1,0 +1,287 @@
+{
+  "task_id": "taco-test-0152",
+  "source_task_sha256": "8b3709eb856e08d902e859f65c59c4b5249949210fb8aa0b9fd5529a57ff79d8",
+  "validator_sha256": {
+    "validate_selected.py": "f9434c47b021fa11c5bb34f0355cf9171516a6e24f46ed5ae28e85a8769cd2c8",
+    "validate_hard.py": "bb9f9a5369c4bc8060068c78193f97a2489aaffd14a04a9b642e8304de9b3d20"
+  },
+  "case_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    11,
+    12,
+    14,
+    34,
+    36,
+    38,
+    40,
+    42,
+    48
+  ],
+  "inputs": [
+    "5 9\n3 3 8\n2 4 7\n2 3 6\n2 1 9\n5 1 3\n1 1 6\n4 3 6\n4 1 2\n4 2 3\n",
+    "7 29\n6 2 627\n7 6 580\n6 6 624\n2 7 381\n4 6 894\n7 7 776\n3 5 929\n1 4 313\n7 5 699\n4 4 977\n3 2 586\n5 5 456\n4 5 13\n4 3 935\n3 7 946\n1 5 950\n2 1 597\n1 3 338\n3 4 844\n6 5 523\n7 1 152\n6 7 981\n1 6 947\n5 3 49\n4 2 948\n5 6 734\n1 1 214\n4 7 747\n6 1 533\n",
+    "4 9\n1 3 1\n4 3 8\n2 1 3\n4 2 5\n3 1 3\n2 4 9\n1 2 7\n1 1 10\n1 4 9\n",
+    "5 9\n3 3 8\n2 4 7\n2 3 6\n2 1 9\n5 1 3\n1 1 5\n4 3 6\n4 1 2\n4 2 3\n",
+    "7 29\n6 2 627\n7 6 580\n6 6 624\n2 7 381\n4 6 894\n7 7 776\n3 5 929\n1 6 313\n7 5 699\n4 4 977\n3 2 586\n5 5 456\n4 5 13\n4 3 935\n3 7 946\n1 5 950\n2 1 597\n1 3 338\n3 4 844\n6 5 523\n7 1 152\n6 7 981\n1 6 947\n5 3 49\n4 2 948\n5 6 734\n1 1 214\n4 7 747\n6 1 533\n",
+    "4 9\n1 3 1\n4 3 8\n2 1 3\n4 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "7 29\n6 2 627\n7 6 580\n6 6 624\n2 7 381\n4 6 1263\n7 7 776\n3 5 929\n1 4 313\n7 5 699\n4 4 977\n3 2 586\n5 5 456\n4 5 13\n4 3 935\n3 7 946\n1 5 950\n2 1 597\n1 3 338\n3 4 844\n6 5 523\n7 1 152\n6 7 981\n1 6 947\n5 3 49\n4 2 948\n5 6 734\n1 1 214\n4 7 747\n6 1 533\n",
+    "7 29\n6 2 627\n7 6 580\n6 6 624\n2 7 381\n4 6 894\n7 7 776\n3 5 929\n1 6 313\n7 5 699\n4 4 977\n3 2 827\n5 5 456\n4 5 13\n4 3 935\n3 7 946\n1 5 950\n2 1 597\n1 3 338\n3 4 844\n6 5 523\n7 1 152\n6 7 981\n1 6 947\n5 3 49\n4 2 948\n5 6 734\n1 1 214\n4 7 747\n6 1 533\n",
+    "4 9\n1 3 2\n4 3 8\n2 1 3\n4 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "7 29\n6 2 627\n7 6 580\n6 6 624\n2 7 381\n4 6 894\n7 7 776\n3 5 929\n1 6 313\n7 5 699\n4 4 977\n3 2 827\n5 5 510\n4 5 13\n4 3 935\n3 7 946\n1 5 950\n2 1 597\n1 3 338\n3 4 844\n6 5 523\n7 1 152\n6 7 981\n1 6 947\n5 3 49\n4 2 948\n5 6 734\n1 1 214\n4 7 747\n6 1 533\n",
+    "4 9\n1 3 2\n4 3 8\n2 1 5\n4 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "4 9\n1 3 2\n3 3 8\n2 1 5\n4 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "5 9\n3 3 8\n2 3 7\n2 3 6\n2 1 9\n5 1 3\n1 1 6\n4 3 6\n4 1 2\n4 2 3\n",
+    "4 9\n1 3 1\n4 3 8\n2 1 4\n4 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "4 9\n1 3 2\n4 3 8\n2 1 3\n2 2 5\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "4 9\n1 3 2\n4 3 8\n2 1 5\n4 2 5\n3 1 3\n2 4 9\n2 1 7\n1 1 10\n1 4 9\n",
+    "4 9\n1 3 2\n3 3 8\n2 1 5\n4 2 4\n3 1 3\n2 4 9\n2 2 7\n1 1 10\n1 4 9\n",
+    "3 5\n1 2 1\n2 3 2\n3 3 3\n2 1 4\n2 2 5\n"
+  ],
+  "outputs": [
+    "-1\n",
+    "586\n",
+    "9\n",
+    "-1\n",
+    "844\n",
+    "9\n",
+    "586\n",
+    "844\n",
+    "9\n",
+    "844\n",
+    "9\n",
+    "9\n",
+    "-1\n",
+    "9\n",
+    "9\n",
+    "9\n",
+    "9\n",
+    "4\n"
+  ],
+  "excluded": [
+    {
+      "case_index": 7,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "66da2a336f1e754e5bb491752d4e7d5df8ce996cce1fcbf02369301678286356",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "e083d83d32964d98f7468a780f4df333bfbd7d29ac5210f5b38883503fc988bf"
+    },
+    {
+      "case_index": 10,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "d99b18379c7944218a4efc0ac7b3b1b78515feb8f1865f458ccab311f736b73f",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "6cb55395293282e068f0d821a03388935c7d09f1ad3533723e352e93d0ed3189"
+    },
+    {
+      "case_index": 13,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "b90a6aa22209dc66500c467ec01b1d2c5d4d6a04f10e82f814de39f8ae2d1433",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "5a6c265545b52d39b067ab8e1f7d29d8944f8508161b14699c8802eb4e12e4eb"
+    },
+    {
+      "case_index": 15,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "f522418004090e9cf989059af67082f4f860b4e3f95471f98bbeb18d89584961",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "41ad2e33802d674d2a7008b031d773eb5495c1efc10514e4150a793023b7f49e"
+    },
+    {
+      "case_index": 16,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "8d72f5407ce8c6c54e882f22778aef5e7a74e73cc44837a92bc7b3d5f49b8327",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "64ca468e7cf7fe6829102c6b63664c3190bd5b3738258e3ea93dcb0222a1149b"
+    },
+    {
+      "case_index": 17,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "fa5bde0341098ad1b44d18d13d81c76b9dab950ddde4eca17b134cb8749fca01",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "1faeeda2c4fb7e422df2177611ac2b9ecf9b7860863ecbc79684c05b2a459fac"
+    },
+    {
+      "case_index": 18,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "7ac49837f690d31993996c15df49b6e1e8162986fe563f448935ee8cb6b9cf9a",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "44598fb160a0077202807076fc506c26cd5fd22ddc862140245422a2afa6d309"
+    },
+    {
+      "case_index": 19,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "8c2c68eccf2b95d01f29043b54e6e6621c5fec3a1fdcf5c03a65c9224113243c",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "394cfb3aa5fff1a9778c26ee11b18f51bb423295ed994431dde92b8dbf4e126d"
+    },
+    {
+      "case_index": 20,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "840d8a289f9b6da0b00473f8e93cabe9005c8c005c666c2c7fa169be9f351e0d",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "e8d6f8d6fa8439dfe2751b6541082565440e1d00e0f368d6c627cd10ac87255a"
+    },
+    {
+      "case_index": 21,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "f6d0e289509bf3fcd647292fde89c1429269165d43eebdd8c1290b757d9044d7",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "49dde9e02c20a8c17fbbe97781bec9a44b128c47e4a02c23caffbf6798c9a511"
+    },
+    {
+      "case_index": 22,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "5fa03083733e788de5ed3a3d44094f13f571fa55dc12d6532a794602a9378e55",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "48e94d9b20da2464da4c6221301dcda89ead38530632d0e3159d3bd117f36277"
+    },
+    {
+      "case_index": 23,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "b6b8d8ef6c6a1ebcc06c00637435e8f775ffa6456f527ea5a30b086113bf6700",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "5afe4033d2f44e8dcec3737fc9d001fc14e26e1c2e28a563c5a816bd95cc2765"
+    },
+    {
+      "case_index": 24,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "40cf468d0385adc3ca55af228d275e3be37909158f47ab765e346bd7bb4c44a1",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "3ef68045c3256f211249aeee6cbfa9a7e6acea571485d1efd7ad9b23dab14f99"
+    },
+    {
+      "case_index": 25,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "b88d71ec19f78e379b93561ca7bba3cf2d0a473eb4ae9cc348df4427c348f3a6",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "75b637ec1817fb815f416d394a7a447d556f51fdd7ae8ac42a62dd7ca9c6808c"
+    },
+    {
+      "case_index": 26,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "2cb412c8e15525abfb9352ebe9c2ef01a8e2f3e43400e161eba2f279211667cc",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "62f5600658d6815a46c06d0818871cf10b045df77c7094738c2f6c573c876add"
+    },
+    {
+      "case_index": 27,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "ad4019e3a0ad8c4a9967b4b7027119d5f546562f53d60d36d6d4e4e0116668c5",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "1755d1037a551fb63152b9363df4cbbead6403ea7e280c7531f82baf9ea522c0"
+    },
+    {
+      "case_index": 28,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "12b49a40a5f3aa08eb85a25e590f30f0fe56039723b355e7d1d5c57a6543c486",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "2ed389e714d9e5177be590754dde0f95d76f5b6f3269c4fbc240e3a82a02ceee"
+    },
+    {
+      "case_index": 29,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "c224dc2a778a605d7cdb74719562fbd55ebcd47d5625d8c64d48ae4985993c96",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "dea9c7e846d29a3c9222b3708bfdf53a8a9b03c4c79991cbfe43e9c40d8e445e"
+    },
+    {
+      "case_index": 30,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "5a9a8e3e4e2459bc7b615e33b8a66ca44bd94755d72d3a772b4f366f62fa130a",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "f55d7953c087d77e7b744352661c507ce07b5d65720a7dc6f8a6c592cb2f5a11"
+    },
+    {
+      "case_index": 31,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "b8ab6c70ea70215c76e94900c09ba3c58da5d8c50f07ba1558314e53e3a0facc",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "4f0cf833b8928ebb040b099fad863c1e8f24e8477016a6799ab168bf2b351e64"
+    },
+    {
+      "case_index": 32,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "469b67239b9f60af9e2c84d3551b3641a21c851c4b5f0407dcec8aaf2ddbbb24",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "d9620d1dcbfdfb16dc2d536ee5055a25709852bf62a17bde672e42b1b5f5b49f"
+    },
+    {
+      "case_index": 33,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "ec24e4570d200ee376cc963bb9c33938b896715719f3084d7b46cf8f52f8ca27",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "13464f8d07251cb42455f3f21c7b0fedac6524b58b656b6395f651898cc0949a"
+    },
+    {
+      "case_index": 35,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "54137d014d726d251286a66f1e1a993960c559590d2db12c3a52734d2ff627dd",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "147805c8096f6c848c3bf57dc82a90c0e19d2c1098e1f17378a802ff0135c3cf"
+    },
+    {
+      "case_index": 37,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "903c06aa055f76592e46c5f8e948ab2cced3e632ce60ce4a0f67ea2c0655ced2",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "e8aba382dc487390cce75f6f10f536f9b53467f0de8b870c836e8f572d90a08b"
+    },
+    {
+      "case_index": 39,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "2a7f8f5d91feefb5694fc062cdaa98c7b33e136f263fd4efe53486f57a9019c2",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "7fcfb11b73955c39cbfd01cbc97ce85e233b1252de49e5fadd6e777e3d3816d7"
+    },
+    {
+      "case_index": 41,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "9606cd541a5ebf5940dde1aab6225d5bbeaff373c4cd06994d10985c7c10a770",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "111f40ee78e3cd47d7910df2b264c1868e0686228289feecdb6a9873c14fc1bd"
+    },
+    {
+      "case_index": 43,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "fc7f188b31542d4ce26abb310e9fae711102a2e970a298cc842a2ad515370eab",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "b1d0a3ffd09b45decb0257c690a7f90460539a90ccd14d42e9dea5c4a20822f8"
+    },
+    {
+      "case_index": 44,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "1e2a14e4dd7b062368d0e4d261a2bb13c651f89e93c823b4dc078db802be6ab3",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "3292af507cd7f01e0de071721b82da68b2824a7eb32e2ac123f1299ab459a3e4"
+    },
+    {
+      "case_index": 45,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "7cce394ba119282b341d417ec93f2e166a35fdf798c6f6cb5f498d87e4187848",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "01ed17f7190314ec194a526db21229e7ffd2fe2d8c57bd77bb0706e513c5b820"
+    },
+    {
+      "case_index": 46,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "5f6b4810ea8714f7e7ab2dafe67daf768249a8f8f90df22f542d1aeda6186cfb",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "8a761c02a1c1a6c16b7f16fb6f53f39575a268fd6b1ca3e39347aec739d0d5a8"
+    },
+    {
+      "case_index": 47,
+      "reason": "Unexpected trailing tokens",
+      "input_sha256": "3f454f43fc37875a02e2ddbfa9d2e575c974f0ab5f84cec23f56763d462e387a",
+      "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28",
+      "original_case_sha256": "39a667bfa95c4d68178fe632ad401747e0a10adbbece3c5b8b8e3cb5364925c6"
+    }
+  ]
+}

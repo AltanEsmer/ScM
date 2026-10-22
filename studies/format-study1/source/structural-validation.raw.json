@@ -1,0 +1,1103 @@
+{
+  "method": "Task-specific statement input/domain and expected-shape checks. No answer computation or reference execution.",
+  "all_passed": false,
+  "tasks": [
+    {
+      "task_id": "taco-test-0760",
+      "row_index": 760,
+      "case_count": 334,
+      "task_sha256": "6a61c0cfbd4f81a0e01fedbb3882d3affe9e1c403a1857b12a958df57caa8aa8",
+      "passed": true,
+      "failures": []
+    },
+    {
+      "task_id": "taco-test-0402",
+      "row_index": 402,
+      "case_count": 196,
+      "task_sha256": "9e44490641c0dd401817a2e3514d8100cd0a8d3ff309819cb3ab585b6be9090b",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 39,
+          "reason": "input value 0 outside [1, 4]",
+          "input_sha256": "b2f3559cac846ea4ee74e99aec83735e741ecb556f6dcf721f62a92f98303643",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 44,
+          "reason": "input value 0 outside [1, 2]",
+          "input_sha256": "3670b3b37c10f664a674691fb9811a6f6b6d39f52d97d5de56acd6845802bfd3",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 47,
+          "reason": "input value 0 outside [1, 6]",
+          "input_sha256": "5e88f37e89f8343c0a5b4e11948b18d33c4a13bc35f1ae37e2aab8350b0f096e",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 51,
+          "reason": "input value 0 outside [1, 6]",
+          "input_sha256": "1ec9d54793ac6b7ae34147a8727763f0b9b0cda0be0eb9bfb1faa6f7f483717c",
+          "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        {
+          "case_index": 63,
+          "reason": "input value 0 outside [1, 6]",
+          "input_sha256": "ac45c34b3119412832b87e02666eb77f1da2eb165c92081529b014a2c1f128d6",
+          "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        {
+          "case_index": 65,
+          "reason": "input value 0 outside [1, 4]",
+          "input_sha256": "6c0cea70ebdebe9be7bfac1228f67759899fe8c0ea3dde250bb5c9469833b3c6",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 70,
+          "reason": "input value 0 outside [1, 3]",
+          "input_sha256": "6183f65be39c4c98165cadbad3fb4f1aef1cc1eaf32e7573958c48e2a216d7c0",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 73,
+          "reason": "input value 0 outside [1, 5]",
+          "input_sha256": "18cf636de3f6e3fb82c4d781c61f81b364a3d2197ac0916244b15dd2c6414957",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 78,
+          "reason": "input value 0 outside [1, 8]",
+          "input_sha256": "6afd8a9ac28452b31915b03dff0edc8e1908c191ed3cf9c2e8cb9869d9402780",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 90,
+          "reason": "declared tree has cycle or duplicate edge",
+          "input_sha256": "fdd981adeeeddb44da46e417c50504f3b4df36993d8b2f890c31132bd7d6fb48",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 107,
+          "reason": "input value 0 outside [1, 7]",
+          "input_sha256": "8c436f46f9a7c3b01f829c4f4ceacd84b39b6a984cb74f173f1551bd70abe640",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 122,
+          "reason": "input value 4 outside [1, 3]",
+          "input_sha256": "f9fd00252d773a9e2a3bc7468dee6f16a23af9d1394dde7719f4a365cfc466b6",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 134,
+          "reason": "input value 0 outside [1, 3]",
+          "input_sha256": "6183f65be39c4c98165cadbad3fb4f1aef1cc1eaf32e7573958c48e2a216d7c0",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 148,
+          "reason": "input value 7 outside [1, 3]",
+          "input_sha256": "8a35319c2e53f939b2d6cd15dc8d62e7ce42f185ce64e56e5f82748ecc56849b",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 157,
+          "reason": "input value 7 outside [1, 3]",
+          "input_sha256": "4730dd28bdeb5b8de9b61709e7072de7bbae79d60f3c9ad4ddb939290647b7b8",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 169,
+          "reason": "input value 0 outside [1, 3]",
+          "input_sha256": "c2d6c3e0f2057941b3ab32e6a661b5ff93bca89ed2bfa75c357bfd7a227f4ad6",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 175,
+          "reason": "input value 14 outside [1, 3]",
+          "input_sha256": "e8e25e0007188f5b506de85edf62770b3c12931f660aa1ae0e126c3a89d5d293",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0472",
+      "row_index": 472,
+      "case_count": 164,
+      "task_sha256": "b658e8b8ca3b9b5d835111b108cf06a2bf096829bb01adf87b29ddbd52816e09",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 45,
+          "reason": "chess piece side must be odd",
+          "input_sha256": "88b575f866afa3a72fc3a9fe20fbcf1b901bfaed2ff5525deb39c1a1e99a1240",
+          "expected_sha256": "aa67a169b0bba217aa0aa88a65346920c84c42447c36ba5f7ea65f422c1fe5d8"
+        },
+        {
+          "case_index": 46,
+          "reason": "chess piece side must be odd",
+          "input_sha256": "b7cf1c06843c5d9e535a64a92c4bc061b90b207b095ed10e2b27ce64e9231036",
+          "expected_sha256": "2115cdb6bfcfb008eb2bab2bb79347cb064a48e4e7c4115ccbe4469c787bb6c4"
+        },
+        {
+          "case_index": 48,
+          "reason": "chess piece side must be odd",
+          "input_sha256": "f3d094314538c3bd8d1a3e240b0d33606393edaa0b5c32939644503373e3d40c",
+          "expected_sha256": "bd5fa6e75f0ddfcd9ff32e0a2297554cd81188f177f14d7ce416310efa0b5c77"
+        },
+        {
+          "case_index": 156,
+          "reason": "chess piece side must be odd",
+          "input_sha256": "99a97c114382d41fe01d59383423133955c046ddee7efe503570a4a7c96a1a38",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0074",
+      "row_index": 74,
+      "case_count": 180,
+      "task_sha256": "1f0c5eb8dca00a12054f730e3092ed6f9c49728819bcadaf998dfa8862629137",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 28,
+          "reason": "box removed before it was added",
+          "input_sha256": "7053f6662cb2095adc4dbb0593caf04b2e1ffd95111c90e69fef6633e4715cb8",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 29,
+          "reason": "box removed before it was added",
+          "input_sha256": "64aaa83e54da8cf4bb4c45810f43be204fc631d3bef0da40cc3b5f6fb0d663f1",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 37,
+          "reason": "box removed before it was added",
+          "input_sha256": "a773f8d35db8bedf4a184c365e62a24131ce996af97b31ba97611a65efb9773a",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 39,
+          "reason": "box removed before it was added",
+          "input_sha256": "083f539744b57a958dcd90c60469f6180da601d98cc0023d1a2417748fc7a76c",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 40,
+          "reason": "box removed before it was added",
+          "input_sha256": "7467b31214135beb2b2b842f89877d51197f355b7d34b8651ae43b65c5326924",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 41,
+          "reason": "box removed before it was added",
+          "input_sha256": "83765be4062d87e91262686b1c553d3b2158f67e5001b4db142be69be84d1943",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 43,
+          "reason": "box removed before it was added",
+          "input_sha256": "f42f1e99d1bad9fbcefc7179b6ce63e33bf252c716531b7993afa233394bc4b1",
+          "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        {
+          "case_index": 46,
+          "reason": "input value 6 outside [1, 5]",
+          "input_sha256": "bcb3986e72f81dcb83ad1afc13185d0b069c5db84346ff941a033e57f8e2bfc7",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 84,
+          "reason": "unconsumed input after declared structure",
+          "input_sha256": "8483c0f208a0c0f1cf7dc79dd6754e2cc988001c4d8d65f4880320b58060ab2b",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 85,
+          "reason": "unconsumed input after declared structure",
+          "input_sha256": "d325fceb1c735f4fd8e472f8a4a4164d8564f43da9245d6c9ebd4159ba7d0ffc",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 86,
+          "reason": "box added more than once",
+          "input_sha256": "052c6588c96aa6dfca62f54d6e7da18dd4c75f8dceb7bbe93a375cfae8212904",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 87,
+          "reason": "box removed before it was added",
+          "input_sha256": "a780b34baeaa7519ca0dc03f536949aceb3c960fdf93964c32d64bbebeec13e8",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 88,
+          "reason": "box removed before it was added",
+          "input_sha256": "09c36904730c3a0ebb977002b7ee661857e581429522bb2bc38a9a6d1af201c6",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 89,
+          "reason": "input value 4 outside [1, 2]",
+          "input_sha256": "818936f9177a260fe88b245875b0a4633760fe00e5a698bfae26d76f53e0d2a1",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 90,
+          "reason": "input value 9 outside [1, 3]",
+          "input_sha256": "7f72388c30fced83d8810399cf77b11236a87cda56307df29147182a44fbcac4",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 91,
+          "reason": "box removed before it was added",
+          "input_sha256": "9c6573a15fa3dcdc7a475a4cba5ede398b4e5f5f6c6002ffe3f6e6d33ccd2ccb",
+          "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06"
+        },
+        {
+          "case_index": 92,
+          "reason": "input value 100 outside [1, 1]",
+          "input_sha256": "35903136b7a089e166edab8e737986146e9efc87ec6a199b269a11a469dd1816",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 99,
+          "reason": "box removed before it was added",
+          "input_sha256": "299998b013891c85b11b6a510417a4a1baae4037f4df3408ae94ab9093727a39",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 101,
+          "reason": "box removed before it was added",
+          "input_sha256": "8a27fd07fcf183485ffe7db851307fadd25bd2da4d1a33fef8213a12d32d086b",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 104,
+          "reason": "box removed before it was added",
+          "input_sha256": "669ce24e2c8ee6aab5b441cd5a414cc72ce6a8fd9bb61d1cf2ef6dd68b81b8fa",
+          "expected_sha256": "f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06"
+        },
+        {
+          "case_index": 107,
+          "reason": "box removed before it was added",
+          "input_sha256": "2e6b3e882119f5429205c95a3027a0cdb6b99af17c5e1913692c728140927769",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 111,
+          "reason": "box removed before it was added",
+          "input_sha256": "2ef1c06a5f4b66cb7d099ba9a7bda58fb03c2247540e58244889dda73e0ce554",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 117,
+          "reason": "box removed before it was added",
+          "input_sha256": "1624bf86f2bb7ef431b4bdd05bdc0b5c7ca0b4678258a5bad31d4d804d472cd3",
+          "expected_sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7"
+        },
+        {
+          "case_index": 120,
+          "reason": "box removed before it was added",
+          "input_sha256": "7f3bd876b94244e26213ac493f44bf04d2447446c6e0f2c6c8fbcb95ac3c0360",
+          "expected_sha256": "917df3320d778ddbaa5c5c7742bc4046bf803c36ed2b050f30844ed206783469"
+        },
+        {
+          "case_index": 121,
+          "reason": "box removed before it was added",
+          "input_sha256": "44fb905c127b4e8fae9462a6589447f3771f094703528beb48276afc65a2b6db",
+          "expected_sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7"
+        },
+        {
+          "case_index": 129,
+          "reason": "input value 7 outside [1, 6]",
+          "input_sha256": "f4d1d71b17fa2a315aff1d4b6add32935106e783570c3ee78960e4835e6db21d",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 143,
+          "reason": "box removed before it was added",
+          "input_sha256": "6f9b8a621340721dedb2aeb32a657c1c58abb0895937439bab96535d299adf8c",
+          "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        {
+          "case_index": 145,
+          "reason": "box removed before it was added",
+          "input_sha256": "033ffd2ee4f643b9b0d521951079196e667b55ba13b7575aa68f1c963075005a",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 150,
+          "reason": "unconsumed input after declared structure",
+          "input_sha256": "ef36f9ca86c749de325d2c0404f379e0961c22d191f418cdc38c11e515fadf18",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 154,
+          "reason": "box removed before it was added",
+          "input_sha256": "0ca1e7b71098e2b5a0890ae0e288721637e292f63d0d5bbf031c31a36f77a7ef",
+          "expected_sha256": "7de1555df0c2700329e815b93b32c571c3ea54dc967b89e81ab73b9972b72d1d"
+        },
+        {
+          "case_index": 161,
+          "reason": "box removed before it was added",
+          "input_sha256": "f496ed751d3b3310b8db83a8118d1504fa82a1e3f28039aea183863e13c7cb80",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 162,
+          "reason": "box removed before it was added",
+          "input_sha256": "794ff0ee7e6972d3fe253bd48fe892408c02a5c312713bfce8b095184c1b7564",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 164,
+          "reason": "box removed before it was added",
+          "input_sha256": "1d937707c3d0cbeef6316527838f39fd70579a29050da56243f2d118d56e3699",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 174,
+          "reason": "box removed before it was added",
+          "input_sha256": "ad5590c08d54e7990c6e6593ccb962b0712215c0f50d24bb26a5b3021a37bd98",
+          "expected_sha256": "1121cfccd5913f0a63fec40a6ffd44ea64f9dc135c66634ba001d10bcf4302a2"
+        },
+        {
+          "case_index": 175,
+          "reason": "box added more than once",
+          "input_sha256": "30d3933695fb8bde87451e953c1896da58b6549c520f658f52f79c89ab170b86",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 176,
+          "reason": "box removed before it was added",
+          "input_sha256": "083f539744b57a958dcd90c60469f6180da601d98cc0023d1a2417748fc7a76c",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 179,
+          "reason": "box removed before it was added",
+          "input_sha256": "24266f8c80f176dd56c47e18186453800904a037ddbaad6681ee536b4f8095fe",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0250",
+      "row_index": 250,
+      "case_count": 278,
+      "task_sha256": "d9e73639474c9e26b81e5eff7b830bef36dfb02eaa7f741a7e61062365cb0662",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 25,
+          "reason": "input value 1111111111 outside [1, 1000000000]",
+          "input_sha256": "e958c6e9cb31c79be70b41385117cfff17546d1c3a3e4174d18026c641627f0d",
+          "expected_sha256": "48c5b160b3ba727a25ff55d1ba1f12c86caf8c21bc653aa2cd64f2c2b4fdcfb3"
+        },
+        {
+          "case_index": 173,
+          "reason": "expected one positive integer per input number",
+          "input_sha256": "214d5eb96a699eac489951c9f2e1a211e665e2c745fb7da6462a84252d86d4fb",
+          "expected_sha256": "71e3d794fbfa5c400a96b1682b4f16f84c93899914fdb24afdf4ed987d608bcb"
+        },
+        {
+          "case_index": 218,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "b34ae663a923d7c20114de04e027d9049a1280049329f47d0074bb7414528c4a",
+          "expected_sha256": "8d768149cfd95f9bafc3da5bdcd40cb7f9eeda5f93ccbb3179b7990c4c24a89a"
+        },
+        {
+          "case_index": 221,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "38a2d1050d1677ca3fd8597b2399bd429e24140dd9cf4acd65a690d29eb956f2",
+          "expected_sha256": "3e3ca10204cb093a93d1a750c01232e559a1c8b9208c629324c087b17e67e8b3"
+        },
+        {
+          "case_index": 228,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "5e24ec7553793d3128c594577b6903a67681a104de5ff7f1008f33a1ff2be798",
+          "expected_sha256": "4a6fea88f1f4b219ceb90682c04fd1ba1febd0ba67fd1dd30fcca180eecbb7b5"
+        },
+        {
+          "case_index": 229,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "79c246725bdb61d672006b0279e90ca0978674b57458ef9966710e849f36d923",
+          "expected_sha256": "44afc78e43fa3ec801952ecfc03e3c16f98bd6560212f3f9f61f0e4649af506f"
+        },
+        {
+          "case_index": 230,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "9f5c0841733842a855a6f723ab740f106aa53c5958ea9cfa0f98669ad7e44305",
+          "expected_sha256": "cf1f2f9e36e5c80e0d1b261dae4179a249ec8c1262224489288d266ea39aa6a4"
+        },
+        {
+          "case_index": 237,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "51bcdc6066f7dab147a6e8ec5a23a862ed5610f721ce21a8676fafafd3a6fbd9",
+          "expected_sha256": "4ab3db65b81005603177334f0ee0f852eceefac2437313eb99e6521f42fbc756"
+        },
+        {
+          "case_index": 243,
+          "reason": "input value -2 outside [1, 1000000000]",
+          "input_sha256": "334f5170319d3949f91503370365cfdb19eb78b5e3948c0ffb90ddddd5ead231",
+          "expected_sha256": "569a83815c1765809019148f0639ea8690d237892493b339735d36f6b87dfccd"
+        },
+        {
+          "case_index": 246,
+          "reason": "input value -2 outside [1, 1000000000]",
+          "input_sha256": "57fdcdaab86fee3408608f82207db1f65dc791572b275b1e5bc160842629ce41",
+          "expected_sha256": "cdc573395900670455d9d13254acbcf18ac256d9e3d46ab52ea0611e7648b3f8"
+        },
+        {
+          "case_index": 248,
+          "reason": "input value -3 outside [1, 1000000000]",
+          "input_sha256": "016daefc7fa308f59852ec58783759207a4a86eb0db91ddb9e8412aa1c3ff364",
+          "expected_sha256": "80395bb4ed6ef32e0e39741aa1787cd299fc783ed91394b1ff6b5231114e7896"
+        },
+        {
+          "case_index": 251,
+          "reason": "input value -2 outside [1, 1000000000]",
+          "input_sha256": "8114fe9a609faf50187624b53c6edc85f7f02d527d92273556f260fd65aebd2c",
+          "expected_sha256": "c0a0646ba9eb63a839b9876d4267da62e2e63aaaa4dc39dfe5df25439a6df77e"
+        },
+        {
+          "case_index": 252,
+          "reason": "input value -5 outside [1, 1000000000]",
+          "input_sha256": "5c946af3067646243d4b254c6b6b90fcea2b1dcbd4e09a17b4d584b35c9633d7",
+          "expected_sha256": "678bcd51c9c4b73762afd1938f644d905f683c3129d4315ec1c7388c80991c9b"
+        },
+        {
+          "case_index": 255,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "3b1a7229363476005f5c3cc288d8b0ebf6b2ae741cb321a59093188451619f22",
+          "expected_sha256": "9fdc812c6d4e3512d317ce532d13f130dc6feaa3bd6753af33bd01262249750b"
+        },
+        {
+          "case_index": 256,
+          "reason": "input value -2 outside [1, 1000000000]",
+          "input_sha256": "536590586f1a688348b7b081fc00d2269af45f4084bb83836513505c23ee87e3",
+          "expected_sha256": "6224d77ca9ebb99111a836c0a7846454ddc2c978e2fc6167a0e40ca8eaca625d"
+        },
+        {
+          "case_index": 259,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "6292b651c10dc3f0d7acb2faf59220d02cccc59dc1789d2c4e5b1d1bf0f530db",
+          "expected_sha256": "63fffb910d9d72ae5c16e967c67b93b081c1b22e58ff92815e310b3c5052f693"
+        },
+        {
+          "case_index": 261,
+          "reason": "input value -1 outside [1, 1000000000]",
+          "input_sha256": "09f2c63b43688c1fea0b69fd2bec80c899991a345388d190ff9ce8a589c25f06",
+          "expected_sha256": "dd04b548d421e997a9ab96df939e2ee104d78da94bc991516bafe22e464ec7a1"
+        },
+        {
+          "case_index": 263,
+          "reason": "input value -4 outside [1, 1000000000]",
+          "input_sha256": "5fa6c6e600f2b01ca7e928d66c5126e2220af116e882f39ebd061fed60bcd97e",
+          "expected_sha256": "f9f861e535c7491f0ca8377bb899c524864dacd46fc5a77027e8f51a2368b79b"
+        },
+        {
+          "case_index": 265,
+          "reason": "input value -8 outside [1, 1000000000]",
+          "input_sha256": "0f4664713109a728a79da0ddbdd61a7bddcc331657db4b63d69d17eacaf80d90",
+          "expected_sha256": "ea319a27257ab16c159c250a2d25ab5fcb871029a824d69445d75e5cb4ad103a"
+        },
+        {
+          "case_index": 267,
+          "reason": "input value -8 outside [1, 1000000000]",
+          "input_sha256": "09af802eaac6e0938d6f7e58bb43769789f02b3f83cf482bb15e8cc28238ae31",
+          "expected_sha256": "8de4c752fb981e85bb0e4e80cf1479d5cb3b417627f1a1f6faa1d25e0baa5282"
+        },
+        {
+          "case_index": 269,
+          "reason": "input value -8 outside [1, 1000000000]",
+          "input_sha256": "21fda5c67f21df021d4f44abdc383a40028fbddc53036ad00539f8bb980c81c7",
+          "expected_sha256": "345c9208df23e15e7d5f084bdb63844a10cd9ad8017e3e431be14042ae78e570"
+        },
+        {
+          "case_index": 271,
+          "reason": "input value -8 outside [1, 1000000000]",
+          "input_sha256": "f82170d8b0fae05d1ecee708ea8f7fc1171e2945bc1790cf65780fd6c82b2f27",
+          "expected_sha256": "f3fffc272ebea052fd024e107431cc9128d4b4caf1da22523175726821200501"
+        },
+        {
+          "case_index": 273,
+          "reason": "input value -11 outside [1, 1000000000]",
+          "input_sha256": "56335d3e686389e9256f1853881c93bc7e8e08394e9f46fe5439dd50fceaf345",
+          "expected_sha256": "92cd8dcab4f836c5c16a9682b8ff078e9d2792613b710fb03c654dfd091c8116"
+        },
+        {
+          "case_index": 275,
+          "reason": "input value -11 outside [1, 1000000000]",
+          "input_sha256": "bcb85268b765657a84d34922702969084e4afa134afc464478c9023a6db14a41",
+          "expected_sha256": "94d23231c6efc7c2952a422ea6fa795a137060cb614eaa8baa0fd27117b32b05"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0320",
+      "row_index": 320,
+      "case_count": 238,
+      "task_sha256": "0d482a19eb24a0321d4a361c4b3ad5dcc88e7a6de8e16fca996238a435d6db61",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 82,
+          "reason": "unconsumed input after declared structure",
+          "input_sha256": "cb6156491f5ef0251cf31cb72ed2d433573f1549330bfb10bb2a0f4804466973",
+          "expected_sha256": "10159baf262b43a92d95db59dae1f72c645127301661e0a3ce4e38b295a97c58"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0778",
+      "row_index": 778,
+      "case_count": 195,
+      "task_sha256": "5b0a77ab1cf261e3a979062900368fee9ce073d4be44d1e392dc606fde207bf6",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 11,
+          "reason": "Integer 6 outside [1, 5]",
+          "input_sha256": "3f73b041b4b24384fc42f73fbf3f737d95bd1dcd528f04efa7550f9fe0032a35",
+          "expected_sha256": "76d8e84ce355b24f0a4ba6c7b67104b486634d87f38d64dfe0d57c0b6de68c8d"
+        },
+        {
+          "case_index": 106,
+          "reason": "Integer 6 outside [1, 5]",
+          "input_sha256": "271872e7c3184a13e4187833ffac96c5f8637d770726ca7b803b61c6000a5a6e",
+          "expected_sha256": "9d272f1f3e92f7c5efdcfdda0ab92facccd98c340be8be09064060503fd167e4"
+        },
+        {
+          "case_index": 107,
+          "reason": "Integer 7 outside [1, 6]",
+          "input_sha256": "aba21d23cbf13f1fda655e15b4a752917407ebe096524c702a9dd1f1b340782c",
+          "expected_sha256": "2d6d93acb8791091df8c43d6398c11e1d2fb8973aa7ba34fc6a6ef217c38680e"
+        },
+        {
+          "case_index": 111,
+          "reason": "Integer 6 outside [1, 5]",
+          "input_sha256": "083ab94bcca9e795236c0f28c5784af8fc662a2950741a400e295b7263c6992b",
+          "expected_sha256": "9d272f1f3e92f7c5efdcfdda0ab92facccd98c340be8be09064060503fd167e4"
+        },
+        {
+          "case_index": 121,
+          "reason": "Integer 7 outside [1, 6]",
+          "input_sha256": "141616801e27e17eaa145c4eb57f3a45be7d3daa81d9e571fb957be33404381e",
+          "expected_sha256": "9d272f1f3e92f7c5efdcfdda0ab92facccd98c340be8be09064060503fd167e4"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0339",
+      "row_index": 339,
+      "case_count": 242,
+      "task_sha256": "2a5d9c62539bf761b88166201a7b7963fe4a8de12271fad79e20b7e1b1c8585b",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 75,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "4b52958b12771821a4e0758eddfcb0cb602eb3275dfb5c7aa51609f5762cd581",
+          "expected_sha256": "cd973562cc19c34caa58a23cf4323dc543bcde9fc3f2b518083698c84de6b1f0"
+        },
+        {
+          "case_index": 109,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "bfb862a67b2b4a1a7260606f6bcd23b3a87c53ef2e1b32198069b1364753fdb0",
+          "expected_sha256": "70851a8d5248ac28b50b80296acfa5db761fd92f6e3c179df5e5f999d4073676"
+        },
+        {
+          "case_index": 125,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "bf211ba2531da0f1ca00d9b8704a63e8999711ff1160b2ef34a17739e3132b87",
+          "expected_sha256": "002b7f5abdebc5f2f72c0cded65abc7591deda18c482beb9ad8d2b53e5b9554f"
+        },
+        {
+          "case_index": 139,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "c43befa4dff4b1240f42f756c1a42e8d754e2c4786d5e6f51c2f68f4fc397838",
+          "expected_sha256": "1f98f96d399d43f71f7a3ebf64500a7202ac1ef7b642ce745e34aab176967e39"
+        },
+        {
+          "case_index": 155,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "1f2f32b5529fbe29a6bc241dd3b6d5915a9e02cd14016e75c8818a32af29a91f",
+          "expected_sha256": "2ed7f4b461b656c0e8e113a2f58c00fdd811354185eb443d5565872d6197aec4"
+        },
+        {
+          "case_index": 157,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "bb32dea27c8245ed1abc6e988fcdb46f92c3a97f2fd631650fbc55f1b5bfe87e",
+          "expected_sha256": "a4b3116b2c9879d49feca51c192ebaf0415d79d7b915f5e6db1e75153d63cda9"
+        },
+        {
+          "case_index": 160,
+          "reason": "Integer 0 outside [1, 1000000000]",
+          "input_sha256": "a6b51bd1fc4bb063e9d929920aa8fe4b5c84b2bd283a421dbb2cfc34066d4bb7",
+          "expected_sha256": "026a267b3873dab8974235646b67acd4781735f4024bb3fe719017ee6ac65117"
+        },
+        {
+          "case_index": 165,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "b3d27753d290a4ce2e844ac6e8c1a172df6c1426314089a1db2afb7ad2ceb68c",
+          "expected_sha256": "5a06a936ced255f8b9201b84beeae071cc80dbe55a0d65d05274c90d3a1c3624"
+        },
+        {
+          "case_index": 170,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "0bc468aceb8fa107ac1125a21fbcbf71dd296e4bb9c65982164c07f0adc70500",
+          "expected_sha256": "26f96ea273758df32b97f99457df0a670bba7fd5626f8ec981007c353c420998"
+        },
+        {
+          "case_index": 171,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "a5db4ace3262438d567723cb0b99093f52eb9730ef2a3ba02f32d752b9b593a4",
+          "expected_sha256": "b3ead6d4284686778fd655244f6b7887d19bd0bb979a2d7e83d1f6029d81f42a"
+        },
+        {
+          "case_index": 172,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "0287f2df54c311e3ef1d9e0d75f42122ea66c6f942f9484ac4f5aff394a2fe24",
+          "expected_sha256": "fdac03a4eee9c630b75a458ce637c4e214c1d6babb32c3d5e9214f64b855090e"
+        },
+        {
+          "case_index": 175,
+          "reason": "Array values must be pairwise distinct",
+          "input_sha256": "bbc403a8dfffb95645e144aee343790ca432c0aca394c80064520c460c0c8d77",
+          "expected_sha256": "5839c3007ceda971bb65af4d65955e5c26a1a0848253bedc96b695c1eab4a7a4"
+        },
+        {
+          "case_index": 201,
+          "reason": "Integer 1000000001 outside [1, 1000000000]",
+          "input_sha256": "d03f944ccaca7fd3e3e8cb64e1ce21a667dab246df90e3e571f66b9bc0a5446d",
+          "expected_sha256": "2d0950cf30857d228318e37d67235063975b097380e4c8706be786c8ae9b12eb"
+        },
+        {
+          "case_index": 208,
+          "reason": "Integer 1000000011 outside [1, 1000000000]",
+          "input_sha256": "6c68bbc8fe4be02bc02e55a363489d4ca8e310a761a05c8d26ea335ec9903d50",
+          "expected_sha256": "9a92adbc0cee38ef658c71ce1b1bf8c65668f166bfb213644c895ccb1ad07a25"
+        },
+        {
+          "case_index": 221,
+          "reason": "Integer 1010000000 outside [1, 1000000000]",
+          "input_sha256": "4735fb279b56fbf1f8950ea116c5052550f5a5940ede80333d5a5592f87f6f04",
+          "expected_sha256": "7ea15caa8238eb0b4ade25fdd1861677a486e37d6a1767f9ec44835fac6cf971"
+        },
+        {
+          "case_index": 229,
+          "reason": "Integer 1010000011 outside [1, 1000000000]",
+          "input_sha256": "4f23d171506a3351c89f309fe1ba76d5569d6d660294b95198caa5c9a230f3a5",
+          "expected_sha256": "6e465306100290a735c6d7c11c20fb2795897a37a1c083af7adbc1ddbccdbf96"
+        },
+        {
+          "case_index": 239,
+          "reason": "Integer 1011000000 outside [1, 1000000000]",
+          "input_sha256": "f8465bfeb82bb1e1bc9f0c1a59bb567b2248f8c70e7e749bd0589e22259d7d0b",
+          "expected_sha256": "81e797a3418747cc2db7ccefd9cad9c023f19aede6063168528663794f46f876"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0466",
+      "row_index": 466,
+      "case_count": 157,
+      "task_sha256": "eee36e31a0a19fac6e3a6265804cf5f3e4f8c4a10329aa8b5fa0dffa20a142b2",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 2,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "1f02fc58a74317dee9a10daa7107d543707b7eddbb836b63626face5097624da",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 18,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "3e67b03affe51994336e4f717bbe2ca330404bb6f866a0224204d9fbca92d95e",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 23,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "c5d91da13654c4e4b5695b3f3df261508796dca13827202759b0875cd86d76d9",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 26,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "316c846ad16ff5ffb75db310695dd81e47b3f39f8a4b7779bf661b5a1f950070",
+          "expected_sha256": "52f96c26a39ed25108a6db43d6e11c6051eba8a498a5baab1891adfa7ac7c262"
+        },
+        {
+          "case_index": 30,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "409266bbe29e4441b416ef10a4821b9e775668b7e03493600798a36c3a13acc5",
+          "expected_sha256": "5d90ef7fc0d040fd56a1e48697cfa99e0dfaf4fd803aefefc3b5053ec1d36aea"
+        },
+        {
+          "case_index": 32,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "7b05e58c4371ee25dcf7d002e3ff99313e247fc490e24b52f6d1d1d819260cf0",
+          "expected_sha256": "6a33a504c8d16194914401f4f46532de96e1b63119fc5981341c6b65c6c27096"
+        },
+        {
+          "case_index": 33,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "916e47dda75bd8e71f1e741e228d285e6b47d72a55f9d854ccca905f9159431c",
+          "expected_sha256": "47c361e7565a2c13343ee34bb880dcc0b283523597bbe04e3d07878b69194e80"
+        },
+        {
+          "case_index": 61,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "511c66a57efc120283eecfe1d35818d2455ae89a70e1d63966b8ff675d73357c",
+          "expected_sha256": "751f43ef30ddf4d6c674a46de13ceb7c92008fe3a8b8f71cf49b291112dc120b"
+        },
+        {
+          "case_index": 63,
+          "reason": "Input truncated",
+          "input_sha256": "27f1a8abad73610462b1685ac48c215035641410e35c3f83dd03603cb65bb3f4",
+          "expected_sha256": "7593b73ab10a204d3774ea7e011a358ce1b0ed681e7de3444ab6fbef62cf16c9"
+        },
+        {
+          "case_index": 70,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "c24862c0391f3a73a55af90002b6c412a9020850d4da94763df2a31b0a03f6b1",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 75,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "d1be224c4656bec805559b82801a8ed67fbc7a28b0ab01b4101330953aae6aa6",
+          "expected_sha256": "4f3bcd001d9fa430c93c8f1b3e204706c5f790a89974cff5faede5972f408dbf"
+        },
+        {
+          "case_index": 77,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "2bdef100f4cc29d07d833c56fb9c55e154b587fdefcee073a4da26bbd46ba75f",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 78,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "6449105e0cad3f9cd8c9fb4452db47765360850f1ecf939f2e6b76c08f725376",
+          "expected_sha256": "82c1315e6c757f33c4a77ca58b2a184f5a88614470c05ec77f3d28918db6b8ae"
+        },
+        {
+          "case_index": 85,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "78b149cdf2bc1d1e72742bf93260e57d5a463d737cc54ffaba93b57631e5365a",
+          "expected_sha256": "5d90ef7fc0d040fd56a1e48697cfa99e0dfaf4fd803aefefc3b5053ec1d36aea"
+        },
+        {
+          "case_index": 88,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "a71901848a436144931f7580c7e82e651e0660528d1bebcd19e8acc8e2e189e1",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 91,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "bd59e6a0c08271d68e5f9b459319a20d451545843c56f92e86be4fcbea214dd6",
+          "expected_sha256": "ad0fadf63cc7cd779ce475e345bf4063565b63a3c2efef1eebc89790aaa6acba"
+        },
+        {
+          "case_index": 96,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "e3ed04facddbd33960f4d82fae060fb23ca60c46b843d326422bba0d6e106cde",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "case_index": 98,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "14c9f61fb2a1b708b4df55e4fb55361a57b9cf19ea417cff0c16db59507a57f5",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 100,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "c168b82a25c0241dc476226dea1efd497acce315db49dfd4dca86500868c87f8",
+          "expected_sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+        },
+        {
+          "case_index": 132,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "105f11b56fe6c140889da6f6d2ee2c1dd0a8fb4415b67b0234ccbb413150d08b",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 133,
+          "reason": "Integer 0 outside [1, 1000000]",
+          "input_sha256": "76ad0672e081a454e07c556b3f141606dc02aaad679e69fc511a2386e7e39fb1",
+          "expected_sha256": "53c234e5e8472b6ac51c1ae1cab3fe06fad053beb8ebfd8977b010655bfdd3c3"
+        },
+        {
+          "case_index": 156,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "ddddbfa76325b41e84c4b72c26d04fb0a60860a4dc194584477ef4eac41bcd91",
+          "expected_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0581",
+      "row_index": 581,
+      "case_count": 206,
+      "task_sha256": "b7994420c944dce59a359632fa625ae5d432909cc4ed6cda9472c40fc5d33d5b",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 103,
+          "reason": "Integer 1 outside [2, 100000]",
+          "input_sha256": "a234e7c74543d925378fe4ca8ce907f94e0fec2291875a8e139fd1f36781da67",
+          "expected_sha256": "029384de67de6444a1643a64689b93352a5f5fcf726d70620bd97cbd5103ab5c"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0152",
+      "row_index": 152,
+      "case_count": 49,
+      "task_sha256": "8b3709eb856e08d902e859f65c59c4b5249949210fb8aa0b9fd5529a57ff79d8",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 7,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "66da2a336f1e754e5bb491752d4e7d5df8ce996cce1fcbf02369301678286356",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 10,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "d99b18379c7944218a4efc0ac7b3b1b78515feb8f1865f458ccab311f736b73f",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 13,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "b90a6aa22209dc66500c467ec01b1d2c5d4d6a04f10e82f814de39f8ae2d1433",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 15,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "f522418004090e9cf989059af67082f4f860b4e3f95471f98bbeb18d89584961",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 16,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "8d72f5407ce8c6c54e882f22778aef5e7a74e73cc44837a92bc7b3d5f49b8327",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 17,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "fa5bde0341098ad1b44d18d13d81c76b9dab950ddde4eca17b134cb8749fca01",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 18,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "7ac49837f690d31993996c15df49b6e1e8162986fe563f448935ee8cb6b9cf9a",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 19,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "8c2c68eccf2b95d01f29043b54e6e6621c5fec3a1fdcf5c03a65c9224113243c",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 20,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "840d8a289f9b6da0b00473f8e93cabe9005c8c005c666c2c7fa169be9f351e0d",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 21,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "f6d0e289509bf3fcd647292fde89c1429269165d43eebdd8c1290b757d9044d7",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 22,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "5fa03083733e788de5ed3a3d44094f13f571fa55dc12d6532a794602a9378e55",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 23,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "b6b8d8ef6c6a1ebcc06c00637435e8f775ffa6456f527ea5a30b086113bf6700",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 24,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "40cf468d0385adc3ca55af228d275e3be37909158f47ab765e346bd7bb4c44a1",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 25,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "b88d71ec19f78e379b93561ca7bba3cf2d0a473eb4ae9cc348df4427c348f3a6",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 26,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "2cb412c8e15525abfb9352ebe9c2ef01a8e2f3e43400e161eba2f279211667cc",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 27,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "ad4019e3a0ad8c4a9967b4b7027119d5f546562f53d60d36d6d4e4e0116668c5",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 28,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "12b49a40a5f3aa08eb85a25e590f30f0fe56039723b355e7d1d5c57a6543c486",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 29,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "c224dc2a778a605d7cdb74719562fbd55ebcd47d5625d8c64d48ae4985993c96",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 30,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "5a9a8e3e4e2459bc7b615e33b8a66ca44bd94755d72d3a772b4f366f62fa130a",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 31,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "b8ab6c70ea70215c76e94900c09ba3c58da5d8c50f07ba1558314e53e3a0facc",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 32,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "469b67239b9f60af9e2c84d3551b3641a21c851c4b5f0407dcec8aaf2ddbbb24",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 33,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "ec24e4570d200ee376cc963bb9c33938b896715719f3084d7b46cf8f52f8ca27",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 35,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "54137d014d726d251286a66f1e1a993960c559590d2db12c3a52734d2ff627dd",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 37,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "903c06aa055f76592e46c5f8e948ab2cced3e632ce60ce4a0f67ea2c0655ced2",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 39,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "2a7f8f5d91feefb5694fc062cdaa98c7b33e136f263fd4efe53486f57a9019c2",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 41,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "9606cd541a5ebf5940dde1aab6225d5bbeaff373c4cd06994d10985c7c10a770",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 43,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "fc7f188b31542d4ce26abb310e9fae711102a2e970a298cc842a2ad515370eab",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 44,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "1e2a14e4dd7b062368d0e4d261a2bb13c651f89e93c823b4dc078db802be6ab3",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 45,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "7cce394ba119282b341d417ec93f2e166a35fdf798c6f6cb5f498d87e4187848",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 46,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "5f6b4810ea8714f7e7ab2dafe67daf768249a8f8f90df22f542d1aeda6186cfb",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        },
+        {
+          "case_index": 47,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "3f454f43fc37875a02e2ddbfa9d2e575c974f0ab5f84cec23f56763d462e387a",
+          "expected_sha256": "ee3aa64bb94a50845d5024cd4bd20202a4567aed5cd5328c0d97e9920775fc28"
+        }
+      ]
+    },
+    {
+      "task_id": "taco-test-0979",
+      "row_index": 979,
+      "case_count": 244,
+      "task_sha256": "fd6bbe0ea88cbb42a7196a8fb2a3d9593cb6f67c2c115bcbd0037850966f631f",
+      "passed": false,
+      "failures": [
+        {
+          "case_index": 92,
+          "reason": "Invalid binary string or length",
+          "input_sha256": "67281ba600a587d972d77f59950657c6ff92a7357db84abb6519e8698a2c2057",
+          "expected_sha256": "69b0e417fbc5d34d31bb086a872c4d6b8d971a5c49840cfde271c6bfd7acdcc1"
+        },
+        {
+          "case_index": 98,
+          "reason": "Invalid binary string or length",
+          "input_sha256": "d394086997533eedf47b8442d1d004d023de06e20c3b279fe7afaf18f517b2a4",
+          "expected_sha256": "7aa1df0de86dba7229c83f2d9ca448342f7247c19cc1d7a0cce41abbce64a949"
+        },
+        {
+          "case_index": 163,
+          "reason": "Invalid binary string or length",
+          "input_sha256": "1a5e3075a2fb9df566d4846178c047bc8cc4e17d15861d5588be4e0390fab34f",
+          "expected_sha256": "66a784eb918cd681e483caa1fda67899311d78b0cbb364702f66f9f44534c695"
+        },
+        {
+          "case_index": 172,
+          "reason": "Unexpected trailing tokens",
+          "input_sha256": "79a05c659b47084aefcf302c8b2368aeda65e95e26595d291bf780447d12f6b2",
+          "expected_sha256": "4a20ec6c402912e9d135cc26dc0dd19248d7332005a1eb306b2d58b881c726de"
+        },
+        {
+          "case_index": 180,
+          "reason": "Invalid binary string or length",
+          "input_sha256": "4bf2a6b154e12d33cb23ed9abbe6ea82c60446237c634eee247d0ed6d0683ce6",
+          "expected_sha256": "f08da48e07d77d590ad40c77c10420f2b2bb0cca87a2723579ba9b9380e1c03e"
+        },
+        {
+          "case_index": 237,
+          "reason": "Invalid binary string or length",
+          "input_sha256": "71e7cf459abc94c72199669002f120d028ada856c3f42e1b61fb7c99fc9a8aee",
+          "expected_sha256": "e68f0ce079fa12bb4cec109e65587d3bfabcf65c7cfc376fb25a6de039c5a977"
+        }
+      ]
+    }
+  ]
+}

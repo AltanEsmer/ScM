@@ -1,0 +1,14 @@
+{
+  "row_index": 778,
+  "source_case_index": 94,
+  "input": "1\n001\n001\n6\n1 1\n1 2\n1 3\n3 1\n3 2\n3 3",
+  "expected": "110011",
+  "independently_confirmed_correct_output": "110010\n",
+  "source_task_sha256": "5b0a77ab1cf261e3a979062900368fee9ce073d4be44d1e392dc606fde207bf6",
+  "input_sha256": "be89fac8d63b1d977663fb53a6c2164dddec210caf86e2efdd263b06619939be",
+  "expected_sha256": "1875e9921945f51e3f39d59b252c6b741597333583ecab95adcdbc431f2c79a6",
+  "reason": "Valid-domain game state independently checked by reviewer and supplied reference. At (3,3), both available child positions are winning for the next player, so current player loses. Supplied last bit 1 is false. Whole task excluded, no expected rewrite or outcome-based case pruning.",
+  "next_ranked_hard_row": 799,
+  "target_model_trials_used": false,
+  "independent_reviewer_proof": "Terminal bit 0 means the mover wins; bit 1 means the mover loses. With horizontal=vertical=001, current-player-win interior rows are 110, 101, 010. W(x,y) is true iff a move immediately wins or hands the opponent an interior losing cell. Both successors (2,3) and (3,2) of (3,3) are winning, making (3,3) losing. The six queries therefore yield 110010. Reviewer used only the external statement and reasoning, without executing supplied references."
+}
