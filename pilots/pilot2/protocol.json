@@ -1,0 +1,37 @@
+{
+  "id": "pilot2-2026-10-22",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "collection_backend": "collaboration.spawn_agent",
+  "fork_turns": "none",
+  "tasks": [
+    "select_jobs",
+    "match_path",
+    "best_itinerary"
+  ],
+  "variants": [
+    "A",
+    "B",
+    "C"
+  ],
+  "repetitions": 5,
+  "seed": 20261023,
+  "order": "Dispatch frozen randomized order; at most three concurrent trials; completion may differ",
+  "primary_outcome": "Fraction of evaluated generations passing every predefined case, per task and variant. Candidate errors count as failures; missing, infrastructure failures and not-evaluated records excluded and reported.",
+  "secondary_outcome": "Number of predefined cases passed when runner returns observations. A runtime error aborts the batch; passed-case count is then zero, not a measurement of each preceding case.",
+  "wording_intervention": "Whole-specification paraphrases in prose, numbered rules, and formal contract; same behavior/bounds/interface, changed wording/order/layout jointly. No algorithm suggestions or asymmetric examples.",
+  "docker_image": "python@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2",
+  "grader": "../../grading.py",
+  "extraction": "Bare Python or one complete python/py fenced block with no prose; other text parsed unchanged.",
+  "timeout_seconds": 4,
+  "no_retries": true,
+  "metadata_limits": [
+    "Requested model/effort recorded; backend weights/revision/temperature/seed not observable",
+    "Fresh no-history sessions retain system instructions and shared tool/filesystem access",
+    "Full candidate tool-event traces unavailable; cannot prove candidates avoided tools or files",
+    "Answers copied unchanged from returned first final messages; coordinator observation timestamps only",
+    "Candidate interpreter observations are not secure against malicious tampering"
+  ],
+  "analysis": "Descriptive counts and within-task pass-rate differences. No significance tests/equivalence claims. Pilot1 vs pilot2 contrast is not causal because tasks and wording intervention changed together.",
+  "freeze_policy": "Freeze task cases, references, prompts, schedule, protocol, runner and grader before first generation. Keep pilot1 hashes and data intact. Document any later correction separately; no silent outcome-driven changes."
+}

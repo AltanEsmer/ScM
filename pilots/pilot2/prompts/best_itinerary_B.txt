@@ -1,0 +1,10 @@
+Define best_itinerary(data) according to these ordered rules.
+1. data is a dictionary with flights, start, goal, and time. flights contains at most 12 entries [origin, destination, departure, arrival]. All cities, including start and goal, are ASCII strings. All times are integers and each flight has departure < arrival.
+2. If start == goal, return [].
+3. Otherwise, a route's first flight has origin == start and departure >= time. Each next flight has origin equal to the previous destination and departure >= the previous arrival. The last destination is goal. Waiting and repeated cities are allowed.
+4. Prefer the route with earliest final arrival.
+5. Among routes with that final arrival, prefer fewer flights.
+6. Among remaining ties, prefer the lexicographically smallest sequence of original zero-based flight indices in travel order.
+7. Return the preferred route's index sequence as a list, or None if no route exists. Do not modify the input.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

@@ -1,0 +1,9 @@
+Define select_jobs(data) according to these ordered rules.
+1. data is a list of at most 12 jobs. Each job is [start, end, profit], all integers, with start < end.
+2. A selection is any subset of the original jobs, including the empty subset. Its half-open intervals [start, end) must not overlap. Touching endpoints are allowed.
+3. Prefer the selection with greatest total profit.
+4. Among equal-profit selections, prefer the one containing fewer jobs.
+5. Among remaining ties, prefer the lexicographically smallest ascending list of original zero-based job indices.
+6. Return that ascending list of indices. Do not modify the input.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

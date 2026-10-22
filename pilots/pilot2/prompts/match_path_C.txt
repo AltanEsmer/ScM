@@ -1,0 +1,7 @@
+Function contract: match_path(data).
+Input domain: data is a dictionary containing pattern and text; both are ASCII strings with length <= 30.
+Interpretation: / is the path separator. A backslash followed by a character denotes that literal character, and a final backslash denotes a literal backslash. An unescaped ? denotes exactly one non-slash character. A single unescaped * denotes any sequence of non-slash characters, including the empty sequence. A maximal consecutive unescaped run of two or more stars denotes any sequence of characters, including slash and the empty sequence. All remaining characters, including brackets and dot, denote themselves literally.
+Output: a bool, True if and only if the entire text is matched by the entire pattern under this interpretation.
+Postcondition: the input is unchanged.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

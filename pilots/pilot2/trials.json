@@ -1,0 +1,317 @@
+[
+  {
+    "trial_id": "best_itinerary_B_05",
+    "task": "best_itinerary",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/best_itinerary_B.txt"
+  },
+  {
+    "trial_id": "match_path_C_03",
+    "task": "match_path",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/match_path_C.txt"
+  },
+  {
+    "trial_id": "best_itinerary_A_03",
+    "task": "best_itinerary",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/best_itinerary_A.txt"
+  },
+  {
+    "trial_id": "best_itinerary_A_04",
+    "task": "best_itinerary",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/best_itinerary_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_A_03",
+    "task": "select_jobs",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/select_jobs_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_B_03",
+    "task": "select_jobs",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/select_jobs_B.txt"
+  },
+  {
+    "trial_id": "select_jobs_C_01",
+    "task": "select_jobs",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/select_jobs_C.txt"
+  },
+  {
+    "trial_id": "match_path_B_02",
+    "task": "match_path",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/match_path_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_B_03",
+    "task": "best_itinerary",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/best_itinerary_B.txt"
+  },
+  {
+    "trial_id": "select_jobs_B_01",
+    "task": "select_jobs",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/select_jobs_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_A_02",
+    "task": "best_itinerary",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/best_itinerary_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_B_02",
+    "task": "select_jobs",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/select_jobs_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_C_04",
+    "task": "best_itinerary",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/best_itinerary_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_A_04",
+    "task": "select_jobs",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/select_jobs_A.txt"
+  },
+  {
+    "trial_id": "match_path_A_03",
+    "task": "match_path",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/match_path_A.txt"
+  },
+  {
+    "trial_id": "match_path_B_05",
+    "task": "match_path",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/match_path_B.txt"
+  },
+  {
+    "trial_id": "match_path_C_05",
+    "task": "match_path",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/match_path_C.txt"
+  },
+  {
+    "trial_id": "match_path_B_01",
+    "task": "match_path",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/match_path_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_C_01",
+    "task": "best_itinerary",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/best_itinerary_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_C_05",
+    "task": "select_jobs",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/select_jobs_C.txt"
+  },
+  {
+    "trial_id": "best_itinerary_C_02",
+    "task": "best_itinerary",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/best_itinerary_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_A_01",
+    "task": "select_jobs",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/select_jobs_A.txt"
+  },
+  {
+    "trial_id": "best_itinerary_C_03",
+    "task": "best_itinerary",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/best_itinerary_C.txt"
+  },
+  {
+    "trial_id": "best_itinerary_B_01",
+    "task": "best_itinerary",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/best_itinerary_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_B_04",
+    "task": "best_itinerary",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/best_itinerary_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_A_01",
+    "task": "best_itinerary",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/best_itinerary_A.txt"
+  },
+  {
+    "trial_id": "match_path_C_04",
+    "task": "match_path",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/match_path_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_B_04",
+    "task": "select_jobs",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/select_jobs_B.txt"
+  },
+  {
+    "trial_id": "match_path_A_04",
+    "task": "match_path",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/match_path_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_B_05",
+    "task": "select_jobs",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/select_jobs_B.txt"
+  },
+  {
+    "trial_id": "select_jobs_C_02",
+    "task": "select_jobs",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/select_jobs_C.txt"
+  },
+  {
+    "trial_id": "match_path_A_05",
+    "task": "match_path",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/match_path_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_C_04",
+    "task": "select_jobs",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/select_jobs_C.txt"
+  },
+  {
+    "trial_id": "match_path_C_01",
+    "task": "match_path",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/match_path_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_A_05",
+    "task": "select_jobs",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/select_jobs_A.txt"
+  },
+  {
+    "trial_id": "match_path_C_02",
+    "task": "match_path",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/match_path_C.txt"
+  },
+  {
+    "trial_id": "select_jobs_A_02",
+    "task": "select_jobs",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/select_jobs_A.txt"
+  },
+  {
+    "trial_id": "match_path_B_04",
+    "task": "match_path",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/match_path_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_B_02",
+    "task": "best_itinerary",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/best_itinerary_B.txt"
+  },
+  {
+    "trial_id": "match_path_A_01",
+    "task": "match_path",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/match_path_A.txt"
+  },
+  {
+    "trial_id": "match_path_B_03",
+    "task": "match_path",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/match_path_B.txt"
+  },
+  {
+    "trial_id": "best_itinerary_A_05",
+    "task": "best_itinerary",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/best_itinerary_A.txt"
+  },
+  {
+    "trial_id": "select_jobs_C_03",
+    "task": "select_jobs",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/select_jobs_C.txt"
+  },
+  {
+    "trial_id": "best_itinerary_C_05",
+    "task": "best_itinerary",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/best_itinerary_C.txt"
+  },
+  {
+    "trial_id": "match_path_A_02",
+    "task": "match_path",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/match_path_A.txt"
+  }
+]

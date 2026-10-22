@@ -1,0 +1,11 @@
+Define match_path(data) according to these ordered rules.
+1. data is a dictionary with pattern and text, both ASCII strings of at most 30 characters.
+2. Match the entire pattern against the entire text. Slash / is the path separator.
+3. A backslash escapes the following character, which is matched literally. A backslash at the end of the pattern is itself literal.
+4. An unescaped ? matches exactly one character other than slash.
+5. An unescaped * matches zero or more characters other than slash.
+6. Each maximal consecutive unescaped run of at least two stars matches zero or more characters of any kind, including slash.
+7. Every other character is literal, including brackets and dot.
+8. Return a bool for whether the full match succeeds. Do not modify the input.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

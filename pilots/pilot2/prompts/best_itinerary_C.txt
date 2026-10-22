@@ -1,0 +1,9 @@
+Function contract: best_itinerary(data).
+Input domain: data is a dictionary with flights, start, goal, and time. flights = [flight_0, ..., flight_(n-1)], 0 <= n <= 12; flight_i = [origin_i, destination_i, departure_i, arrival_i]. All cities, including start and goal, are ASCII strings. time and all departures and arrivals are integers; departure_i < arrival_i.
+Special result: if start == goal, output [].
+Feasible nonempty route: a sequence I of original zero-based flight indices in travel order with origin_(I[0]) = start, departure_(I[0]) >= time, destination_(I[-1]) = goal, and, for every consecutive pair i,j, origin_j = destination_i and departure_j >= arrival_i. Waiting and repeated cities are permitted.
+Ordering: prefer smaller final arrival; then fewer flights; then lexicographically smaller I.
+Output when start != goal: the preferred feasible index sequence as a list, or None when no route exists.
+Postcondition: the input is unchanged.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

@@ -1,0 +1,8 @@
+Function contract: select_jobs(data).
+Input domain: data = [job_0, ..., job_(n-1)], 0 <= n <= 12. job_i = [start_i, end_i, profit_i], with integer components and start_i < end_i.
+Feasible result: an ascending list I of distinct original zero-based indices, possibly empty, such that the half-open intervals [start_i, end_i) for i in I are pairwise nonoverlapping. Endpoints may touch.
+Ordering: compare feasible selections first by total profit sum(profit_i for i in I), larger preferred; then by len(I), smaller preferred; then by lexicographic order of I, smaller preferred.
+Output: the preferred feasible list I.
+Postcondition: the input is unchanged.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.
