@@ -6,6 +6,10 @@ Two Scientific Methods pilots investigate whether equivalent prompt variations c
 
 **Pilot 2:** harder tasks with interacting rules and full-specification paraphrases; all 45 responses passed 1,620 case checks. Read [pilot 2 findings](pilots/pilot2/findings.md) and its [reproduction instructions](pilots/pilot2/README.md). Pilot 1 data and frozen inputs are preserved.
 
+**Calibration:** six more complex tasks, one baseline prompt each, three responses per task. All 18 passed; no task met the frozen mixed-outcome selection rule. Read [calibration findings](calibration/round1/findings.md).
+
+**Pilot 3:** [conditional design](pilots/pilot3/design.md), not collected. A new development calibration must establish eligible families before launch. See [how strong the findings are for the report](docs/evidence-strength.md), including suggested report wording.
+
 The requested model is `gpt-6.1-sol` with medium reasoning. This is a pilot collected through native Codex subagents. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
 
 ## Reproduce pilot 1

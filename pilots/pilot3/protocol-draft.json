@@ -1,0 +1,276 @@
+{
+  "schema": 1,
+  "id": "pilot3-conditional-design-draft-2026-10-22",
+  "status": "conditional_not_ready_not_collected",
+  "ready_for_collection": false,
+  "design_only": true,
+  "calibration2_collected": false,
+  "pilot3_collected": false,
+  "current_evidence": {
+    "source": "../../calibration/round1/results/report.md",
+    "generation_passes": 18,
+    "generation_trials": 18,
+    "case_checks_passed": 582,
+    "case_checks_total": 582,
+    "ceiling_families": 6,
+    "eligible_families": 0,
+    "interpretation": "The frozen round-1 gate supplies no eligible family. Do not reinterpret these ceilings or launch pilot 3 from this result."
+  },
+  "requested_settings": {
+    "model": "gpt-6.1-sol",
+    "reasoning": "medium",
+    "fork_turns": "none",
+    "collection_backend": "collaboration.spawn_agent",
+    "unavailable": [
+      "provider-confirmed serving revision",
+      "temperature",
+      "backend sampling seed",
+      "full tool-event traces"
+    ],
+    "limits": "Fresh no-history sessions retain system instructions, tools, and shared filesystem access. Requested settings are not backend attestation."
+  },
+  "development_calibration": {
+    "status": "draft_not_frozen_not_collected",
+    "new_contracts": 6,
+    "baseline_prompts_per_contract": 1,
+    "repetitions": 5,
+    "planned_generations": 30,
+    "prompt_comparison": false,
+    "freeze_before_generation": [
+      "complete development contracts",
+      "all 12 distinct held-out contracts",
+      "public input bounds and schemas",
+      "baseline prompts",
+      "case sets",
+      "references",
+      "independent oracle checks",
+      "execution policy",
+      "selection rule",
+      "seeded dispatch schedule",
+      "manifests"
+    ],
+    "eligibility": {
+      "minimum_full_suite_passes": 1,
+      "maximum_full_suite_passes": 4,
+      "minimum_semantic_fail_statuses": 1,
+      "semantic_failure_definition": "Observed grader fail status from a valid frozen case, including wrong value, wrong type, or input mutation. Verify the mismatch against the frozen contract and independently checked expected value.",
+      "errors_count_as_unsuccessful_but_cannot_alone_qualify": [
+        "syntax_error",
+        "invalid_output",
+        "runtime_error",
+        "timeout",
+        "output_limit"
+      ],
+      "excluded_from_functional_denominator": [
+        "missing",
+        "interrupted",
+        "infrastructure_error",
+        "not_evaluated"
+      ],
+      "incomplete_family_eligible": false,
+      "invalid_contract_or_oracle": "Invalidate the family for this round, document the defect, and make no same-round repair or recollection.",
+      "complete_valid_scored_outcomes_required": 5
+    },
+    "selection": "Include both pre-frozen held-out contracts from every eligible family. No ranking by favorable outcomes and no post-outcome task tuning.",
+    "minimum_eligible_families": 3,
+    "maximum_eligible_families": 6,
+    "insufficient_eligibility": "Do not launch pilot 3. Publish unsuccessful calibration. A later round requires a separate justified bounded design and freeze; no automatic outcome hunt.",
+    "no_model_response_retries": true
+  },
+  "registry": [
+    {
+      "family_id": "F1",
+      "family": "versioned_network_optimization",
+      "development_function": "versioned_circulation_costs",
+      "held_out_functions": [
+        "inventory_transfer_cost",
+        "single_failure_costs"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    },
+    {
+      "family_id": "F2",
+      "family": "resource_bounded_grammar_derivations",
+      "development_function": "budget_parse_cost",
+      "held_out_functions": [
+        "bounded_derivation_count",
+        "budget_grammar_edit_cost"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    },
+    {
+      "family_id": "F3",
+      "family": "lexical_closures_with_persistent_store",
+      "development_function": "store_program_result",
+      "held_out_functions": [
+        "forked_store_observations",
+        "bounded_store_equivalence"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    },
+    {
+      "family_id": "F4",
+      "family": "capacity_and_time_transport_scheduling",
+      "development_function": "pickup_delivery_cost",
+      "held_out_functions": [
+        "fleet_assignment_cost",
+        "reward_delivery_selection"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    },
+    {
+      "family_id": "F5",
+      "family": "automaton_accepted_resource_walks",
+      "development_function": "automaton_route_cost",
+      "held_out_functions": [
+        "accepted_walk_counts",
+        "budget_route_strategy"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    },
+    {
+      "family_id": "F6",
+      "family": "structured_edits_with_finite_state_constraints",
+      "development_function": "constrained_edit_cost",
+      "held_out_functions": [
+        "optimal_edit_script_count",
+        "joint_text_repair_cost"
+      ],
+      "contract_status": "behavioral_blueprints_only_full_specification_and_oracle_review_required"
+    }
+  ],
+  "held_out_policy": {
+    "contracts_per_eligible_family": 2,
+    "minimum_task_contracts": 6,
+    "maximum_task_contracts": 12,
+    "requires_distinct_function_contracts": true,
+    "new_input_seeds_alone_qualify": false,
+    "paired_contracts_finalized_before_development_outcomes": true,
+    "difficulty": "Unmeasured on the held-out contracts. Development-family variation does not guarantee held-out variation.",
+    "selection_scope": "Selected convenience sample conditional on exploratory development calibration."
+  },
+  "intervention": {
+    "factor": "presentation_format",
+    "variants": {
+      "A": "prose paragraphs",
+      "B": "unordered list",
+      "C": "XML contract containing clause elements"
+    },
+    "canonical_ordered_clauses_identical": true,
+    "machine_check": "Decode each format and compare ordered clause strings exactly, including wording and punctuation.",
+    "byte_identical_common_sections": [
+      "opening instruction",
+      "source-code output instructions"
+    ],
+    "example_policy": "Use identical examples in identical positions or omit them from all variants.",
+    "forbidden_asymmetries": [
+      "semantic clauses",
+      "clause order",
+      "algorithm hints",
+      "examples",
+      "competence claims"
+    ],
+    "lexical_paraphrase": "Deferred to a separate experiment.",
+    "limits": "Markup, delimiters, layout, and resulting token-count differences belong to this intervention."
+  },
+  "collection": {
+    "status": "not_frozen_not_collected",
+    "variants": [
+      "A",
+      "B",
+      "C"
+    ],
+    "repetitions_per_task_variant": 10,
+    "minimum_generations": 180,
+    "maximum_generations": 360,
+    "blocks_per_task": 10,
+    "responses_per_block": {
+      "A": 1,
+      "B": 1,
+      "C": 1
+    },
+    "schedule": "Seed chosen and frozen before collection. Randomize task order and balance variant positions within task to differ by at most one.",
+    "maximum_concurrent_sessions": 3,
+    "follow_frozen_dispatch_order": true,
+    "first_final_only": true,
+    "preserve_raw_answer_bytes": true,
+    "no_feedback_repairs_or_model_retries": true,
+    "optional_stopping": false,
+    "analyze_after_planned_collection": true,
+    "provenance": [
+      "exact prompt hash",
+      "raw response hash",
+      "requested model and reasoning",
+      "session identity",
+      "schedule position",
+      "coordinator dispatch and completion observations"
+    ],
+    "unresolved_missing_or_infrastructure": "Report available counts and mark primary planned contrasts incomplete. Do not drop tasks silently.",
+    "infrastructure_regrading": "Documented regrading of the same immutable answer under unchanged frozen semantics is permitted. No new model generation or candidate feedback."
+  },
+  "scoring": {
+    "primary_outcome": "Binary generation success requires all predefined cases, exact types, and input preservation.",
+    "unsuccessful_generation_statuses": [
+      "fail",
+      "syntax_error",
+      "invalid_output",
+      "runtime_error",
+      "timeout",
+      "output_limit"
+    ],
+    "separate_statuses": [
+      "missing",
+      "interrupted",
+      "infrastructure_error",
+      "not_evaluated"
+    ],
+    "case_counts": "Diagnostic only; execution errors abort the batch and zero passed is not an observation of every prior case.",
+    "grader_policy_draft": {
+      "grader": "../../grading.py",
+      "wall_timeout_seconds": 4,
+      "cpus": 0.5,
+      "memory_mib": 128,
+      "combined_output_limit_bytes": 65536,
+      "target_complete_typed_observation_bytes": 49152
+    },
+    "policy_readiness": "Actual Docker headroom must be measured. Any change to execution limits is justified and frozen before collection and applied equally to variants.",
+    "docker_image": "python@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2",
+    "security_limit": "Expected values stay outside candidate containers, but shared-interpreter observations are not secure against deliberate candidate tampering."
+  },
+  "analysis": {
+    "task_variant_rate": "p[t,v] = successes / 10, requiring ten valid scored outcomes.",
+    "primary_contrasts": [
+      "mean_t(p[t,B] - p[t,A])",
+      "mean_t(p[t,C] - p[t,A])"
+    ],
+    "report_units": "Signed percentage-point differences with per-task rates and denominators.",
+    "weighting": "Each retained task contract has equal weight; two contracts per family also give equal family weight.",
+    "secondary": [
+      "C minus B",
+      "failure categories",
+      "per-task case counts"
+    ],
+    "generation_unit": "Individual fresh response.",
+    "task_unit": "Held-out function contract; contracts within families may be dependent.",
+    "case_checks_are_independent_trials": false,
+    "optional_exploratory_bootstrap": {
+      "unit": "Resample entire task contracts, retaining every variant and response.",
+      "sensitivity": "Also resample pairs of contracts by family.",
+      "seed_and_method": "Preregister before collection.",
+      "warning": "Only 6-12 task contracts and 3-6 families. Intervals are unstable, descriptive, and do not establish population effects."
+    },
+    "significance_testing": "No confirmatory significance claim is prespecified in this draft.",
+    "power": "Ten repetitions is a feasibility choice, not an achieved power calculation or guaranteed detectable effect.",
+    "all_pass_result": "Report zero observed contrasts and ceilings. Do not infer format equivalence or replace tasks."
+  },
+  "remaining_readiness_conditions": [
+    "Finalize every public contract and independent oracle strategy.",
+    "Independently verify valid cases, goldens, semantic mutants, output transport, and real Docker headroom.",
+    "Obtain human review independent of reference authorship before confirmatory interpretation.",
+    "Freeze all six development and twelve held-out contracts before development collection.",
+    "Complete a separate 30-generation development calibration without outcome-driven repairs.",
+    "Qualify at least three families under the fixed gate.",
+    "Freeze the mechanically retained pilot-3 subset, exact prompts, dispatch schedule, and analysis before any pilot-3 response."
+  ],
+  "claim_limits": "Better candidate access isolation, authenticated collection evidence, and independent human oracle review are needed for stronger confirmatory claims. This draft launches nothing."
+}
