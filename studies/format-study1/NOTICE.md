@@ -1,5 +1,7 @@
 # TACO external task provenance
 
+The source files and preparation records named below are in [`source/`](source/).
+
 Task statements, supplied input/output tests, supplied solution programs, source names, URLs, and difficulty labels are external material from BAAI/TACO. These tasks were authored independently of this experiment. The acquisition script, selection policy, format adapters, and experiment protocol are AI-assisted experiment materials. Supplied solutions are external references, not newly authored oracle implementations.
 
 Dataset source: https://huggingface.co/datasets/BAAI/TACO/tree/d593ed0a2becbbc952230bb89be09189bf1056dc
@@ -10,7 +12,7 @@ Official project: https://github.com/FlagOpen/TACO
 
 Project metadata and special-judge exclusion list are pinned to `245eba3beb2d23a07082307de303de2589e4321a`. `README.github.md`, `README.upstream.md`, `LICENSE`, and `output_spj.jsonl` are retained. The exclusion list is indexed by the official test-set row index. Selection also independently excludes HackerRank material, function tasks, interactive wording, flexible-output wording, and floating point output literals.
 
-The original Parquet is read as data using PyArrow. No remote dataset loading code, pickle deserialization, reference execution, or model trial is used during acquisition. `select.py` only parses solution ASTs. Reference correctness and output compatibility remain provisional until every selected supplied solution passes every supplied test inside the experiment container. No reference program has been executed on the host.
+The original Parquet is read as data using PyArrow. No remote dataset loading code, pickle deserialization, reference execution, or model trial is used during acquisition. `select.py` only parses solution ASTs. Reference correctness and output compatibility remain provisional until every selected supplied solution passes every curated evaluation case inside the experiment container. No reference program has been executed on the host.
 
 Selection is fixed before target-model outcomes. Seed `scm-format-study1-external-v1` ranks eligible external IDs with SHA-256. Six externally labeled MEDIUM tasks and six HARD tasks are selected. Static eligibility is not a guarantee of Python runtime compatibility or unique-output semantics. No replacements may be chosen based on target-model performance.
 

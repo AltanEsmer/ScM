@@ -1,0 +1,69 @@
+{
+  "status": "STOPPED_INCOMPLETE",
+  "reason": "Supplied fixture defects and missing image dependencies found before freezing; no model calls",
+  "completed_task_summaries": [
+    {
+      "task_id": "taco-test-0002",
+      "passed": 245,
+      "total": 245
+    },
+    {
+      "task_id": "taco-test-0044",
+      "passed": 204,
+      "total": 206
+    },
+    {
+      "task_id": "taco-test-0060",
+      "passed": 112,
+      "total": 113
+    },
+    {
+      "task_id": "taco-test-0078",
+      "passed": 224,
+      "total": 239
+    },
+    {
+      "task_id": "taco-test-0339",
+      "passed": 242,
+      "total": 242
+    },
+    {
+      "task_id": "taco-test-0341",
+      "passed": 1,
+      "total": 178
+    },
+    {
+      "task_id": "taco-test-0355",
+      "passed": 210,
+      "total": 223
+    }
+  ],
+  "task_sha256": {
+    "taco-test-0002": "49d17d3132aaeaef631f1df1f59c9ffc215ed60bf0d7b1c45375dd0b63e8a016",
+    "taco-test-0044": "7b6e6b33884410938e7227224b5f3c9eb137ab81c689f6201b8eca6f197ee9d8",
+    "taco-test-0060": "cb8d7221609aa5c5378f38cc609bc5b3fb49df6e548f2030216d88b027f09dd4",
+    "taco-test-0078": "4af15376ca430dbc86cc0bcc0b8eaca497355d1a621c4e834478cd28b76bedd7",
+    "taco-test-0339": "2a5d9c62539bf761b88166201a7b7963fe4a8de12271fad79e20b7e1b1c8585b",
+    "taco-test-0341": "e55f0903e1d6c32900fd3d64fb02e18c65ee8c7ca8bd10fc1b4a1bbf83835488",
+    "taco-test-0355": "8738b197aa870e70e32c5175bc32e327c063c0440a1221b66b6d5bd41efd923f",
+    "taco-test-0402": "9e44490641c0dd401817a2e3514d8100cd0a8d3ff309819cb3ab585b6be9090b",
+    "taco-test-0466": "eee36e31a0a19fac6e3a6265804cf5f3e4f8c4a10329aa8b5fa0dffa20a142b2",
+    "taco-test-0760": "6a61c0cfbd4f81a0e01fedbb3882d3affe9e1c403a1857b12a958df57caa8aa8",
+    "taco-test-0778": "5b0a77ab1cf261e3a979062900368fee9ce073d4be44d1e392dc606fde207bf6",
+    "taco-test-0917": "8baceebfbdfcf4b20da5cc78f553550c9f2bd1b08d9a3e618a4206754cf84675"
+  },
+  "reference_sha256": {
+    "taco-test-0002": "67feb9b1afa2b7f52cdf5f34a0d894a5f47b6eca4fb69abbc50527ef09235017",
+    "taco-test-0044": "96b8da40837f190c60e1e5e3fbed22cb9a6869ae6375db0ea571a76fcffbf0cb",
+    "taco-test-0060": "32cf1a50b40fffd317fae345468b3c1d94919315681e4b5c1cda7759deaa1321",
+    "taco-test-0078": "6a49552bd27813f85d008040924a51b16d2a91104fbd6fc01fb9d136af673f4f",
+    "taco-test-0339": "70689904c7ec94f345bb6d226b0daa8f5e1dce0367823f904fa3aec5a653b19b",
+    "taco-test-0341": "224b815fced27d3a949e8e1aa077a8ed21ca708b97aca9631af66db62f13bbe5",
+    "taco-test-0355": "b70c10fb8ca2df21f840df45e5c56bf85f7c48a6b59ec19cdb3a9851c5052999",
+    "taco-test-0402": "64c9f0c1444b6753e8f369c945e45a571709d4748617802fd0e3e402adcfefc1",
+    "taco-test-0466": "cc7cd0a51fef7c790c8bdc5b55166149d9dfe8e9f0ea390e254a315b4efa3446",
+    "taco-test-0760": "fec1213edacd922b43d04e434ba554d2a237f007e2b79c4468bcc477be0aff5d",
+    "taco-test-0778": "0c493a4dae11de54363bf2fe3aa740fd6e6deeaadc28573c3d63e5191dc97df1",
+    "taco-test-0917": "14c3842473db8dfa8a796227fc5373f578d90e1a13d41bb3686afe54a0c53ef1"
+  }
+}

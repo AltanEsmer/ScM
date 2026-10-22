@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-10-22T20:15:49.768193+00:00",
+  "server_errors": null,
+  "containers_running": 2,
+  "failed_case_container_present": false,
+  "status": "DOCKER_RESPONSIVE",
+  "observation": "docker info and filtered docker ps returned successfully after the preserved cleanup timeout."
+}

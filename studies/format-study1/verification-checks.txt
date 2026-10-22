@@ -1,0 +1,67 @@
+$ python3 -m unittest discover -s studies/format-study1/tests -v
+test_actual_missing_image_is_infrastructure_failure (test_grader_docker.DockerGraderTests.test_actual_missing_image_is_infrastructure_failure) ... ok
+test_candidate_diagnostics_cannot_spoof_infrastructure (test_grader_docker.DockerGraderTests.test_candidate_diagnostics_cannot_spoof_infrastructure) ... ok
+test_cleanup_exception_preserves_an_unavailable_record (test_grader_docker.DockerGraderTests.test_cleanup_exception_preserves_an_unavailable_record) ... ok
+test_rejects_statement_domain_or_output_shape_violations (test_hard_validation.HardValidationTests.test_rejects_statement_domain_or_output_shape_violations) ... ok
+test_statement_conforming_cases (test_hard_validation.HardValidationTests.test_statement_conforming_cases) ... ok
+test_all_selected_questions_round_trip (test_preparation.PreparationTests.test_all_selected_questions_round_trip) ... ok
+test_analysis_pairs_tasks_and_marks_unavailable (test_preparation.PreparationTests.test_analysis_pairs_tasks_and_marks_unavailable) ... ok
+test_curated_cases_preserve_all_valid_original_values (test_preparation.PreparationTests.test_curated_cases_preserve_all_valid_original_values) ... ok
+test_format_changes_only_instruction_structure (test_preparation.PreparationTests.test_format_changes_only_instruction_structure) ... ok
+test_freeze_requires_validated_sources (test_preparation.PreparationTests.test_freeze_requires_validated_sources) ... ok
+test_grader_compares_on_host (test_preparation.PreparationTests.test_grader_compares_on_host) ... ok
+test_outputs_reject_debug_and_wrong_tokens (test_preparation.PreparationTests.test_outputs_reject_debug_and_wrong_tokens) ... ok
+test_partial_analysis_retains_observed_success_and_failure (test_preparation.PreparationTests.test_partial_analysis_retains_observed_success_and_failure) ... ok
+test_schedule_is_balanced_and_deterministic (test_preparation.PreparationTests.test_schedule_is_balanced_and_deterministic) ... ok
+test_verify_detects_tampering_and_extra_artifact (test_preparation.PreparationTests.test_verify_detects_tampering_and_extra_artifact) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.973s
+
+OK
+
+exit_code=0
+
+$ python3 -m unittest discover -s studies/format-study1/source -p test_validators.py -v
+test_all_contracts_accept_valid_minimal_examples (test_validators.StatementValidatorsTest.test_all_contracts_accept_valid_minimal_examples) ... ok
+test_all_contracts_reject_specific_domain_violations (test_validators.StatementValidatorsTest.test_all_contracts_reject_specific_domain_violations) ... ok
+test_all_contracts_reject_undeclared_input_and_output (test_validators.StatementValidatorsTest.test_all_contracts_reject_undeclared_input_and_output) ... ok
+test_curated_cases_are_exact_original_subset (test_validators.StatementValidatorsTest.test_curated_cases_are_exact_original_subset) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.013s
+
+OK
+
+exit_code=0
+
+$ python3 -m unittest discover -s studies/format-study1/isolation -p test_*.py -v
+test_changed_frozen_prompt_blocks_before_dispatch (test_run.FrozenDispatchTests.test_changed_frozen_prompt_blocks_before_dispatch) ... ok
+test_failed_attempt_blocks_retry_and_following_trial (test_run.FrozenDispatchTests.test_failed_attempt_blocks_retry_and_following_trial) ... ok
+test_schedule_reserves_before_dispatch_and_prevents_retry (test_run.FrozenDispatchTests.test_schedule_reserves_before_dispatch_and_prevents_retry) ... ok
+test_stale_image_cannot_be_attested_with_current_source (test_run.ImageBindingTests.test_stale_image_cannot_be_attested_with_current_source) ... ok
+test_unvalidated_live_commands_exit_without_reading_credentials (test_run.LaunchGateTests.test_unvalidated_live_commands_exit_without_reading_credentials) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.120s
+
+OK
+
+exit_code=0
+
+$ node studies/format-study1/isolation/test_live_transport.mjs
+mock HTTPS/auth tests passed: 7; network requests: 0
+
+exit_code=0
+
+$ python3 -m unittest discover -s studies/format-study1/tests -p test_recovery.py -v
+{"task_id": "task-a", "passed": 1, "total": 1, "attempt": 2}
+test_recovery_preserves_attempt_and_revalidates_full_task_sequentially (test_recovery.ReferenceRecoveryTests.test_recovery_preserves_attempt_and_revalidates_full_task_sequentially) ... ok
+test_recovery_refuses_semantic_failure (test_recovery.ReferenceRecoveryTests.test_recovery_refuses_semantic_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.012s
+
+OK
+
+exit_code=0

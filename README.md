@@ -14,7 +14,9 @@ Two Scientific Methods pilots investigate whether equivalent prompt variations c
 
 **Pilot 3:** [not run](pilots/pilot3/README.md), because the frozen gate required at least three qualifying families. See [how strong the findings are for the report](docs/evidence-strength.md), including suggested report wording.
 
-The requested model is `gpt-6.1-sol` with medium reasoning. This is a pilot collected through native Codex subagents. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
+**Independent format study:** preparation for 12 externally authored competition tasks, three equivalent formats, and two repetitions per format (72 planned responses). The study preserves 2,339 source cases and uses a separately indexed, statement-validated subset of 2,178. Read the [preparation status](studies/format-study1/README.md) and [frozen protocol](studies/format-study1/PROTOCOL.md). No study responses have been collected.
+
+The requested model is `gpt-6.1-sol` with medium reasoning. The earlier pilots were collected through native Codex subagents; the new independent format study uses a separately isolated collection workflow. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
 
 ## Reproduce pilot 1
 
