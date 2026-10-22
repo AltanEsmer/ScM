@@ -1,3 +1,4 @@
+import csv
 import json
 import shutil
 import subprocess
@@ -5,6 +6,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -71,6 +73,50 @@ class PilotTests(unittest.TestCase):
             (directory / 'answer.txt').write_text('altered')
             with self.assertRaises(ValueError):
                 scm.verify(root)
+
+    def test_infrastructure_failure_replaces_stale_results(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            for directory in ('experiment', 'prompts'):
+                shutil.copytree(ROOT / directory, root / directory)
+            for name in ('scm.py', 'grading.py'):
+                shutil.copy(ROOT / name, root / name)
+            scm.freeze(root)
+            for trial in scm.trials(root)[:3]:
+                directory = root / 'records' / trial.trial_id
+                directory.mkdir(parents=True)
+                (directory / 'answer.txt').write_text('def candidate(): pass')
+                evidence = dict(trial_id=trial.trial_id, session_id=trial.trial_id,
+                                requested_model='gpt-6.1-sol', requested_reasoning='medium', fork_turns='none',
+                                dispatch_observed_utc='2026-10-22T10:00:00Z', completion_observed_utc='2026-10-22T10:01:00Z',
+                                backend='collaboration.spawn_agent', observed_model=None, tool_trace_available=False,
+                                prompt_sha256=scm.sha(root / trial.prompt_file), response_sha256=scm.sha(directory / 'answer.txt'),
+                                capture_method='coordinator copied returned final message')
+                (directory / 'evidence.json').write_text(json.dumps(evidence))
+            (root / 'results').mkdir()
+            (root / 'results/trials.csv').write_text('stale all-pass CSV')
+            (root / 'results/report.md').write_text('stale all-pass report')
+            with patch.object(scm, '__file__', str(root / 'scm.py')), patch.object(sys, 'argv', ['scm.py', 'grade']), \
+                    patch.object(grading, 'evaluate', side_effect=[('pass', 7, ''), ('infrastructure_error', 0, 'daemon unavailable')]) as evaluate:
+                self.assertEqual(scm.main(), 1)
+                self.assertEqual(evaluate.call_count, 2)
+            with (root / 'results/trials.csv').open() as file:
+                rows = list(csv.DictReader(file))
+            self.assertEqual(len(rows), 45)
+            self.assertEqual([r['status'] for r in rows[:3]], ['pass', 'infrastructure_error', 'not_evaluated'])
+            self.assertTrue(all(r['status'] == 'missing' for r in rows[3:]))
+            report = (root / 'results/report.md').read_text()
+            self.assertNotIn('stale all-pass', report)
+            self.assertIn('Infrastructure', report)
+            self.assertIn('Not evaluated', report)
+            self.assertIn('excluded', report)
+            rows[0]['task'] = 'wrong-task'
+            with (root / 'results/trials.csv').open('w', newline='') as file:
+                writer = csv.DictWriter(file, fieldnames=list(rows[0]))
+                writer.writeheader()
+                writer.writerows(rows)
+            with self.assertRaises(ValueError):
+                scm.report(root)
 
     def test_duplicate_schedule_rejected(self):
         with tempfile.TemporaryDirectory() as d:
