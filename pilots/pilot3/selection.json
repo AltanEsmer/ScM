@@ -1,0 +1,125 @@
+{
+  "families": [
+    {
+      "family": "F1",
+      "development_task": "versioned_circulation_costs",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    },
+    {
+      "family": "F2",
+      "development_task": "budget_parse_cost",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    },
+    {
+      "family": "F3",
+      "development_task": "store_program_result",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    },
+    {
+      "family": "F4",
+      "development_task": "pickup_delivery_cost",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    },
+    {
+      "family": "F5",
+      "development_task": "automaton_route_cost",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    },
+    {
+      "family": "F6",
+      "development_task": "constrained_edit_cost",
+      "counts": {
+        "fail": 0,
+        "infrastructure_error": 0,
+        "interrupted": 0,
+        "invalid_output": 0,
+        "missing": 0,
+        "not_evaluated": 0,
+        "output_limit": 0,
+        "pass": 5,
+        "runtime_error": 0,
+        "syntax_error": 0,
+        "timeout": 0
+      },
+      "evaluated": 5,
+      "status": "ceiling"
+    }
+  ],
+  "eligible_families": [],
+  "gate_satisfied": false,
+  "status": "not_run_insufficient_eligible_families",
+  "source_csv_sha256": "21d25751ba86f9184244e0875f68398d81521d6f5bd0cb4a3b7eacf9f57aeb7d",
+  "source_calibration_manifest_sha256": "d19c98a990d85c22c6cfb5038ae63adf53a98a3d55d3f9306630addbed57029c",
+  "validation_sha256": null,
+  "eligible_task_ids": []
+}

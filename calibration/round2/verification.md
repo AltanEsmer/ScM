@@ -21,3 +21,11 @@ The new suite has 29 tests covering independent goldens, domain membership, muta
 The manifest freezes all development and held-out materials before generation. A separate pilot manifest is required only if the frozen gate succeeds. First final messages are copied unchanged; response hashes and coordinator-observed timestamps support auditability without supplying provider-authenticated transcripts. Requested model/effort are recorded as requested, with unavailable backend model revision and tool traces explicitly represented.
 
 Shared filesystem and tool access remain available to native candidate sessions. Reference inaccessibility, no tool use, session independence, and absence of backend drift cannot be established. The finite-case grader is intended for ordinary generated code and is not hardened against deliberate interpreter tampering. These limits apply to every resulting claim.
+
+## Completed collection and grading
+
+Test contracts were committed in `a8c1e5f`, implementation in `b928b1f`, and the precollection freeze in `7141a528af11c0933810911d79994bbd9c070eaf`. The freeze timestamp is 2026-10-22 18:40:37 UTC. The frozen materials were pushed to the verified public remote during collection.
+
+All 30 first responses were collected from unique fresh native sessions at the requested model and effort, in schedule order, with a maximum of two candidate sessions concurrently. There were no retries, follow-ups, repairs, interim grading or missing responses. Raw records were committed in `79fda31` before the first grading run.
+
+That run evaluated all 30 responses successfully: 30 all-case passes, 595/595 case checks, no functional failures, execution errors, exclusions or infrastructure failures. Every family scored 5/5. Selection records zero eligible families and `not_run_insufficient_eligible_families`. No qualifying-failure review was necessary, and no pilot-3 candidate generation occurred. Frozen inputs still match the manifest.
