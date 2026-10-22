@@ -1,0 +1,15 @@
+{
+  "trial_id": "min_resource_route_B0_03",
+  "session_id": "/root/calibration_runner/code_002",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:53:25.588072+00:00",
+  "completion_observed_utc": "2026-10-22T16:54:00.064382+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "8c1954d0d51382305052a19eea07e493aadd81fa5b0572520fd66551f6c65f23",
+  "response_sha256": "8d1c2f6d3de8dff1321cb00c8aa61c924c21e4ddea4e35a41364afe04a383cbf",
+  "capture_method": "coordinator copied returned final message"
+}

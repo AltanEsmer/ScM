@@ -1,0 +1,89 @@
+def min_cost_circulation(arg):
+    import heapq
+
+    n = arg["n"]
+    source, sink = n, n + 1
+    size = n + 2
+    graph = [[] for _ in range(size)]
+    balance = [0] * n
+    total_cost = 0
+
+    def add_edge(u, v, capacity, cost):
+        forward = [v, len(graph[v]), capacity, cost]
+        reverse = [u, len(graph[u]), 0, -cost]
+        graph[u].append(forward)
+        graph[v].append(reverse)
+
+    for u, v, lower, upper, cost in arg["arcs"]:
+        flow = upper if cost < 0 else lower
+        total_cost += flow * cost
+
+        if u == v:
+            continue
+
+        balance[u] -= flow
+        balance[v] += flow
+        capacity = upper - lower
+        if capacity:
+            if cost < 0:
+                add_edge(v, u, capacity, -cost)
+            else:
+                add_edge(u, v, capacity, cost)
+
+    required = 0
+    for vertex, amount in enumerate(balance):
+        if amount > 0:
+            add_edge(source, vertex, amount, 0)
+            required += amount
+        elif amount < 0:
+            add_edge(vertex, sink, -amount, 0)
+
+    potential = [0] * size
+    infinity = float("inf")
+
+    while required:
+        distance = [infinity] * size
+        previous = [None] * size
+        distance[source] = 0
+        queue = [(0, source)]
+
+        while queue:
+            dist, u = heapq.heappop(queue)
+            if dist != distance[u]:
+                continue
+
+            for index, edge in enumerate(graph[u]):
+                v, _, capacity, cost = edge
+                if capacity:
+                    candidate = dist + cost + potential[u] - potential[v]
+                    if candidate < distance[v]:
+                        distance[v] = candidate
+                        previous[v] = (u, index)
+                        heapq.heappush(queue, (candidate, v))
+
+        if distance[sink] == infinity:
+            return None
+
+        for vertex in range(size):
+            if distance[vertex] != infinity:
+                potential[vertex] += distance[vertex]
+
+        amount = required
+        vertex = sink
+        while vertex != source:
+            u, index = previous[vertex]
+            amount = min(amount, graph[u][index][2])
+            vertex = u
+
+        vertex = sink
+        while vertex != source:
+            u, index = previous[vertex]
+            edge = graph[u][index]
+            edge[2] -= amount
+            graph[vertex][edge[1]][2] += amount
+            total_cost += amount * edge[3]
+            vertex = u
+
+        required -= amount
+
+    return total_cost

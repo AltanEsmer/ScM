@@ -1,0 +1,91 @@
+def min_parse_cost(data):
+    import heapq
+
+    k = data["nonterminals"]
+    text = data["text"]
+    n = len(text)
+    terminal_ids = {"a": k, "b": k + 1}
+    symbol_count = k + 2
+    unary_rules = []
+    binary_rules = []
+    empty_rules = []
+
+    for lhs, rhs, cost in data["rules"]:
+        symbols = [
+            value if kind == "N" else terminal_ids[value]
+            for kind, value in rhs
+        ]
+        if not symbols:
+            empty_rules.append((lhs, cost))
+        elif len(symbols) == 1:
+            unary_rules.append((lhs, symbols[0], cost))
+        elif len(symbols) == 2:
+            binary_rules.append((lhs, symbols[0], symbols[1], cost))
+        else:
+            intermediate = symbol_count
+            symbol_count += 1
+            binary_rules.append((lhs, symbols[0], intermediate, cost))
+            binary_rules.append((intermediate, symbols[1], symbols[2], 0))
+
+    unary_parents = [[] for _ in range(symbol_count)]
+    left_parents = [[] for _ in range(symbol_count)]
+    right_parents = [[] for _ in range(symbol_count)]
+
+    for lhs, child, cost in unary_rules:
+        unary_parents[child].append((lhs, cost))
+    for lhs, left, right, cost in binary_rules:
+        left_parents[left].append((lhs, right, cost))
+        right_parents[right].append((lhs, left, cost))
+
+    inf = float("inf")
+    distances = [
+        [[inf] * (n + 1) for _ in range(n + 1)]
+        for _ in range(symbol_count)
+    ]
+    settled = [
+        [[False] * (n + 1) for _ in range(n + 1)]
+        for _ in range(symbol_count)
+    ]
+    by_start = [[[] for _ in range(n + 1)] for _ in range(symbol_count)]
+    by_end = [[[] for _ in range(n + 1)] for _ in range(symbol_count)]
+    heap = []
+
+    def relax(symbol, start, end, cost):
+        if cost < distances[symbol][start][end]:
+            distances[symbol][start][end] = cost
+            heapq.heappush(heap, (cost, symbol, start, end))
+
+    for position, char in enumerate(text):
+        relax(terminal_ids[char], position, position + 1, 0)
+
+    for lhs, cost in empty_rules:
+        for position in range(n + 1):
+            relax(lhs, position, position, cost)
+
+    target = data["start"]
+    while heap:
+        cost, symbol, start, end = heapq.heappop(heap)
+        if settled[symbol][start][end]:
+            continue
+        if cost != distances[symbol][start][end]:
+            continue
+
+        settled[symbol][start][end] = True
+        if symbol == target and start == 0 and end == n:
+            return cost
+
+        by_start[symbol][start].append((end, cost))
+        by_end[symbol][end].append((start, cost))
+
+        for lhs, rule_cost in unary_parents[symbol]:
+            relax(lhs, start, end, cost + rule_cost)
+
+        for lhs, right, rule_cost in left_parents[symbol]:
+            for right_end, right_cost in by_start[right][end]:
+                relax(lhs, start, right_end, cost + right_cost + rule_cost)
+
+        for lhs, left, rule_cost in right_parents[symbol]:
+            for left_start, left_cost in by_end[left][start]:
+                relax(lhs, left_start, end, left_cost + cost + rule_cost)
+
+    return None

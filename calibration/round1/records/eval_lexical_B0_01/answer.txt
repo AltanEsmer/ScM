@@ -1,0 +1,39 @@
+def eval_lexical(data):
+    def evaluate(node, env):
+        kind = node[0]
+
+        if kind == "int":
+            return node[1]
+        if kind == "var":
+            return env[node[1]]
+        if kind in ("add", "sub", "mul"):
+            left = evaluate(node[1], env)
+            right = evaluate(node[2], env)
+            if kind == "add":
+                return left + right
+            if kind == "sub":
+                return left - right
+            return left * right
+        if kind == "if0":
+            condition = evaluate(node[1], env)
+            return evaluate(node[2] if condition == 0 else node[3], env)
+        if kind == "let":
+            value = evaluate(node[2], env)
+            extended = env.copy()
+            extended[node[1]] = value
+            return evaluate(node[3], extended)
+        if kind == "fn":
+            return (node[1], node[2], env)
+        if kind == "call":
+            function = evaluate(node[1], env)
+            argument = evaluate(node[2], env)
+            param, body, captured = function
+            extended = captured.copy()
+            extended[param] = argument
+            return evaluate(body, extended)
+        if kind == "letrec":
+            extended = env.copy()
+            extended[node[1]] = (node[2], node[3], extended)
+            return evaluate(node[4], extended)
+
+    return evaluate(data, {})

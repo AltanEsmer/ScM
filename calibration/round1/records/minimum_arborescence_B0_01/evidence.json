@@ -1,0 +1,15 @@
+{
+  "trial_id": "minimum_arborescence_B0_01",
+  "session_id": "/root/calibration_runner/code_005",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:54:14.943660+00:00",
+  "completion_observed_utc": "2026-10-22T16:54:46.638664+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "962a3531b067581a139616e93d8014f77cd7b68a110ff087079ce67cb60e2376",
+  "response_sha256": "d32aa3b23396d857b88986a9b38cbbfdf6f273c441e51feb58895eca2740b41b",
+  "capture_method": "coordinator copied returned final message"
+}

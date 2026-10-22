@@ -1,0 +1,15 @@
+{
+  "trial_id": "min_parse_cost_B0_01",
+  "session_id": "/root/calibration_runner/code_016",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:57:32.539351+00:00",
+  "completion_observed_utc": "2026-10-22T16:58:31.825062+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "5dab677281f232f3a848b0d8757a4fedec6f8a47e76d36584740a6955fbc852f",
+  "response_sha256": "d774a3265389839012e7e06c1ba528945b468e0926086ac9258c93f71279383f",
+  "capture_method": "coordinator copied returned final message"
+}

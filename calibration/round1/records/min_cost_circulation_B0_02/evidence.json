@@ -1,0 +1,15 @@
+{
+  "trial_id": "min_cost_circulation_B0_02",
+  "session_id": "/root/calibration_runner/code_007",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:54:46.669777+00:00",
+  "completion_observed_utc": "2026-10-22T16:55:30.855944+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "3b485e7101f442a5f759794162dfa97597391d12cf15be893c7e08028ddab5dc",
+  "response_sha256": "cbc54943a5be9d13778e8a2fc7e0ef3027a0acbca11d8e666b616ce230fc760a",
+  "capture_method": "coordinator copied returned final message"
+}

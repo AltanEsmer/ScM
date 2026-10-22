@@ -1,0 +1,97 @@
+def min_parse_cost(data):
+    from heapq import heappop, heappush
+
+    k = data["nonterminals"]
+    text = data["text"]
+    n = len(text)
+
+    terminal_ids = {"a": k, "b": k + 1}
+    symbol_count = k + 2
+    unary_rules = []
+    binary_rules = []
+    empty_rules = []
+
+    for lhs, rhs, cost in data["rules"]:
+        symbols = [
+            index if kind == "N" else terminal_ids[index]
+            for kind, index in rhs
+        ]
+        if not symbols:
+            empty_rules.append((lhs, cost))
+        elif len(symbols) == 1:
+            unary_rules.append((symbols[0], lhs, cost))
+        elif len(symbols) == 2:
+            binary_rules.append((lhs, symbols[0], symbols[1], cost))
+        else:
+            auxiliary = symbol_count
+            symbol_count += 1
+            binary_rules.append((lhs, symbols[0], auxiliary, cost))
+            binary_rules.append((auxiliary, symbols[1], symbols[2], 0))
+
+    unary_parents = [[] for _ in range(symbol_count)]
+    left_parents = [[] for _ in range(symbol_count)]
+    right_parents = [[] for _ in range(symbol_count)]
+
+    for child, parent, cost in unary_rules:
+        unary_parents[child].append((parent, cost))
+    for parent, left, right, cost in binary_rules:
+        left_parents[left].append((parent, right, cost))
+        right_parents[right].append((parent, left, cost))
+
+    by_start = [
+        [[] for _ in range(n + 1)] for _ in range(symbol_count)
+    ]
+    by_end = [
+        [[] for _ in range(n + 1)] for _ in range(symbol_count)
+    ]
+    distances = {}
+    finalized = set()
+    heap = []
+
+    def relax(symbol, begin, end, cost):
+        key = (symbol, begin, end)
+        previous = distances.get(key)
+        if previous is None or cost < previous:
+            distances[key] = cost
+            heappush(heap, (cost, symbol, begin, end))
+
+    for position in range(n + 1):
+        for symbol, cost in empty_rules:
+            relax(symbol, position, position, cost)
+
+    for position, character in enumerate(text):
+        relax(terminal_ids[character], position, position + 1, 0)
+
+    target = (data["start"], 0, n)
+
+    while heap:
+        cost, symbol, begin, end = heappop(heap)
+        key = (symbol, begin, end)
+        if key in finalized or distances[key] != cost:
+            continue
+        finalized.add(key)
+
+        if key == target:
+            return cost
+
+        by_start[symbol][begin].append((end, cost))
+        by_end[symbol][end].append((begin, cost))
+
+        for parent, rule_cost in unary_parents[symbol]:
+            relax(parent, begin, end, cost + rule_cost)
+
+        for parent, right, rule_cost in left_parents[symbol]:
+            for right_end, right_cost in by_start[right][end]:
+                relax(
+                    parent, begin, right_end,
+                    cost + right_cost + rule_cost
+                )
+
+        for parent, left, rule_cost in right_parents[symbol]:
+            for left_begin, left_cost in by_end[left][begin]:
+                relax(
+                    parent, left_begin, end,
+                    left_cost + cost + rule_cost
+                )
+
+    return None

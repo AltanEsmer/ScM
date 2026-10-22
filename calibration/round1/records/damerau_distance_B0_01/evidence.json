@@ -1,0 +1,15 @@
+{
+  "trial_id": "damerau_distance_B0_01",
+  "session_id": "/root/calibration_runner/code_014",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:56:56.379836+00:00",
+  "completion_observed_utc": "2026-10-22T16:57:32.509806+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "cdc060b67ebdfc93811121dac4153849948517d698ffb2079184fc021aad6554",
+  "response_sha256": "c16b864760d3caf679094111397ca902601361e24f8f559d97d77f083df1cbcd",
+  "capture_method": "coordinator copied returned final message"
+}

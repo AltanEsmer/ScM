@@ -1,0 +1,41 @@
+def min_resource_route(data):
+    n = data["n"]
+    budget = data["budget"]
+    start = data["start"]
+    goal = data["goal"]
+    required = data["required"]
+
+    mask_count = 1 << len(required)
+    full_mask = mask_count - 1
+    vertex_bits = [0] * n
+    for i, vertex in enumerate(required):
+        vertex_bits[vertex] = 1 << i
+
+    outgoing = [[] for _ in range(n)]
+    for u, v, resource, cost in data["edges"]:
+        outgoing[u].append((v, resource, cost))
+
+    infinity = float("inf")
+    dp = [[infinity] * (n * mask_count) for _ in range(budget + 1)]
+    dp[0][start * mask_count + vertex_bits[start]] = 0
+    answer = infinity
+    goal_index = goal * mask_count + full_mask
+
+    for used in range(budget + 1):
+        current = dp[used]
+        answer = min(answer, current[goal_index])
+        for u in range(n):
+            base = u * mask_count
+            for mask in range(mask_count):
+                cost_so_far = current[base + mask]
+                if cost_so_far == infinity:
+                    continue
+                for v, resource, edge_cost in outgoing[u]:
+                    next_used = used + resource
+                    if next_used <= budget:
+                        index = v * mask_count + (mask | vertex_bits[v])
+                        candidate = cost_so_far + edge_cost
+                        if candidate < dp[next_used][index]:
+                            dp[next_used][index] = candidate
+
+    return None if answer == infinity else answer

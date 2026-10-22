@@ -1,0 +1,90 @@
+from heapq import heappop, heappush
+
+
+def min_cost_circulation(arg):
+    n = arg["n"]
+    source, sink = n, n + 1
+    size = n + 2
+    graph = [[] for _ in range(size)]
+    balance = [0] * n
+    total_cost = 0
+
+    def add_edge(u, v, capacity, cost):
+        forward = [v, len(graph[v]), capacity, cost]
+        backward = [u, len(graph[u]), 0, -cost]
+        graph[u].append(forward)
+        graph[v].append(backward)
+
+    for u, v, lower, upper, cost in arg["arcs"]:
+        flow = upper if cost < 0 else lower
+        total_cost += flow * cost
+        if u == v:
+            continue
+
+        balance[u] -= flow
+        balance[v] += flow
+        capacity = upper - lower
+        if capacity:
+            if cost < 0:
+                add_edge(v, u, capacity, -cost)
+            else:
+                add_edge(u, v, capacity, cost)
+
+    remaining = 0
+    for vertex, excess in enumerate(balance):
+        if excess > 0:
+            add_edge(source, vertex, excess, 0)
+            remaining += excess
+        elif excess < 0:
+            add_edge(vertex, sink, -excess, 0)
+
+    potential = [0] * size
+    infinity = float("inf")
+
+    while remaining:
+        distance = [infinity] * size
+        parent = [None] * size
+        distance[source] = 0
+        heap = [(0, source)]
+
+        while heap:
+            current_distance, u = heappop(heap)
+            if current_distance != distance[u]:
+                continue
+
+            for index, edge in enumerate(graph[u]):
+                v, _, capacity, cost = edge
+                if capacity <= 0:
+                    continue
+                candidate = current_distance + cost + potential[u] - potential[v]
+                if candidate < distance[v]:
+                    distance[v] = candidate
+                    parent[v] = (u, index)
+                    heappush(heap, (candidate, v))
+
+        if distance[sink] == infinity:
+            return None
+
+        for vertex in range(size):
+            if distance[vertex] != infinity:
+                potential[vertex] += distance[vertex]
+
+        amount = remaining
+        vertex = sink
+        while vertex != source:
+            u, index = parent[vertex]
+            amount = min(amount, graph[u][index][2])
+            vertex = u
+
+        vertex = sink
+        while vertex != source:
+            u, index = parent[vertex]
+            edge = graph[u][index]
+            total_cost += amount * edge[3]
+            edge[2] -= amount
+            graph[vertex][edge[1]][2] += amount
+            vertex = u
+
+        remaining -= amount
+
+    return total_cost

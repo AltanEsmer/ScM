@@ -1,0 +1,58 @@
+def minimum_arborescence(arg):
+    n = arg["n"]
+    root = arg["root"]
+    edges = [(u, v, cost) for u, v, cost in arg["edges"]]
+    total = 0
+
+    while True:
+        incoming = [None] * n
+        predecessor = [-1] * n
+
+        for u, v, cost in edges:
+            if u != v and v != root:
+                if incoming[v] is None or cost < incoming[v]:
+                    incoming[v] = cost
+                    predecessor[v] = u
+
+        incoming[root] = 0
+        if any(cost is None for cost in incoming):
+            return None
+        total += sum(incoming)
+
+        component = [-1] * n
+        visited = [-1] * n
+        cycle_count = 0
+
+        for start in range(n):
+            v = start
+            while v != root and component[v] == -1 and visited[v] != start:
+                visited[v] = start
+                v = predecessor[v]
+
+            if v != root and component[v] == -1:
+                component[v] = cycle_count
+                u = predecessor[v]
+                while u != v:
+                    component[u] = cycle_count
+                    u = predecessor[u]
+                cycle_count += 1
+
+        if cycle_count == 0:
+            return total
+
+        component_count = cycle_count
+        for v in range(n):
+            if component[v] == -1:
+                component[v] = component_count
+                component_count += 1
+
+        contracted_edges = []
+        for u, v, cost in edges:
+            new_u = component[u]
+            new_v = component[v]
+            if new_u != new_v:
+                contracted_edges.append((new_u, new_v, cost - incoming[v]))
+
+        root = component[root]
+        n = component_count
+        edges = contracted_edges

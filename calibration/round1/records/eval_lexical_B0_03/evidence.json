@@ -1,0 +1,15 @@
+{
+  "trial_id": "eval_lexical_B0_03",
+  "session_id": "/root/calibration_runner/code_008",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:55:02.679478+00:00",
+  "completion_observed_utc": "2026-10-22T16:55:41.811299+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "85ffc45edcc8b89d822442a4050d132b1bb4e2ef6adb009b584cd7c147b7168e",
+  "response_sha256": "8007d63ab717f0d9f07a8fe57dbc894058d69066a1d63137eeebe6c27ddf6dee",
+  "capture_method": "coordinator copied returned final message"
+}

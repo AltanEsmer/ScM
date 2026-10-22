@@ -1,0 +1,93 @@
+def min_cost_circulation(arg):
+    from heapq import heappop, heappush
+
+    n = arg["n"]
+    source, sink = n, n + 1
+    size = n + 2
+    adjacency = [[] for _ in range(size)]
+    targets = []
+    capacities = []
+    costs = []
+
+    def add_edge(u, v, capacity, cost):
+        index = len(targets)
+        adjacency[u].append(index)
+        targets.append(v)
+        capacities.append(capacity)
+        costs.append(cost)
+        adjacency[v].append(index + 1)
+        targets.append(u)
+        capacities.append(0)
+        costs.append(-cost)
+        return index
+
+    balance = [0] * n
+    total_cost = 0
+
+    for u, v, lower, upper, cost in arg["arcs"]:
+        flow = upper if cost < 0 else lower
+        total_cost += flow * cost
+        balance[u] -= flow
+        balance[v] += flow
+        index = add_edge(u, v, upper - flow, cost)
+        capacities[index ^ 1] = flow - lower
+
+    required = 0
+    for vertex, excess in enumerate(balance):
+        if excess > 0:
+            add_edge(source, vertex, excess, 0)
+            required += excess
+        elif excess < 0:
+            add_edge(vertex, sink, -excess, 0)
+
+    potential = [0] * size
+    infinity = float("inf")
+
+    while required:
+        distance = [infinity] * size
+        previous = [-1] * size
+        distance[source] = 0
+        queue = [(0, source)]
+
+        while queue:
+            current_distance, u = heappop(queue)
+            if current_distance != distance[u]:
+                continue
+            for index in adjacency[u]:
+                if capacities[index] == 0:
+                    continue
+                v = targets[index]
+                candidate = (
+                    current_distance + costs[index]
+                    + potential[u] - potential[v]
+                )
+                if candidate < distance[v]:
+                    distance[v] = candidate
+                    previous[v] = index
+                    heappush(queue, (candidate, v))
+
+        if distance[sink] == infinity:
+            return None
+
+        for vertex in range(size):
+            if distance[vertex] != infinity:
+                potential[vertex] += distance[vertex]
+
+        amount = required
+        vertex = sink
+        while vertex != source:
+            index = previous[vertex]
+            amount = min(amount, capacities[index])
+            vertex = targets[index ^ 1]
+
+        vertex = sink
+        while vertex != source:
+            index = previous[vertex]
+            capacities[index] -= amount
+            capacities[index ^ 1] += amount
+            total_cost += amount * costs[index]
+            vertex = targets[index ^ 1]
+
+        required -= amount
+
+    return total_cost
