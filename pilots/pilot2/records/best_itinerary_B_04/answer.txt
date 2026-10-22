@@ -1,0 +1,27 @@
+def best_itinerary(data):
+    start = data["start"]
+    goal = data["goal"]
+    if start == goal:
+        return []
+
+    flights = data["flights"]
+    best = None
+    stack = [(start, data["time"], ())]
+
+    while stack:
+        city, current_time, path = stack.pop()
+
+        if city == goal:
+            candidate = (current_time, len(path), path)
+            if best is None or candidate < best:
+                best = candidate
+            continue
+
+        if best is not None and current_time >= best[0]:
+            continue
+
+        for index, (origin, destination, departure, arrival) in enumerate(flights):
+            if origin == city and departure >= current_time:
+                stack.append((destination, arrival, path + (index,)))
+
+    return None if best is None else list(best[2])

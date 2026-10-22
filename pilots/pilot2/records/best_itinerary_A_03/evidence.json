@@ -1,0 +1,15 @@
+{
+  "trial_id": "best_itinerary_A_03",
+  "session_id": "/root/python_044/p2_003",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:15:49.721598+00:00",
+  "completion_observed_utc": "2026-10-22T16:16:20.811063+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "fd19b21a7f71eb3456a5564c254e06e9be9e704eb3a14ccfbc77c23c34c50386",
+  "response_sha256": "75ef24fe460e42c368b58fce2117af9acafe7a5a3a0dfad696fb0b373cb4cd47",
+  "capture_method": "coordinator copied returned final message"
+}

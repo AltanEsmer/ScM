@@ -1,0 +1,30 @@
+def select_jobs(data):
+    n = len(data)
+    conflicts = [0] * n
+    for i in range(n):
+        for j in range(i):
+            if data[i][0] < data[j][1] and data[j][0] < data[i][1]:
+                conflicts[i] |= 1 << j
+                conflicts[j] |= 1 << i
+
+    best = ()
+    best_key = (0, 0, ())
+
+    def search(start, mask, indices, profit):
+        nonlocal best, best_key
+        key = (-profit, len(indices), indices)
+        if key < best_key:
+            best_key = key
+            best = indices
+
+        for i in range(start, n):
+            if not conflicts[i] & mask:
+                search(
+                    i + 1,
+                    mask | (1 << i),
+                    indices + (i,),
+                    profit + data[i][2],
+                )
+
+    search(0, 0, (), 0)
+    return list(best)

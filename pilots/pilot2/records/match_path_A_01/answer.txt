@@ -1,0 +1,31 @@
+import re
+
+
+def match_path(data):
+    pattern = data["pattern"]
+    parts = []
+    i = 0
+
+    while i < len(pattern):
+        char = pattern[i]
+        if char == "\\":
+            i += 1
+            if i < len(pattern):
+                parts.append(re.escape(pattern[i]))
+                i += 1
+            else:
+                parts.append(re.escape("\\"))
+        elif char == "*":
+            end = i + 1
+            while end < len(pattern) and pattern[end] == "*":
+                end += 1
+            parts.append(r"[\s\S]*" if end - i >= 2 else r"[^/]*")
+            i = end
+        elif char == "?":
+            parts.append(r"[^/]")
+            i += 1
+        else:
+            parts.append(re.escape(char))
+            i += 1
+
+    return re.fullmatch("".join(parts), data["text"]) is not None

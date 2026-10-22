@@ -1,0 +1,29 @@
+def select_jobs(data):
+    best = []
+    best_profit = 0
+    chosen = []
+
+    def search(index, profit):
+        nonlocal best, best_profit
+        if index == len(data):
+            if (
+                profit > best_profit
+                or (
+                    profit == best_profit
+                    and (len(chosen), chosen) < (len(best), best)
+                )
+            ):
+                best = chosen.copy()
+                best_profit = profit
+            return
+
+        search(index + 1, profit)
+
+        start, end, value = data[index]
+        if all(end <= data[j][0] or data[j][1] <= start for j in chosen):
+            chosen.append(index)
+            search(index + 1, profit + value)
+            chosen.pop()
+
+    search(0, 0)
+    return best

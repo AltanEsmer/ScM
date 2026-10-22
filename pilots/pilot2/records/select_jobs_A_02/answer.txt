@@ -1,0 +1,32 @@
+def select_jobs(data):
+    n = len(data)
+    conflicts = [0] * n
+    for i in range(n):
+        for j in range(i):
+            if data[i][0] < data[j][1] and data[j][0] < data[i][1]:
+                conflicts[i] |= 1 << j
+                conflicts[j] |= 1 << i
+
+    size = 1 << n
+    valid = [False] * size
+    profits = [0] * size
+    valid[0] = True
+    best_key = (0, 0, ())
+    best_indices = ()
+
+    for mask in range(1, size):
+        bit = mask & -mask
+        i = bit.bit_length() - 1
+        rest = mask ^ bit
+        if not valid[rest] or conflicts[i] & rest:
+            continue
+
+        valid[mask] = True
+        profits[mask] = profits[rest] + data[i][2]
+        indices = tuple(j for j in range(n) if mask & (1 << j))
+        key = (-profits[mask], len(indices), indices)
+        if key < best_key:
+            best_key = key
+            best_indices = indices
+
+    return list(best_indices)

@@ -1,0 +1,15 @@
+{
+  "trial_id": "match_path_C_05",
+  "session_id": "/root/python_044/p2_017",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T16:19:12.574190+00:00",
+  "completion_observed_utc": "2026-10-22T16:19:45.707274+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "8059e81388953036004ea8706e6372b3f52ae94b8e4ab19b646530abedf56390",
+  "response_sha256": "f46abe0b2bcd92dab45d7354bc6bf84cf6caa229c82a42dc4e82004f9f08ef57",
+  "capture_method": "coordinator copied returned final message"
+}

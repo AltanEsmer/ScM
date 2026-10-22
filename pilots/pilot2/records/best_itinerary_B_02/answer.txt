@@ -1,0 +1,32 @@
+def best_itinerary(data):
+    start = data["start"]
+    goal = data["goal"]
+    if start == goal:
+        return []
+
+    flights = data["flights"]
+    outgoing = {}
+    for index, (origin, destination, departure, arrival) in enumerate(flights):
+        outgoing.setdefault(origin, []).append(
+            (index, destination, departure, arrival)
+        )
+
+    best = None
+
+    def search(city, ready, path):
+        nonlocal best
+        if city == goal:
+            candidate = (ready, len(path), path)
+            if best is None or candidate < best:
+                best = candidate
+            return
+
+        if best is not None and ready >= best[0]:
+            return
+
+        for index, destination, departure, arrival in outgoing.get(city, ()):
+            if departure >= ready:
+                search(destination, arrival, path + (index,))
+
+    search(start, data["time"], ())
+    return None if best is None else list(best[2])

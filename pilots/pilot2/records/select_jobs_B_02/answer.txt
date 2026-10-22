@@ -1,0 +1,34 @@
+def select_jobs(data):
+    best_indices = []
+    best_key = (0, 0, ())
+    n = len(data)
+
+    for mask in range(1, 1 << n):
+        indices = []
+        profit = 0
+        valid = True
+
+        for i in range(n):
+            if not mask & (1 << i):
+                continue
+
+            start, end, value = data[i]
+            for j in indices:
+                other_start, other_end, _ = data[j]
+                if start < other_end and other_start < end:
+                    valid = False
+                    break
+
+            if not valid:
+                break
+
+            indices.append(i)
+            profit += value
+
+        if valid:
+            key = (-profit, len(indices), tuple(indices))
+            if key < best_key:
+                best_key = key
+                best_indices = indices
+
+    return best_indices

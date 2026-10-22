@@ -1,0 +1,28 @@
+def best_itinerary(data):
+    if data["start"] == data["goal"]:
+        return []
+
+    flights = data["flights"]
+    paths = [None] * len(flights)
+
+    for i in sorted(range(len(flights)), key=lambda i: flights[i][2]):
+        origin, destination, departure, arrival = flights[i]
+        best = (i,) if origin == data["start"] and departure >= data["time"] else None
+
+        for j, path in enumerate(paths):
+            if path is not None and flights[j][1] == origin and flights[j][3] <= departure:
+                candidate = path + (i,)
+                if best is None or (len(candidate), candidate) < (len(best), best):
+                    best = candidate
+
+        paths[i] = best
+
+    result = min(
+        (
+            (flights[i][3], len(path), path)
+            for i, path in enumerate(paths)
+            if path is not None and flights[i][1] == data["goal"]
+        ),
+        default=None,
+    )
+    return None if result is None else list(result[2])

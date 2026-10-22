@@ -1,0 +1,19 @@
+def select_jobs(data):
+    best_indices = []
+    best_key = (0, 0, [])
+
+    for mask in range(1, 1 << len(data)):
+        indices = [i for i in range(len(data)) if mask & (1 << i)]
+        ordered = sorted(indices, key=lambda i: data[i][0])
+
+        if any(data[a][1] > data[b][0]
+               for a, b in zip(ordered, ordered[1:])):
+            continue
+
+        profit = sum(data[i][2] for i in indices)
+        key = (-profit, len(indices), indices)
+        if key < best_key:
+            best_key = key
+            best_indices = indices
+
+    return best_indices

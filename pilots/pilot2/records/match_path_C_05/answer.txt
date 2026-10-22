@@ -1,0 +1,44 @@
+def match_path(data):
+    pattern = data["pattern"]
+    text = data["text"]
+    n = len(text)
+    dp = [True] + [False] * n
+    i = 0
+
+    while i < len(pattern):
+        char = pattern[i]
+        if char == "\\":
+            i += 1
+            literal = pattern[i] if i < len(pattern) else "\\"
+            i += 1
+            dp = [False] + [
+                dp[j - 1] and text[j - 1] == literal
+                for j in range(1, n + 1)
+            ]
+        elif char == "*":
+            end = i + 1
+            while end < len(pattern) and pattern[end] == "*":
+                end += 1
+            crosses_slashes = end - i >= 2
+            updated = dp.copy()
+            for j in range(1, n + 1):
+                updated[j] = updated[j] or (
+                    updated[j - 1]
+                    and (crosses_slashes or text[j - 1] != "/")
+                )
+            dp = updated
+            i = end
+        elif char == "?":
+            dp = [False] + [
+                dp[j - 1] and text[j - 1] != "/"
+                for j in range(1, n + 1)
+            ]
+            i += 1
+        else:
+            dp = [False] + [
+                dp[j - 1] and text[j - 1] == char
+                for j in range(1, n + 1)
+            ]
+            i += 1
+
+    return dp[n]

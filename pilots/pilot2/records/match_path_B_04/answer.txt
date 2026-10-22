@@ -1,0 +1,54 @@
+from functools import lru_cache
+
+
+def match_path(data):
+    pattern = data["pattern"]
+    text = data["text"]
+    tokens = []
+    i = 0
+
+    while i < len(pattern):
+        char = pattern[i]
+        if char == "\\":
+            if i + 1 < len(pattern):
+                tokens.append(("literal", pattern[i + 1]))
+                i += 2
+            else:
+                tokens.append(("literal", "\\"))
+                i += 1
+        elif char == "*":
+            end = i + 1
+            while end < len(pattern) and pattern[end] == "*":
+                end += 1
+            tokens.append(("globstar" if end - i >= 2 else "star", None))
+            i = end
+        elif char == "?":
+            tokens.append(("question", None))
+            i += 1
+        else:
+            tokens.append(("literal", char))
+            i += 1
+
+    @lru_cache(maxsize=None)
+    def matches(token_index, text_index):
+        if token_index == len(tokens):
+            return text_index == len(text)
+
+        kind, value = tokens[token_index]
+        if kind in ("star", "globstar"):
+            return matches(token_index + 1, text_index) or (
+                text_index < len(text)
+                and (kind == "globstar" or text[text_index] != "/")
+                and matches(token_index, text_index + 1)
+            )
+        if text_index == len(text):
+            return False
+        if kind == "question":
+            return text[text_index] != "/" and matches(
+                token_index + 1, text_index + 1
+            )
+        return text[text_index] == value and matches(
+            token_index + 1, text_index + 1
+        )
+
+    return matches(0, 0)

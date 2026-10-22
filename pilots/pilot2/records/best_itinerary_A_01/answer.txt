@@ -1,0 +1,33 @@
+def best_itinerary(data):
+    start = data["start"]
+    goal = data["goal"]
+    if start == goal:
+        return []
+
+    flights = data["flights"]
+    reachable = []
+    best = None
+
+    for index in sorted(range(len(flights)), key=lambda i: flights[i][2]):
+        origin, destination, departure, arrival = flights[index]
+        prefix = () if origin == start and departure >= data["time"] else None
+
+        for previous_destination, previous_arrival, previous_route in reachable:
+            if previous_destination == origin and previous_arrival <= departure:
+                if prefix is None or (len(previous_route), previous_route) < (
+                    len(prefix), prefix
+                ):
+                    prefix = previous_route
+
+        if prefix is None:
+            continue
+
+        route = prefix + (index,)
+        reachable.append((destination, arrival, route))
+
+        if destination == goal:
+            candidate = (arrival, len(route), route)
+            if best is None or candidate < best:
+                best = candidate
+
+    return None if best is None else list(best[2])
