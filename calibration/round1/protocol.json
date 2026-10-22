@@ -1,0 +1,37 @@
+{
+  "id": "calibration-round1-2026-10-22",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "collection_backend": "collaboration.spawn_agent",
+  "fork_turns": "none",
+  "tasks": [
+    "damerau_distance",
+    "min_cost_circulation",
+    "minimum_arborescence",
+    "min_parse_cost",
+    "min_resource_route",
+    "eval_lexical"
+  ],
+  "variants": [
+    "B0"
+  ],
+  "repetitions": 3,
+  "seed": 20261024,
+  "docker_image": "python@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2",
+  "timeout_seconds": 4,
+  "selection_rule": "Exactly three evaluated responses required. 1/3 or 2/3 all-case passes: mixed, eligible for priority family selection; 3/3: ceiling, exclude from primary selection; 0/3: floor, diagnose specification/oracle and failure before any future simplification. Missing/infrastructure/not-evaluated: incomplete, no classification. No model retries or outcome-driven edits. If no mixed family emerges, do not pretend calibration succeeded: document floors/ceilings and make third pilot conditional on a new separately frozen calibration.",
+  "primary_outcome": "All predefined cases pass for a generated function; candidate syntax/runtime/timeout/format errors count as failure. Infrastructure and missing records excluded from evaluated counts and reported.",
+  "secondary_outcome": "Cases passed when observable; execution errors abort batch, so passed=0 does not measure individual preceding cases.",
+  "purpose": "Exploratory task-difficulty calibration with one prompt per task. No estimate of prompt sensitivity. Selection applies to task families; new input values alone are not held-out programming tasks.",
+  "order": "Frozen randomized dispatch order, at most three in flight.",
+  "no_retries": true,
+  "freeze_policy": "Freeze all prompts, tasks, references, cases, generator, protocol, schedule, runner and grader before dispatch. Exclude rather than silently fix a task found invalid after outcomes; publish the defect and new round if needed.",
+  "evidence_limits": [
+    "Requested model/effort not provider-confirmed serving revision",
+    "No inherited conversation but system instructions/tools/shared filesystem remain",
+    "Full tool traces and sampling seed/temperature unavailable",
+    "First final copied unchanged; timestamps are coordinator observations",
+    "Finite-case ordinary-code grader, not adversarial interpreter security"
+  ],
+  "analysis": "Report each task separately. Three repeats only screen observed difficulty; classifications do not establish population accuracy. Do not pool calibration with prompt-variation pilots. Design a third pilot but do not collect it in this workstream."
+}

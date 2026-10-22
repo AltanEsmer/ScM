@@ -1,0 +1,128 @@
+[
+  {
+    "trial_id": "min_resource_route_B0_01",
+    "task": "min_resource_route",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/min_resource_route_B0.txt"
+  },
+  {
+    "trial_id": "min_resource_route_B0_03",
+    "task": "min_resource_route",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/min_resource_route_B0.txt"
+  },
+  {
+    "trial_id": "eval_lexical_B0_01",
+    "task": "eval_lexical",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/eval_lexical_B0.txt"
+  },
+  {
+    "trial_id": "eval_lexical_B0_02",
+    "task": "eval_lexical",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/eval_lexical_B0.txt"
+  },
+  {
+    "trial_id": "minimum_arborescence_B0_01",
+    "task": "minimum_arborescence",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/minimum_arborescence_B0.txt"
+  },
+  {
+    "trial_id": "minimum_arborescence_B0_02",
+    "task": "minimum_arborescence",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/minimum_arborescence_B0.txt"
+  },
+  {
+    "trial_id": "min_cost_circulation_B0_02",
+    "task": "min_cost_circulation",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/min_cost_circulation_B0.txt"
+  },
+  {
+    "trial_id": "eval_lexical_B0_03",
+    "task": "eval_lexical",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/eval_lexical_B0.txt"
+  },
+  {
+    "trial_id": "damerau_distance_B0_02",
+    "task": "damerau_distance",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/damerau_distance_B0.txt"
+  },
+  {
+    "trial_id": "min_parse_cost_B0_03",
+    "task": "min_parse_cost",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/min_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "min_resource_route_B0_02",
+    "task": "min_resource_route",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/min_resource_route_B0.txt"
+  },
+  {
+    "trial_id": "minimum_arborescence_B0_03",
+    "task": "minimum_arborescence",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/minimum_arborescence_B0.txt"
+  },
+  {
+    "trial_id": "min_cost_circulation_B0_01",
+    "task": "min_cost_circulation",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/min_cost_circulation_B0.txt"
+  },
+  {
+    "trial_id": "damerau_distance_B0_01",
+    "task": "damerau_distance",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/damerau_distance_B0.txt"
+  },
+  {
+    "trial_id": "min_parse_cost_B0_02",
+    "task": "min_parse_cost",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/min_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "min_parse_cost_B0_01",
+    "task": "min_parse_cost",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/min_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "damerau_distance_B0_03",
+    "task": "damerau_distance",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/damerau_distance_B0.txt"
+  },
+  {
+    "trial_id": "min_cost_circulation_B0_03",
+    "task": "min_cost_circulation",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/min_cost_circulation_B0.txt"
+  }
+]
