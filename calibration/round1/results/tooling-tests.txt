@@ -1,0 +1,88 @@
+root test suite
+test_errors_and_isolation (test_pilot.DockerTests.test_errors_and_isolation) ... ok
+test_exit_codes_remain_candidate_failures (test_pilot.DockerTests.test_exit_codes_remain_candidate_failures) ... ok
+test_forged_results_and_exit_codes (test_pilot.DockerTests.test_forged_results_and_exit_codes) ... ok
+test_mutants (test_pilot.DockerTests.test_mutants) ... ok
+test_named_builtin_subclass_rejected (test_pilot.DockerTests.test_named_builtin_subclass_rejected) ... ok
+test_references (test_pilot.DockerTests.test_references) ... ok
+test_unavailable_image_is_infrastructure_error (test_pilot.DockerTests.test_unavailable_image_is_infrastructure_error) ... ok
+test_duplicate_schedule_rejected (test_pilot.PilotTests.test_duplicate_schedule_rejected) ... ok
+test_exact_nested_types (test_pilot.PilotTests.test_exact_nested_types) ... ok
+test_freeze_and_record_integrity (test_pilot.PilotTests.test_freeze_and_record_integrity) ... ok
+test_infrastructure_failure_replaces_stale_results (test_pilot.PilotTests.test_infrastructure_failure_replaces_stale_results) ... Docker infrastructure failed: daemon unavailable
+ok
+test_stdout_cannot_claim_pass (test_pilot.PilotTests.test_stdout_cannot_claim_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 13.516s
+
+OK
+
+pilot2 test suite
+test_generated_artifact_is_current (test_cases.CaseTests.test_generated_artifact_is_current) ... ok
+test_literal_contracts (test_cases.CaseTests.test_literal_contracts) ... ok
+test_mutants_are_rejected (test_cases.CaseTests.test_mutants_are_rejected) ... ok
+test_prompt_inventory_and_common_output_instruction (test_cases.CaseTests.test_prompt_inventory_and_common_output_instruction) ... ok
+test_references_and_no_mutation (test_cases.CaseTests.test_references_and_no_mutation) ... ok
+test_semantic_mutants_are_rejected (test_cases.CaseTests.test_semantic_mutants_are_rejected) ... ok
+test_attach_must_match_recorded_session (test_runner.RunnerTests.test_attach_must_match_recorded_session) ... ok
+test_duplicate_sessions_are_rejected (test_runner.RunnerTests.test_duplicate_sessions_are_rejected) ... ok
+test_evidence_and_unknown_records_are_rejected (test_runner.RunnerTests.test_evidence_and_unknown_records_are_rejected) ... ok
+test_freeze_is_idempotent_but_cannot_follow_capture (test_runner.RunnerTests.test_freeze_is_idempotent_but_cannot_follow_capture) ... ok
+test_freeze_rejects_invalid_schedule_settings_and_missing_prompt (test_runner.RunnerTests.test_freeze_rejects_invalid_schedule_settings_and_missing_prompt) ... ok
+test_freeze_rejects_invalid_timeout_and_protocol_dimensions (test_runner.RunnerTests.test_freeze_rejects_invalid_timeout_and_protocol_dimensions) ... ok
+test_freeze_required_and_inputs_cannot_change (test_runner.RunnerTests.test_freeze_required_and_inputs_cannot_change) ... ok
+test_infrastructure_stops_grading_and_report_detects_stale_answers (test_runner.RunnerTests.test_infrastructure_stops_grading_and_report_detects_stale_answers) ... ok
+test_record_preserves_bytes_and_rejects_overwrite (test_runner.RunnerTests.test_record_preserves_bytes_and_rejects_overwrite) ... ok
+test_started_trial_is_interrupted_and_ordinals_are_bounded (test_runner.RunnerTests.test_started_trial_is_interrupted_and_ordinals_are_bounded) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.368s
+
+OK
+
+calibration test suite
+test_dataset_kills_common_wrong_contracts (test_algorithms.AlgorithmTests.test_dataset_kills_common_wrong_contracts) ... ok
+test_documented_bounds (test_algorithms.AlgorithmTests.test_documented_bounds) ... ok
+test_exhaustive_flow_oracle (test_algorithms.AlgorithmTests.test_exhaustive_flow_oracle) ... ok
+test_exhaustive_tree_oracle (test_algorithms.AlgorithmTests.test_exhaustive_tree_oracle) ... ok
+test_full_typed_observation_budget (test_algorithms.AlgorithmTests.test_full_typed_observation_budget) ... ok
+test_small_edit_oracle (test_algorithms.AlgorithmTests.test_small_edit_oracle) ... ok
+test_task_contracts (test_algorithms.AlgorithmTests.test_task_contracts) ... ok
+test_unrestricted_transpositions (test_algorithms.AlgorithmTests.test_unrestricted_transpositions) ... ok
+test_attach_must_match_recorded_session (test_runner.RunnerTests.test_attach_must_match_recorded_session) ... ok
+test_duplicate_sessions_are_rejected (test_runner.RunnerTests.test_duplicate_sessions_are_rejected) ... ok
+test_evidence_and_unknown_records_are_rejected (test_runner.RunnerTests.test_evidence_and_unknown_records_are_rejected) ... ok
+test_freeze_hashes_pool_modules_and_requires_selection_rule (test_runner.RunnerTests.test_freeze_hashes_pool_modules_and_requires_selection_rule) ... ok
+test_freeze_is_idempotent_but_cannot_follow_capture (test_runner.RunnerTests.test_freeze_is_idempotent_but_cannot_follow_capture) ... ok
+test_freeze_rejects_invalid_schedule_settings_and_missing_prompt (test_runner.RunnerTests.test_freeze_rejects_invalid_schedule_settings_and_missing_prompt) ... ok
+test_freeze_rejects_invalid_timeout_and_protocol_dimensions (test_runner.RunnerTests.test_freeze_rejects_invalid_timeout_and_protocol_dimensions) ... ok
+test_freeze_required_and_inputs_cannot_change (test_runner.RunnerTests.test_freeze_required_and_inputs_cannot_change) ... ok
+test_infrastructure_stops_grading_and_report_detects_stale_answers (test_runner.RunnerTests.test_infrastructure_stops_grading_and_report_detects_stale_answers) ... ok
+test_record_preserves_bytes_and_rejects_overwrite (test_runner.RunnerTests.test_record_preserves_bytes_and_rejects_overwrite) ... ok
+test_report_classifies_only_three_evaluated_trials (test_runner.RunnerTests.test_report_classifies_only_three_evaluated_trials) ... ok
+test_report_rejects_forged_pass_counts (test_runner.RunnerTests.test_report_rejects_forged_pass_counts) ... ok
+test_six_task_ids_must_be_unique_and_match_functions (test_runner.RunnerTests.test_six_task_ids_must_be_unique_and_match_functions) ... ok
+test_started_trial_is_interrupted_and_ordinals_are_bounded (test_runner.RunnerTests.test_started_trial_is_interrupted_and_ordinals_are_bounded) ... ok
+test_actual_mutants (test_semantics.SemanticsTests.test_actual_mutants) ... ok
+test_domain (test_semantics.SemanticsTests.test_domain) ... ok
+test_independent_oracles (test_semantics.SemanticsTests.test_independent_oracles) ... ok
+test_mutant_regressions (test_semantics.SemanticsTests.test_mutant_regressions) ... ok
+test_references_and_observation_budget (test_semantics.SemanticsTests.test_references_and_observation_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.334s
+
+OK
+
+analysis test suite
+test_cli_illustrations_and_assumptions (test_uncertainty.IntervalTests.test_cli_illustrations_and_assumptions) ... ok
+test_closed_form_edges (test_uncertainty.IntervalTests.test_closed_form_edges) ... ok
+test_complement_symmetry (test_uncertainty.IntervalTests.test_complement_symmetry) ... ok
+test_invalid_counts (test_uncertainty.IntervalTests.test_invalid_counts) ... ok
+test_one_of_three_reference_values (test_uncertainty.IntervalTests.test_one_of_three_reference_values) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.040s
+
+OK

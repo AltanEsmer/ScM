@@ -4,6 +4,8 @@ This is a separate exploratory calibration using six programming tasks, one base
 
 The selection rule is frozen before generation: a task with one or two all-case passes out of three evaluated responses is eligible for priority family selection. Three passes is an observed ceiling; zero is an observed floor requiring diagnosis. Incomplete cells cannot qualify. These are screening labels, not precise estimates of population difficulty. The third pilot is designed after this calibration and is not collected here.
 
+Read the [completed findings](findings.md), [verification evidence](verification.md), and [report-strength assessment](../../docs/evidence-strength.md).
+
 ## Reproduction
 
 Use Python 3.12+ and a running Docker engine. From the repository root:
