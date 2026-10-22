@@ -1,0 +1,22 @@
+{
+  "status": "PRESPECIFIED",
+  "seed": 20261022,
+  "clauses": [
+    "Solve the programming problem below.",
+    "Use Python 3.12 and only the Python standard library.",
+    "Read input from standard input and write the required output to standard output.",
+    "Return only runnable Python source code, without Markdown fences or explanation."
+  ],
+  "problem_partition": "question.split(\"\\n\\n\"); exact reconstruction with blank-line join",
+  "variants": {
+    "A": "prose instructions and source paragraphs",
+    "B": "numbered instruction and problem paragraphs",
+    "C": "XML instruction and problem paragraph elements"
+  },
+  "model": "gpt-6.1-sol",
+  "reasoning_effort": "medium",
+  "primary_outcome": "all curated frozen cases pass",
+  "evaluation_scope": "Statement-validator-passing supplied cases; originals retained; not an official TACO score",
+  "comparison": "whitespace-separated tokens, exact string equality",
+  "analysis": "Average repetitions within each task; report per-task B-A and C-A and their means; descriptive only."
+}

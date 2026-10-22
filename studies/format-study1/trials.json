@@ -1,0 +1,722 @@
+[
+  {
+    "trial_id": "taco-test-0979-r2-C",
+    "task_id": "taco-test-0979",
+    "repetition": 2,
+    "block": 1,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0979/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0979-r2-B",
+    "task_id": "taco-test-0979",
+    "repetition": 2,
+    "block": 1,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0979/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0979-r2-A",
+    "task_id": "taco-test-0979",
+    "repetition": 2,
+    "block": 1,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0979/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r1-B",
+    "task_id": "taco-test-0466",
+    "repetition": 1,
+    "block": 2,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0466/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r1-A",
+    "task_id": "taco-test-0466",
+    "repetition": 1,
+    "block": 2,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0466/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r1-C",
+    "task_id": "taco-test-0466",
+    "repetition": 1,
+    "block": 2,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0466/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r2-B",
+    "task_id": "taco-test-0466",
+    "repetition": 2,
+    "block": 3,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0466/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r2-C",
+    "task_id": "taco-test-0466",
+    "repetition": 2,
+    "block": 3,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0466/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0466-r2-A",
+    "task_id": "taco-test-0466",
+    "repetition": 2,
+    "block": 3,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0466/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r1-A",
+    "task_id": "taco-test-0402",
+    "repetition": 1,
+    "block": 4,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0402/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r1-C",
+    "task_id": "taco-test-0402",
+    "repetition": 1,
+    "block": 4,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0402/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r1-B",
+    "task_id": "taco-test-0402",
+    "repetition": 1,
+    "block": 4,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0402/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r2-A",
+    "task_id": "taco-test-0472",
+    "repetition": 2,
+    "block": 5,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0472/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r2-B",
+    "task_id": "taco-test-0472",
+    "repetition": 2,
+    "block": 5,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0472/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r2-C",
+    "task_id": "taco-test-0472",
+    "repetition": 2,
+    "block": 5,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0472/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r1-A",
+    "task_id": "taco-test-0320",
+    "repetition": 1,
+    "block": 6,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0320/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r1-C",
+    "task_id": "taco-test-0320",
+    "repetition": 1,
+    "block": 6,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0320/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r1-B",
+    "task_id": "taco-test-0320",
+    "repetition": 1,
+    "block": 6,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0320/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r2-C",
+    "task_id": "taco-test-0760",
+    "repetition": 2,
+    "block": 7,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0760/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r2-A",
+    "task_id": "taco-test-0760",
+    "repetition": 2,
+    "block": 7,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0760/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r2-B",
+    "task_id": "taco-test-0760",
+    "repetition": 2,
+    "block": 7,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0760/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r1-B",
+    "task_id": "taco-test-0250",
+    "repetition": 1,
+    "block": 8,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0250/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r1-A",
+    "task_id": "taco-test-0250",
+    "repetition": 1,
+    "block": 8,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0250/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r1-C",
+    "task_id": "taco-test-0250",
+    "repetition": 1,
+    "block": 8,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0250/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r1-A",
+    "task_id": "taco-test-0799",
+    "repetition": 1,
+    "block": 9,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0799/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r1-C",
+    "task_id": "taco-test-0799",
+    "repetition": 1,
+    "block": 9,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0799/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r1-B",
+    "task_id": "taco-test-0799",
+    "repetition": 1,
+    "block": 9,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0799/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r2-C",
+    "task_id": "taco-test-0152",
+    "repetition": 2,
+    "block": 10,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0152/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r2-A",
+    "task_id": "taco-test-0152",
+    "repetition": 2,
+    "block": 10,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0152/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r2-B",
+    "task_id": "taco-test-0152",
+    "repetition": 2,
+    "block": 10,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0152/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r1-C",
+    "task_id": "taco-test-0472",
+    "repetition": 1,
+    "block": 11,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0472/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r1-B",
+    "task_id": "taco-test-0472",
+    "repetition": 1,
+    "block": 11,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0472/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0472-r1-A",
+    "task_id": "taco-test-0472",
+    "repetition": 1,
+    "block": 11,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0472/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r1-A",
+    "task_id": "taco-test-0152",
+    "repetition": 1,
+    "block": 12,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0152/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r1-C",
+    "task_id": "taco-test-0152",
+    "repetition": 1,
+    "block": 12,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0152/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0152-r1-B",
+    "task_id": "taco-test-0152",
+    "repetition": 1,
+    "block": 12,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0152/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r1-C",
+    "task_id": "taco-test-0339",
+    "repetition": 1,
+    "block": 13,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0339/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r1-B",
+    "task_id": "taco-test-0339",
+    "repetition": 1,
+    "block": 13,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0339/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r1-A",
+    "task_id": "taco-test-0339",
+    "repetition": 1,
+    "block": 13,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0339/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0979-r1-B",
+    "task_id": "taco-test-0979",
+    "repetition": 1,
+    "block": 14,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0979/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0979-r1-C",
+    "task_id": "taco-test-0979",
+    "repetition": 1,
+    "block": 14,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0979/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0979-r1-A",
+    "task_id": "taco-test-0979",
+    "repetition": 1,
+    "block": 14,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0979/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r1-B",
+    "task_id": "taco-test-0074",
+    "repetition": 1,
+    "block": 15,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0074/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r1-A",
+    "task_id": "taco-test-0074",
+    "repetition": 1,
+    "block": 15,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0074/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r1-C",
+    "task_id": "taco-test-0074",
+    "repetition": 1,
+    "block": 15,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0074/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r1-C",
+    "task_id": "taco-test-0581",
+    "repetition": 1,
+    "block": 16,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0581/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r1-B",
+    "task_id": "taco-test-0581",
+    "repetition": 1,
+    "block": 16,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0581/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r1-A",
+    "task_id": "taco-test-0581",
+    "repetition": 1,
+    "block": 16,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0581/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r2-B",
+    "task_id": "taco-test-0581",
+    "repetition": 2,
+    "block": 17,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0581/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r2-C",
+    "task_id": "taco-test-0581",
+    "repetition": 2,
+    "block": 17,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0581/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0581-r2-A",
+    "task_id": "taco-test-0581",
+    "repetition": 2,
+    "block": 17,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0581/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r2-A",
+    "task_id": "taco-test-0320",
+    "repetition": 2,
+    "block": 18,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0320/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r2-B",
+    "task_id": "taco-test-0320",
+    "repetition": 2,
+    "block": 18,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0320/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0320-r2-C",
+    "task_id": "taco-test-0320",
+    "repetition": 2,
+    "block": 18,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0320/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r2-B",
+    "task_id": "taco-test-0074",
+    "repetition": 2,
+    "block": 19,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0074/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r2-A",
+    "task_id": "taco-test-0074",
+    "repetition": 2,
+    "block": 19,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0074/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0074-r2-C",
+    "task_id": "taco-test-0074",
+    "repetition": 2,
+    "block": 19,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0074/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r2-A",
+    "task_id": "taco-test-0250",
+    "repetition": 2,
+    "block": 20,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0250/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r2-B",
+    "task_id": "taco-test-0250",
+    "repetition": 2,
+    "block": 20,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0250/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0250-r2-C",
+    "task_id": "taco-test-0250",
+    "repetition": 2,
+    "block": 20,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0250/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r2-A",
+    "task_id": "taco-test-0339",
+    "repetition": 2,
+    "block": 21,
+    "position": 1,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0339/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r2-B",
+    "task_id": "taco-test-0339",
+    "repetition": 2,
+    "block": 21,
+    "position": 2,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0339/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0339-r2-C",
+    "task_id": "taco-test-0339",
+    "repetition": 2,
+    "block": 21,
+    "position": 3,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0339/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r1-B",
+    "task_id": "taco-test-0760",
+    "repetition": 1,
+    "block": 22,
+    "position": 1,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0760/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r1-C",
+    "task_id": "taco-test-0760",
+    "repetition": 1,
+    "block": 22,
+    "position": 2,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0760/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0760-r1-A",
+    "task_id": "taco-test-0760",
+    "repetition": 1,
+    "block": 22,
+    "position": 3,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0760/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r2-C",
+    "task_id": "taco-test-0402",
+    "repetition": 2,
+    "block": 23,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0402/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r2-A",
+    "task_id": "taco-test-0402",
+    "repetition": 2,
+    "block": 23,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0402/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0402-r2-B",
+    "task_id": "taco-test-0402",
+    "repetition": 2,
+    "block": 23,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0402/B.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r2-C",
+    "task_id": "taco-test-0799",
+    "repetition": 2,
+    "block": 24,
+    "position": 1,
+    "variant": "C",
+    "prompt": "prompts/taco-test-0799/C.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r2-A",
+    "task_id": "taco-test-0799",
+    "repetition": 2,
+    "block": 24,
+    "position": 2,
+    "variant": "A",
+    "prompt": "prompts/taco-test-0799/A.txt",
+    "status": "NOT_RUN"
+  },
+  {
+    "trial_id": "taco-test-0799-r2-B",
+    "task_id": "taco-test-0799",
+    "repetition": 2,
+    "block": 24,
+    "position": 3,
+    "variant": "B",
+    "prompt": "prompts/taco-test-0799/B.txt",
+    "status": "NOT_RUN"
+  }
+]

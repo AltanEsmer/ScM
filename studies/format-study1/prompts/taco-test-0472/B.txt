@@ -1,0 +1,58 @@
+1. Solve the programming problem below.
+2. Use Python 3.12 and only the Python standard library.
+3. Read input from standard input and write the required output to standard output.
+4. Return only runnable Python source code, without Markdown fences or explanation.
+
+<problem>
+1. Magnus decided to play a classic chess game. Though what he saw in his locker shocked him! His favourite chessboard got broken into 4 pieces, each of size n by n, n is always odd. And what's even worse, some squares were of wrong color. j-th square of the i-th row of k-th piece of the board has color a_{k}, i, j; 1 being black and 0 being white. 
+
+2. Now Magnus wants to change color of some squares in such a way that he recolors minimum number of squares and obtained pieces form a valid chessboard. Every square has its color different to each of the neightbouring by side squares in a valid board. Its size should be 2n by 2n. You are allowed to move pieces but not allowed to rotate or flip them.
+
+3. 
+   -----Input-----
+
+4. The first line contains odd integer n (1 ≤ n ≤ 100) — the size of all pieces of the board. 
+
+5. Then 4 segments follow, each describes one piece of the board. Each consists of n lines of n characters; j-th one of i-th line is equal to 1 if the square is black initially and 0 otherwise. Segments are separated by an empty line.
+
+6. 
+   -----Output-----
+
+7. Print one number — minimum number of squares Magnus should recolor to be able to obtain a valid chessboard.
+
+8. 
+   -----Examples-----
+   Input
+   1
+   0
+
+9. 0
+
+10. 1
+
+11. 0
+
+12. Output
+   1
+
+13. Input
+   3
+   101
+   010
+   101
+
+14. 101
+   000
+   101
+
+15. 010
+   101
+   011
+
+16. 010
+   101
+   010
+
+17. Output
+   2
+</problem>

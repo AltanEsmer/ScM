@@ -1,0 +1,55 @@
+1. Solve the programming problem below.
+2. Use Python 3.12 and only the Python standard library.
+3. Read input from standard input and write the required output to standard output.
+4. Return only runnable Python source code, without Markdown fences or explanation.
+
+<problem>
+1. Read problems statements in Mandarin Chinese  and Russian. 
+   A number is called as a lucky number if its decimal representation contains only the lucky digits, 4 and 7. e.g. 47, 744, 4 are lucky numbers, whereas 5, 17, 467 are not.
+   Recently, Na2a found a magic stone. With the help of this stone, he can multiply a number by any lucky number. Also, the magic stone can be used any number of times (possibly zero or infinite number of times).
+   For example, if initially he has the number 1, then he can get numbers like 28 (formed by 1*4*7), 14476 (formed as 1*47*77*4) etc.
+   Na2a has N numbers in his bag which are denoted by array A. For each number A_{i} in his bag, he asks you to transform it to a number with maximum possible number of trailing zeroes by using Magic Stone. You have to find the smallest of such numbers, since there can be multiple numbers with the maximum possible number of trailing zeros.
+
+2. ------ Input ------ 
+
+3. There is a single test case.
+   First line contains a single integer N as stated in the problem.
+   The second line contains N space-separated integers A_{1}, A_{2}, ... , A_{N} where A_{i} denotes the i^{th} number in the bag.
+
+4. ------ Output ------ 
+
+5. Output N lines, in which i^{th} line contains the answer corresponding to the number A_{i}.
+
+6. ------ Constraints ------ 
+
+7. $1 ≤ N ≤ 10^{5}$
+   $1 ≤ A_{i} ≤ 10^{9} $
+
+8. ------ Subtasks ------ 
+
+9. Subtask 1(8 points) 
+
+10. $1 ≤ N ≤ 10$
+   $1 ≤ A_{i} ≤ 10 $
+
+11. Subtask 2(22 points) 
+
+12. $1 ≤ N ≤ 10^{2}$
+   $1 ≤ A_{i} ≤ 10^{3} $
+
+13. Subtask 3(70 points) 
+
+14. $Original constraints$
+
+15. ----- Sample Input 1 ------ 
+   2
+
+16. 2 15
+   ----- Sample Output 1 ------ 
+   2
+
+17. 60
+   ----- explanation 1 ------ 
+   Example case 1. You can't get any number having zeros at the end multiplying 2 by lucky numbers.
+   Example case 2. You can multiply 15 by 4 and get 60, which has one trailing zero.
+</problem>
