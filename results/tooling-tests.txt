@@ -1,0 +1,18 @@
+test_errors_and_isolation (test_pilot.DockerTests.test_errors_and_isolation) ... ok
+test_exit_codes_remain_candidate_failures (test_pilot.DockerTests.test_exit_codes_remain_candidate_failures) ... ok
+test_forged_results_and_exit_codes (test_pilot.DockerTests.test_forged_results_and_exit_codes) ... ok
+test_mutants (test_pilot.DockerTests.test_mutants) ... ok
+test_named_builtin_subclass_rejected (test_pilot.DockerTests.test_named_builtin_subclass_rejected) ... ok
+test_references (test_pilot.DockerTests.test_references) ... ok
+test_unavailable_image_is_infrastructure_error (test_pilot.DockerTests.test_unavailable_image_is_infrastructure_error) ... ok
+test_duplicate_schedule_rejected (test_pilot.PilotTests.test_duplicate_schedule_rejected) ... ok
+test_exact_nested_types (test_pilot.PilotTests.test_exact_nested_types) ... ok
+test_freeze_and_record_integrity (test_pilot.PilotTests.test_freeze_and_record_integrity) ... ok
+test_infrastructure_failure_replaces_stale_results (test_pilot.PilotTests.test_infrastructure_failure_replaces_stale_results) ... Docker infrastructure failed: daemon unavailable
+ok
+test_stdout_cannot_claim_pass (test_pilot.PilotTests.test_stdout_cannot_claim_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 10.115s
+
+OK

@@ -18,7 +18,7 @@ A preparatory CLI request asking for `READY` failed because the installed CLI re
 
 ## Provenance and context limits
 
-The coordinator records dispatch and completion observation timestamps, the agent path, requested settings, exact prompt and answer hashes, and the raw first final answer. Timestamps describe coordinator observations, not provider-side generation times. Responses are copied from returned final messages without correcting code or removing Markdown fences. No failed answer is replaced.
+The coordinator records dispatch and completion observation timestamps, the agent path, requested settings, exact prompt and answer hashes, and the raw first final answer. Dispatch timestamps record when an ordinal is queued, shortly before its tool call. Completion timestamps record capture of the returned final message. Neither is a provider-side generation timestamp. Responses are copied from returned final messages without correcting code or removing Markdown fences. No failed answer is replaced.
 
 No-history mode prevents inheritance of this conversation. It does not establish a blank system context, disable tools, or deny access to the shared filesystem. Full tool-event traces are not available to this coordinator. The evidence cannot establish that every candidate avoided tools or filesystem reads. The prompts ask for source code only. Claims are limited to this native-session setup.
 

@@ -2,6 +2,8 @@
 
 A Scientific Methods pilot measures whether three introductory phrasings change the correctness of generated Python functions. The study has three tasks and five repetitions per phrasing, for 45 planned fresh-session responses.
 
+**Result:** all 45 responses passed the frozen tests. Read [pilot findings](docs/findings.md) for interpretation and limits.
+
 The requested model is `gpt-6.1-sol` with medium reasoning. This is a pilot collected through native Codex subagents. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
 
 ## Reproduce the analysis
