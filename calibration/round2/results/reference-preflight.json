@@ -1,0 +1,182 @@
+[
+  {
+    "task": "versioned_circulation_costs",
+    "role": "development",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 13588,
+    "wall_seconds": 0.317,
+    "detail": ""
+  },
+  {
+    "task": "budget_parse_cost",
+    "role": "development",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 8532,
+    "wall_seconds": 0.241,
+    "detail": ""
+  },
+  {
+    "task": "store_program_result",
+    "role": "development",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 12693,
+    "wall_seconds": 0.277,
+    "detail": ""
+  },
+  {
+    "task": "pickup_delivery_cost",
+    "role": "development",
+    "cases": 22,
+    "status": "pass",
+    "passed": 22,
+    "typed_observation_bytes": 19820,
+    "wall_seconds": 0.265,
+    "detail": ""
+  },
+  {
+    "task": "automaton_route_cost",
+    "role": "development",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 10589,
+    "wall_seconds": 0.23,
+    "detail": ""
+  },
+  {
+    "task": "constrained_edit_cost",
+    "role": "development",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 11511,
+    "wall_seconds": 0.255,
+    "detail": ""
+  },
+  {
+    "task": "inventory_transfer_cost",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 12060,
+    "wall_seconds": 0.241,
+    "detail": ""
+  },
+  {
+    "task": "single_failure_costs",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 8321,
+    "wall_seconds": 0.3,
+    "detail": ""
+  },
+  {
+    "task": "bounded_derivation_count",
+    "role": "heldout",
+    "cases": 21,
+    "status": "pass",
+    "passed": 21,
+    "typed_observation_bytes": 9109,
+    "wall_seconds": 0.217,
+    "detail": ""
+  },
+  {
+    "task": "budget_grammar_edit_cost",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 8495,
+    "wall_seconds": 0.275,
+    "detail": ""
+  },
+  {
+    "task": "forked_store_observations",
+    "role": "heldout",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 17507,
+    "wall_seconds": 0.247,
+    "detail": ""
+  },
+  {
+    "task": "bounded_store_equivalence",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 9000,
+    "wall_seconds": 0.276,
+    "detail": ""
+  },
+  {
+    "task": "fleet_assignment_cost",
+    "role": "heldout",
+    "cases": 22,
+    "status": "pass",
+    "passed": 22,
+    "typed_observation_bytes": 24017,
+    "wall_seconds": 0.229,
+    "detail": ""
+  },
+  {
+    "task": "reward_delivery_selection",
+    "role": "heldout",
+    "cases": 22,
+    "status": "pass",
+    "passed": 22,
+    "typed_observation_bytes": 21267,
+    "wall_seconds": 0.225,
+    "detail": ""
+  },
+  {
+    "task": "accepted_walk_counts",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 13468,
+    "wall_seconds": 0.263,
+    "detail": ""
+  },
+  {
+    "task": "budget_route_strategy",
+    "role": "heldout",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 11710,
+    "wall_seconds": 0.27,
+    "detail": ""
+  },
+  {
+    "task": "optimal_edit_script_count",
+    "role": "heldout",
+    "cases": 20,
+    "status": "pass",
+    "passed": 20,
+    "typed_observation_bytes": 12167,
+    "wall_seconds": 0.269,
+    "detail": ""
+  },
+  {
+    "task": "joint_text_repair_cost",
+    "role": "heldout",
+    "cases": 19,
+    "status": "pass",
+    "passed": 19,
+    "typed_observation_bytes": 7720,
+    "wall_seconds": 0.265,
+    "detail": ""
+  }
+]

@@ -1,0 +1,16 @@
+Implement the Python function inventory_transfer_cost taking one argument.
+
+<requirements>
+<clause>The argument is a dictionary with exactly n, days, supply, demand, carry_capacity, storage_cost, and transfers; all numeric fields are integers, not booleans.</clause>
+<clause>There are n locations, with 1 &lt;= n &lt;= 2, and days dates numbered 0 through days-1, with 1 &lt;= days &lt;= 3.</clause>
+<clause>Supply and demand are days-by-n lists of integers from 0 through 2; every supply unit must be used and every demand unit must be satisfied at its specified location and date.</clause>
+<clause>Carry_capacity and storage_cost are (days-1)-by-n lists; each capacity is 0 through 2 and each cost is -3 through 3.</clause>
+<clause>A carry flow at location p from date d to date d+1 is an integer between zero and carry_capacity[d][p], and costs storage_cost[d][p] per unit.</clause>
+<clause>Transfers contains zero through three lists [date, u, v, capacity, cost], with valid date and location indices, capacity 0 through 2, and cost -3 through 3; duplicates and self-loops are allowed and each entry has its own capacity.</clause>
+<clause>A transfer sends an integer between zero and capacity units from u to v on its date at its cost per unit; incoming transfers may supply outgoing transfers on the same date, including circulations.</clause>
+<clause>At each location and date, supply plus incoming transfers plus carry from the preceding date must equal demand plus outgoing transfers plus carry to the following date; there is no initial or final inventory beyond these flows and no disposal.</clause>
+<clause>Return the minimum total carry and transfer cost as an integer, or None if the equalities cannot all be met.</clause>
+<clause>Do not modify the argument or any nested object.</clause>
+</requirements>
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

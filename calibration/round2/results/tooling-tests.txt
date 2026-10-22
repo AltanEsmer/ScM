@@ -1,0 +1,34 @@
+test_domain_fresh_reference_oracle_and_transport (test_family1.NetworkContracts.test_domain_fresh_reference_oracle_and_transport) ... ok
+test_semantic_mutants_are_rejected (test_family1.NetworkContracts.test_semantic_mutants_are_rejected) ... ok
+test_worked_literals (test_family1.NetworkContracts.test_worked_literals) ... ok
+test_domain_fresh_reference_oracle_and_transport (test_family2.GrammarContracts.test_domain_fresh_reference_oracle_and_transport) ... ok
+test_semantic_mutants_are_rejected (test_family2.GrammarContracts.test_semantic_mutants_are_rejected) ... ok
+test_worked_literals (test_family2.GrammarContracts.test_worked_literals) ... ok
+test_cases_independent_oracle_types_preservation_and_budget (test_family3.StoreContracts.test_cases_independent_oracle_types_preservation_and_budget) ... ok
+test_every_task_rejects_dynamic_scoping (test_family3.StoreContracts.test_every_task_rejects_dynamic_scoping) ... ok
+test_semantic_mutants_are_killed (test_family3.StoreContracts.test_semantic_mutants_are_killed) ... ok
+test_independent_permutations_membership_types_and_budget (test_family4.TransportContracts.test_independent_permutations_membership_types_and_budget) ... ok
+test_literal_boundaries (test_family4.TransportContracts.test_literal_boundaries) ... ok
+test_semantic_mutants_are_killed (test_family4.TransportContracts.test_semantic_mutants_are_killed) ... ok
+test_contracts (test_family5.Family5Tests.test_contracts) ... ok
+test_semantic_mutants (test_family5.Family5Tests.test_semantic_mutants) ... ok
+test_contracts (test_family6.Family6Tests.test_contracts) ... ok
+test_cost_spectrum_agrees_with_small_script_enumeration (test_family6.Family6Tests.test_cost_spectrum_agrees_with_small_script_enumeration) ... ok
+test_modular_count_golden_and_candidate_mutant (test_family6.Family6Tests.test_modular_count_golden_and_candidate_mutant) ... ok
+test_semantic_mutants (test_family6.Family6Tests.test_semantic_mutants) ... ok
+test_cartesian_duplicate_and_dimensions_rejected (test_workflow.Collection.test_cartesian_duplicate_and_dimensions_rejected) ... ok
+test_first_bytes_no_overwrite_unique_sessions (test_workflow.Collection.test_first_bytes_no_overwrite_unique_sessions) ... ok
+test_frozen_source_and_heldout_changes_rejected (test_workflow.Collection.test_frozen_source_and_heldout_changes_rejected) ... ok
+test_infrastructure_rows_and_stale_counts (test_workflow.Collection.test_infrastructure_rows_and_stale_counts) ... ok
+test_schedule_prefix_and_historical_concurrency (test_workflow.Collection.test_schedule_prefix_and_historical_concurrency) ... ok
+test_selection_subset_order_and_source_binding (test_workflow.Collection.test_selection_subset_order_and_source_binding) ... ok
+test_defect_invalidation_unknown_and_bad_case_rejected (test_workflow.Gate.test_defect_invalidation_unknown_and_bad_case_rejected) ... ok
+test_gate_zero_to_two_reject_three_and_all_six_select (test_workflow.Gate.test_gate_zero_to_two_reject_three_and_all_six_select) ... ok
+test_unvalidated_and_errors_only_do_not_qualify (test_workflow.Gate.test_unvalidated_and_errors_only_do_not_qualify) ... ok
+test_balanced_schedule (test_workflow.Workflow.test_balanced_schedule) ... ok
+test_inventory_and_prompt_roundtrip (test_workflow.Workflow.test_inventory_and_prompt_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 2.596s
+
+OK

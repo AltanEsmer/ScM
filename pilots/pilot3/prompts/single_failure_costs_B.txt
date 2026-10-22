@@ -1,0 +1,13 @@
+Implement the Python function single_failure_costs taking one argument.
+
+- The argument is a dictionary with exactly the specified keys; all numeric fields are integers, not booleans.
+- The field n is between 1 and 4 and names vertices 0 through n-1; arcs is a list of zero through six lists [u, v, lower, upper, cost].
+- Each arc has endpoints in 0 through n-1, 0 <= lower <= upper <= 2, and -5 <= cost <= 5; parallel arcs and self-loops are allowed and list positions identify distinct arcs.
+- A feasible circulation assigns an integer flow to every arc between its inclusive lower and upper bounds, with total incoming flow equal to total outgoing flow at every vertex.
+- Its total cost is the sum over arcs of flow times cost; the optimum is the minimum total cost among feasible circulations, or None if none exists.
+- The dictionary keys are exactly n and arcs.
+- For each position i in arcs, form a separate scenario from the original arcs by setting both bounds of arc i to zero, even if its original lower bound was positive; retain every other bound and cost.
+- Return a new list of integers or None giving each separate scenario optimum in arc order; return an empty list when arcs is empty.
+- Do not modify the argument or any nested object.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

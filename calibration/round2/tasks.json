@@ -1,0 +1,5764 @@
+[
+  {
+    "id": "versioned_circulation_costs",
+    "function": "versioned_circulation_costs",
+    "family": "F1",
+    "role": "development",
+    "clauses": [
+      "The argument is a dictionary with exactly the specified keys; all numeric fields are integers, not booleans.",
+      "The field n is between 1 and 4 and names vertices 0 through n-1; arcs is a list of zero through six lists [u, v, lower, upper, cost].",
+      "Each arc has endpoints in 0 through n-1, 0 <= lower <= upper <= 2, and -5 <= cost <= 5; parallel arcs and self-loops are allowed and list positions identify distinct arcs.",
+      "A feasible circulation assigns an integer flow to every arc between its inclusive lower and upper bounds, with total incoming flow equal to total outgoing flow at every vertex.",
+      "Its total cost is the sum over arcs of flow times cost; the optimum is the minimum total cost among feasible circulations, or None if none exists.",
+      "The dictionary keys are n, arcs, and versions; versions is a list of zero through eight lists [parent, arc_index, lower, upper, cost].",
+      "The original arcs define version 0; the entry at zero-based index j of versions defines version j+1 by copying version parent, where 0 <= parent <= j, and replacing only the bounds and cost of the indexed arc.",
+      "Every arc_index is a valid position in arcs, and every replacement obeys the same bounds and cost restrictions as an original arc; versions is empty if arcs is empty.",
+      "Return a new list of integers or None, containing the circulation optimum for version 0 and then each version in entry order; infeasible versions may have feasible descendants.",
+      "Do not modify the argument or any nested object."
+    ],
+    "cases": [
+      [
+        {
+          "n": 1,
+          "arcs": [],
+          "versions": []
+        },
+        [
+          0
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              0,
+              1,
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              2,
+              -5
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              1,
+              0,
+              0,
+              -5
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              2,
+              1,
+              1,
+              2,
+              -5
+            ]
+          ]
+        },
+        [
+          -4,
+          null,
+          -4,
+          0,
+          -4
+        ]
+      ],
+      [
+        {
+          "n": 1,
+          "arcs": [
+            [
+              0,
+              0,
+              1,
+              2,
+              -3
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              0,
+              2,
+              2,
+              -5
+            ]
+          ]
+        },
+        [
+          -6,
+          0,
+          -10
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              0,
+              1,
+              1,
+              1,
+              2
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              0,
+              1,
+              -2
+            ]
+          ]
+        },
+        [
+          null,
+          0
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              0,
+              1,
+              1,
+              1,
+              2
+            ],
+            [
+              1,
+              1,
+              0,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              2,
+              1,
+              1,
+              -1
+            ],
+            [
+              0,
+              2,
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              0,
+              2,
+              2
+            ]
+          ]
+        },
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              1,
+              1,
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              4
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              -3
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              3,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              1,
+              1,
+              2,
+              -2
+            ],
+            [
+              1,
+              2,
+              0,
+              1,
+              3
+            ]
+          ]
+        },
+        [
+          1,
+          1,
+          null,
+          null,
+          4
+        ]
+      ],
+      [
+        {
+          "n": 4,
+          "arcs": [
+            [
+              2,
+              2,
+              0,
+              0,
+              5
+            ],
+            [
+              2,
+              0,
+              0,
+              1,
+              -3
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              1,
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              -3
+            ],
+            [
+              2,
+              0,
+              1,
+              1,
+              5
+            ],
+            [
+              2,
+              0,
+              0,
+              0,
+              3
+            ]
+          ]
+        },
+        [
+          0,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              2,
+              1,
+              0,
+              1,
+              -5
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              -1
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              3,
+              1,
+              2,
+              -1
+            ],
+            [
+              1,
+              0,
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        [
+          -2,
+          -2,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              0,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              4
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              1,
+              0,
+              0,
+              -2
+            ],
+            [
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              1,
+              -4
+            ]
+          ]
+        },
+        [
+          null,
+          null,
+          null,
+          1
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              1,
+              0,
+              1,
+              2,
+              -1
+            ],
+            [
+              2,
+              0,
+              0,
+              0,
+              3
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              4
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              0,
+              1,
+              -3
+            ],
+            [
+              0,
+              2,
+              0,
+              2,
+              -3
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              -4
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              3
+            ]
+          ]
+        },
+        [
+          null,
+          0,
+          null,
+          0,
+          0
+        ]
+      ],
+      [
+        {
+          "n": 1,
+          "arcs": [
+            [
+              0,
+              0,
+              0,
+              0,
+              -1
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              2,
+              -2
+            ]
+          ]
+        },
+        [
+          0,
+          0,
+          3,
+          0,
+          -4
+        ]
+      ],
+      [
+        {
+          "n": 4,
+          "arcs": [
+            [
+              1,
+              1,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              2
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              1,
+              1,
+              2,
+              4
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              -1
+            ],
+            [
+              2,
+              1,
+              1,
+              1,
+              -1
+            ]
+          ]
+        },
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              2,
+              1,
+              0,
+              0,
+              -5
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              -5
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              0
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              1,
+              2,
+              -2
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              4
+            ]
+          ]
+        },
+        [
+          -5,
+          null,
+          -5
+        ]
+      ],
+      [
+        {
+          "n": 1,
+          "arcs": [
+            [
+              0,
+              0,
+              0,
+              2,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              -5
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              -2
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              -4
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              1,
+              1,
+              1,
+              -4
+            ],
+            [
+              0,
+              1,
+              0,
+              0,
+              -1
+            ],
+            [
+              2,
+              3,
+              1,
+              1,
+              4
+            ],
+            [
+              0,
+              2,
+              1,
+              1,
+              3
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              -2
+            ]
+          ]
+        },
+        [
+          -16,
+          -20,
+          -16,
+          -10,
+          -3,
+          -16
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              1,
+              0,
+              0,
+              1,
+              3
+            ],
+            [
+              1,
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              4
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              0,
+              0,
+              -4
+            ],
+            [
+              1,
+              1,
+              1,
+              2,
+              -2
+            ],
+            [
+              2,
+              2,
+              0,
+              0,
+              1
+            ],
+            [
+              3,
+              2,
+              0,
+              0,
+              2
+            ]
+          ]
+        },
+        [
+          8,
+          8,
+          2,
+          null,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 1,
+          "arcs": [
+            [
+              0,
+              0,
+              1,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              -5
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              2
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              4,
+              1,
+              1,
+              5
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              -4
+            ]
+          ]
+        },
+        [
+          10,
+          15,
+          2
+        ]
+      ],
+      [
+        {
+          "n": 1,
+          "arcs": [
+            [
+              0,
+              0,
+              1,
+              1,
+              -4
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              -3
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              4
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              1
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              5,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              4,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              5,
+              1,
+              2,
+              2
+            ]
+          ]
+        },
+        [
+          -1,
+          3,
+          2,
+          -1,
+          2,
+          4
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              0,
+              0,
+              0,
+              2,
+              -4
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              2
+            ],
+            [
+              1,
+              1,
+              0,
+              0,
+              4
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              -3
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              4,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              1,
+              1,
+              -2
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              -4
+            ]
+          ]
+        },
+        [
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      [
+        {
+          "n": 2,
+          "arcs": [
+            [
+              1,
+              0,
+              1,
+              2,
+              -3
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              -2
+            ],
+            [
+              1,
+              1,
+              0,
+              1,
+              4
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              -4
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              -5
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              4,
+              1,
+              2,
+              -4
+            ],
+            [
+              1,
+              2,
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              4,
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        [
+          -15,
+          -15,
+          -12,
+          -7
+        ]
+      ],
+      [
+        {
+          "n": 3,
+          "arcs": [
+            [
+              2,
+              2,
+              0,
+              0,
+              3
+            ]
+          ],
+          "versions": [
+            [
+              0,
+              0,
+              1,
+              1,
+              4
+            ],
+            [
+              1,
+              0,
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              -1
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              -4
+            ]
+          ]
+        },
+        [
+          0,
+          4,
+          0,
+          -1,
+          -4
+        ]
+      ]
+    ],
+    "reference": "def _opt(n, edges, target=None):\n    target = tuple(target or [0] * n)\n    states = {(0,) * n: 0}\n    for u, v, low, high, cost in edges:\n        nxt = {}\n        for balance, value in states.items():\n            for flow in range(low, high + 1):\n                b = list(balance)\n                b[u] += flow\n                b[v] -= flow\n                key = tuple(b)\n                val = value + flow * cost\n                if key not in nxt or val < nxt[key]:\n                    nxt[key] = val\n        states = nxt\n    return states.get(target)\n\ndef versioned_circulation_costs(data):\n    snapshots = [[list(e) for e in data['arcs']]]\n    answers = [_opt(data['n'], snapshots[0])]\n    for parent, index, low, high, cost in data['versions']:\n        edges = [e[:] for e in snapshots[parent]]\n        edges[index][2:] = [low, high, cost]\n        snapshots.append(edges)\n        answers.append(_opt(data['n'], edges))\n    return answers\n"
+  },
+  {
+    "id": "budget_parse_cost",
+    "function": "budget_parse_cost",
+    "family": "F2",
+    "role": "development",
+    "clauses": [
+      "The argument is a dictionary with exactly n, start, rules, budget, and text; all numeric fields are integers, not booleans.",
+      "There are n nonterminal symbols numbered 0 through n-1, where 1 <= n <= 3, and start is one of those symbols.",
+      "Rules is a list of zero through six lists [lhs, rhs, resource, cost], where lhs is a nonterminal, resource is 1 through 3, and cost is -5 through 5.",
+      "Each rhs is either an empty list, a one-element list containing the terminal string \"a\" or \"b\", a one-element list containing a nonterminal integer, or a two-element list of nonterminal integers.",
+      "Budget is between 0 and 7 inclusive; text is a string of zero through seven characters, all from \"ab\".",
+      "A derivation is a finite ordered tree rooted at start; every nonterminal occurrence chooses one rule with that lhs, and the rhs gives its ordered children, with an empty rhs producing the empty string.",
+      "A tree yield is its terminal leaves read left to right; its resource and cost are the respective sums of resource and cost over all rule occurrences, including empty and unary rules.",
+      "A permitted tree has total resource at most budget; a nonterminal root always needs a rule occurrence, so budget zero permits no tree.",
+      "Recursive rules, nullable cycles, unused nonterminals, and duplicate rule entries are allowed; positions in rules distinguish rule identities.",
+      "Return the minimum total rule cost over permitted trees whose yield equals text exactly, as an integer, or None if there is no such tree.",
+      "Different resources may yield the same text, and signed rule costs do not change the positive resource restriction.",
+      "Do not modify the argument or any nested object."
+    ],
+    "cases": [
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [],
+          "budget": 7,
+          "text": ""
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [],
+              1,
+              2
+            ]
+          ],
+          "budget": 0,
+          "text": ""
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [],
+              1,
+              2
+            ]
+          ],
+          "budget": 1,
+          "text": ""
+        },
+        2
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                "a"
+              ],
+              2,
+              -3
+            ]
+          ],
+          "budget": 1,
+          "text": "a"
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                "a"
+              ],
+              2,
+              -3
+            ]
+          ],
+          "budget": 2,
+          "text": "a"
+        },
+        -3
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                0
+              ],
+              1,
+              -2
+            ],
+            [
+              0,
+              [],
+              1,
+              3
+            ]
+          ],
+          "budget": 7,
+          "text": ""
+        },
+        -9
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                0,
+                0
+              ],
+              1,
+              -1
+            ],
+            [
+              0,
+              [],
+              1,
+              2
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              1,
+              4
+            ]
+          ],
+          "budget": 7,
+          "text": "a"
+        },
+        4
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                "a"
+              ],
+              1,
+              2
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              1,
+              -3
+            ]
+          ],
+          "budget": 2,
+          "text": "a"
+        },
+        -3
+      ],
+      [
+        {
+          "n": 2,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                1
+              ],
+              1,
+              0
+            ],
+            [
+              1,
+              [
+                0
+              ],
+              1,
+              -2
+            ],
+            [
+              1,
+              [],
+              1,
+              1
+            ]
+          ],
+          "budget": 7,
+          "text": ""
+        },
+        -3
+      ],
+      [
+        {
+          "n": 3,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                1,
+                2
+              ],
+              1,
+              0
+            ],
+            [
+              1,
+              [],
+              2,
+              -1
+            ],
+            [
+              2,
+              [
+                "b"
+              ],
+              2,
+              3
+            ]
+          ],
+          "budget": 5,
+          "text": "b"
+        },
+        2
+      ],
+      [
+        {
+          "n": 3,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                1,
+                2
+              ],
+              1,
+              0
+            ],
+            [
+              1,
+              [
+                "a"
+              ],
+              1,
+              0
+            ],
+            [
+              2,
+              [
+                "b"
+              ],
+              1,
+              0
+            ]
+          ],
+          "budget": 3,
+          "text": "ba"
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                0,
+                0
+              ],
+              1,
+              0
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              1,
+              0
+            ],
+            [
+              0,
+              [
+                "b"
+              ],
+              1,
+              0
+            ]
+          ],
+          "budget": 7,
+          "text": "abba"
+        },
+        0
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                0
+              ],
+              1,
+              -5
+            ],
+            [
+              0,
+              [
+                "b"
+              ],
+              1,
+              5
+            ]
+          ],
+          "budget": 7,
+          "text": "a"
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                1
+              ],
+              3,
+              1
+            ],
+            [
+              1,
+              [
+                "a"
+              ],
+              3,
+              -4
+            ]
+          ],
+          "budget": 6,
+          "text": "a"
+        },
+        -3
+      ],
+      [
+        {
+          "n": 2,
+          "start": 1,
+          "rules": [
+            [
+              1,
+              [
+                "a"
+              ],
+              3,
+              -3
+            ],
+            [
+              0,
+              [
+                0,
+                1
+              ],
+              1,
+              -1
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              2,
+              -1
+            ],
+            [
+              1,
+              [
+                "b"
+              ],
+              3,
+              5
+            ],
+            [
+              1,
+              [
+                0,
+                0
+              ],
+              3,
+              3
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              3,
+              -1
+            ]
+          ],
+          "budget": 6,
+          "text": "aaba"
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                "a"
+              ],
+              2,
+              4
+            ],
+            [
+              0,
+              [
+                0,
+                0
+              ],
+              1,
+              2
+            ],
+            [
+              0,
+              [],
+              3,
+              1
+            ],
+            [
+              0,
+              [
+                "b"
+              ],
+              3,
+              0
+            ],
+            [
+              0,
+              [],
+              2,
+              5
+            ]
+          ],
+          "budget": 1,
+          "text": "a"
+        },
+        null
+      ],
+      [
+        {
+          "n": 3,
+          "start": 0,
+          "rules": [
+            [
+              1,
+              [
+                2
+              ],
+              2,
+              -2
+            ],
+            [
+              0,
+              [],
+              3,
+              -3
+            ],
+            [
+              1,
+              [
+                "a"
+              ],
+              3,
+              0
+            ],
+            [
+              2,
+              [
+                "b"
+              ],
+              2,
+              -5
+            ],
+            [
+              2,
+              [],
+              2,
+              3
+            ],
+            [
+              0,
+              [
+                "a"
+              ],
+              2,
+              0
+            ]
+          ],
+          "budget": 6,
+          "text": "a"
+        },
+        0
+      ],
+      [
+        {
+          "n": 2,
+          "start": 1,
+          "rules": [
+            [
+              0,
+              [
+                "a"
+              ],
+              1,
+              0
+            ],
+            [
+              1,
+              [],
+              3,
+              3
+            ],
+            [
+              1,
+              [
+                "a"
+              ],
+              3,
+              2
+            ],
+            [
+              1,
+              [
+                0
+              ],
+              2,
+              -1
+            ]
+          ],
+          "budget": 4,
+          "text": "bbb"
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "start": 0,
+          "rules": [
+            [
+              0,
+              [
+                0
+              ],
+              2,
+              -1
+            ],
+            [
+              1,
+              [
+                1,
+                1
+              ],
+              3,
+              -2
+            ]
+          ],
+          "budget": 6,
+          "text": "ba"
+        },
+        null
+      ],
+      [
+        {
+          "n": 3,
+          "start": 0,
+          "rules": [
+            [
+              2,
+              [
+                1
+              ],
+              3,
+              5
+            ],
+            [
+              0,
+              [
+                2,
+                0
+              ],
+              3,
+              -1
+            ]
+          ],
+          "budget": 7,
+          "text": ""
+        },
+        null
+      ]
+    ],
+    "reference": "def _chart(data, counting=False):\n    budget = data['budget']\n    table = [[{} for _ in range(budget + 1)] for _ in range(data['n'])]\n    for spent in range(1, budget + 1):\n        for lhs, rhs, resource, cost in data['rules']:\n            left = spent - resource\n            if left < 0:\n                continue\n            possibilities = []\n            if not rhs:\n                if left == 0:\n                    possibilities.append(('', 1 if counting else cost))\n            elif type(rhs[0]) is str:\n                if left == 0:\n                    possibilities.append((rhs[0], 1 if counting else cost))\n            elif len(rhs) == 1:\n                for word, value in table[rhs[0]][left].items():\n                    possibilities.append((word, value if counting else value + cost))\n            else:\n                for first in range(1, left):\n                    for a, av in table[rhs[0]][first].items():\n                        for b, bv in table[rhs[1]][left-first].items():\n                            possibilities.append((a+b, av*bv if counting else av+bv+cost))\n            dest = table[lhs][spent]\n            for word, value in possibilities:\n                if counting and word not in data['text']:\n                    continue\n                if counting:\n                    dest[word] = (dest.get(word, 0) + value) % 1000000007\n                elif word not in dest or value < dest[word]:\n                    dest[word] = value\n    return table[data['start']]\n\ndef budget_parse_cost(data):\n    values = [row[data['text']] for row in _chart(data) if data['text'] in row]\n    return min(values) if values else None\n"
+  },
+  {
+    "id": "store_program_result",
+    "function": "store_program_result",
+    "family": "F3",
+    "role": "development",
+    "clauses": [
+      "Implement store_program_result(arg). Arg has exactly bindings and program. Bindings is an ordered list of at most 6 [name,expression] pairs with distinct names, evaluated sequentially starting with empty environment and store; each binding sees earlier bindings. Program then runs in that environment and resulting store. Return exactly {'value': final integer, 'store': final list of integers}.",
+      "Use exact built-in JSON types; integers exclude booleans. Expressions are integers or the arrays specified here. Names are nonempty lowercase ASCII strings of at most 8 letters. All evaluation is deterministic, left to right, and must preserve the input argument.",
+      "Expression forms are ['var',name], ['let',name,value,body], ['fn',parameter,body], ['call',function,argument], ['seq',first,second], ['if',condition,then,else], ['add',left,right], ['sub',left,right], ['ref',value], ['get',cell], ['set',cell,value], ['snap'], and ['restore',snapshot,body]. No other forms occur. Integer literals are between -20 and 20.",
+      "A let evaluates value in the current environment, then body with that name bound to the resulting value. A function captures a copy of its current lexical name bindings. A call evaluates function then argument in the caller environment, then evaluates the captured body in its captured environment extended by its parameter. There is no recursion binding. A seq discards its first value. An if evaluates only the selected arm: then when its integer condition is nonzero, otherwise else. Add and sub operate on integers.",
+      "The store starts as an empty ordered list of integer cells. Ref evaluates its integer argument, appends a cell, and returns a cell handle with ID equal to the previous store length. Get reads a handle's cell; set evaluates handle then integer value, overwrites that cell, and returns the assigned integer. Handles alias by integer ID, including across captured environments. All allocated cells, even unreachable cells, are observable in ascending ID order.",
+      "Snap returns an immutable copy of the current entire store, without allocation. Restore first evaluates its snapshot expression, replaces the entire current store by that snapshot, then evaluates body in the same lexical environment. Restoring also resets the next allocation ID to the restored length. A preexisting handle denotes its numeric ID in the restored store; using it is valid only if that ID exists at access time. A later allocation may reuse a discarded ID. Closures and snapshots retain captured bindings or store contents independently of subsequent changes.",
+      "All supplied expressions are well scoped, terminate, and are dynamically well typed on every evaluated path: arithmetic and conditions use integers; ref and set store integers only; call uses a closure; restore uses a snapshot; get and set use existing cell IDs. Every final program result is an integer. Each argument contains at most 100 expression nodes in total (including unevaluated function bodies), nesting at most 18, at most 300 evaluated expression nodes per program run, at most 8 cells in any store, and all intermediate integers have absolute value at most 10000. No invalid-input behavior is required."
+    ],
+    "cases": [
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                -4
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                -3
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": -2,
+          "store": [
+            -4
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                -3
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                -2
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": -1,
+          "store": [
+            -3
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                -2
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                -1
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 0,
+          "store": [
+            -2
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                -1
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                0
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 1,
+          "store": [
+            -1
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                0
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                1
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 2,
+          "store": [
+            0
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                1
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                2
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 3,
+          "store": [
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                2
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                3
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 4,
+          "store": [
+            2
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                3
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                4
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 5,
+          "store": [
+            3
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                4
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                5
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  2
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 6,
+          "store": [
+            4
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "x",
+            2,
+            [
+              "let",
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "add",
+                  [
+                    "var",
+                    "x"
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ],
+              [
+                "let",
+                "x",
+                9,
+                [
+                  "call",
+                  [
+                    "var",
+                    "f"
+                  ],
+                  1
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 3,
+          "store": []
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "r",
+            [
+              "ref",
+              1
+            ],
+            [
+              "let",
+              "q",
+              [
+                "var",
+                "r"
+              ],
+              [
+                "seq",
+                [
+                  "set",
+                  [
+                    "var",
+                    "q"
+                  ],
+                  7
+                ],
+                [
+                  "get",
+                  [
+                    "var",
+                    "r"
+                  ]
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 7,
+          "store": [
+            7
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "s",
+            [
+              "snap"
+            ],
+            [
+              "seq",
+              [
+                "ref",
+                8
+              ],
+              [
+                "restore",
+                [
+                  "var",
+                  "s"
+                ],
+                [
+                  "seq",
+                  [
+                    "ref",
+                    3
+                  ],
+                  4
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 4,
+          "store": [
+            3
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "if",
+            0,
+            [
+              "seq",
+              [
+                "ref",
+                9
+              ],
+              1
+            ],
+            2
+          ]
+        },
+        {
+          "value": 2,
+          "store": []
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "r",
+            [
+              "ref",
+              1
+            ],
+            [
+              "let",
+              "s",
+              [
+                "snap"
+              ],
+              [
+                "seq",
+                [
+                  "set",
+                  [
+                    "var",
+                    "r"
+                  ],
+                  8
+                ],
+                [
+                  "restore",
+                  [
+                    "var",
+                    "s"
+                  ],
+                  [
+                    "get",
+                    [
+                      "var",
+                      "r"
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 1,
+          "store": [
+            1
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "f",
+            [
+              "call",
+              [
+                "fn",
+                "x",
+                [
+                  "fn",
+                  "y",
+                  [
+                    "sub",
+                    [
+                      "var",
+                      "x"
+                    ],
+                    [
+                      "var",
+                      "y"
+                    ]
+                  ]
+                ]
+              ],
+              7
+            ],
+            [
+              "call",
+              [
+                "var",
+                "f"
+              ],
+              2
+            ]
+          ]
+        },
+        {
+          "value": 5,
+          "store": []
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "add",
+            [
+              "seq",
+              [
+                "ref",
+                1
+              ],
+              2
+            ],
+            [
+              "seq",
+              [
+                "ref",
+                3
+              ],
+              4
+            ]
+          ]
+        },
+        {
+          "value": 6,
+          "store": [
+            1,
+            3
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "r",
+            [
+              "ref",
+              1
+            ],
+            [
+              "let",
+              "s",
+              [
+                "snap"
+              ],
+              [
+                "let",
+                "q",
+                [
+                  "ref",
+                  2
+                ],
+                [
+                  "restore",
+                  [
+                    "var",
+                    "s"
+                  ],
+                  [
+                    "seq",
+                    [
+                      "ref",
+                      9
+                    ],
+                    [
+                      "get",
+                      [
+                        "var",
+                        "q"
+                      ]
+                    ]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 9,
+          "store": [
+            1,
+            9
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [],
+          "program": [
+            "let",
+            "r",
+            [
+              "ref",
+              1
+            ],
+            [
+              "add",
+              [
+                "set",
+                [
+                  "var",
+                  "r"
+                ],
+                3
+              ],
+              [
+                "get",
+                [
+                  "var",
+                  "r"
+                ]
+              ]
+            ]
+          ]
+        },
+        {
+          "value": 6,
+          "store": [
+            3
+          ]
+        }
+      ],
+      [
+        {
+          "bindings": [
+            [
+              "r",
+              [
+                "ref",
+                2
+              ]
+            ],
+            [
+              "f",
+              [
+                "fn",
+                "a",
+                [
+                  "set",
+                  [
+                    "var",
+                    "r"
+                  ],
+                  [
+                    "var",
+                    "a"
+                  ]
+                ]
+              ]
+            ]
+          ],
+          "program": [
+            "let",
+            "r",
+            [
+              "ref",
+              8
+            ],
+            [
+              "call",
+              [
+                "var",
+                "f"
+              ],
+              4
+            ]
+          ]
+        },
+        {
+          "value": 4,
+          "store": [
+            4,
+            8
+          ]
+        }
+      ]
+    ],
+    "reference": "\ndef _evaluate(e, env, store):\n    if type(e) is int:\n        return e\n    op, *a = e\n    if op == 'var':\n        return env[a[0]]\n    if op == 'let':\n        value = _evaluate(a[1], env, store)\n        return _evaluate(a[2], dict(env, **{a[0]: value}), store)\n    if op == 'fn':\n        return ('closure', a[0], a[1], env.copy())\n    if op == 'call':\n        f = _evaluate(a[0], env, store)\n        x = _evaluate(a[1], env, store)\n        return _evaluate(f[2], dict(f[3], **{f[1]: x}), store)\n    if op == 'seq':\n        _evaluate(a[0], env, store)\n        return _evaluate(a[1], env, store)\n    if op == 'if':\n        return _evaluate(a[1] if _evaluate(a[0], env, store) != 0 else a[2], env, store)\n    if op == 'snap':\n        return ('snapshot', tuple(store))\n    if op == 'restore':\n        snapshot = _evaluate(a[0], env, store)\n        store[:] = snapshot[1]\n        return _evaluate(a[1], env, store)\n    if op == 'ref':\n        value = _evaluate(a[0], env, store)\n        index = len(store)\n        store.append(value)\n        return ('cell', index)\n    if op == 'get':\n        return store[_evaluate(a[0], env, store)[1]]\n    if op == 'set':\n        cell = _evaluate(a[0], env, store)\n        value = _evaluate(a[1], env, store)\n        store[cell[1]] = value\n        return value\n    left = _evaluate(a[0], env, store)\n    right = _evaluate(a[1], env, store)\n    return left + right if op == 'add' else left - right\n\ndef _initial(bindings):\n    env, store = {}, []\n    for name, expression in bindings:\n        env[name] = _evaluate(expression, env, store)\n    return env, store\n\ndef store_program_result(arg):\n    env, store = _initial(arg['bindings'])\n    value = _evaluate(arg['program'], env, store)\n    return {'value': value, 'store': store}\n\ndef forked_store_observations(arg):\n    env, initial = _initial(arg['bindings'])\n    stores, results = [], []\n    for branch in arg['branches']:\n        store = (initial if branch['from'] == -1 else stores[branch['from']]).copy()\n        value = _evaluate(branch['program'], env, store)\n        stores.append(store)\n        results.append({'value': value, 'store': store.copy()})\n    return results\n\ndef bounded_store_equivalence(arg):\n    different = []\n    for x in arg['domain']:\n        observations = []\n        for program in (arg['left'], arg['right']):\n            store = []\n            observations.append((_evaluate(program, {'x': x}, store), store))\n        if observations[0] != observations[1]:\n            different.append(x)\n    return {'equivalent': not different, 'different_inputs': different}\n"
+  },
+  {
+    "id": "pickup_delivery_cost",
+    "function": "pickup_delivery_cost",
+    "family": "F4",
+    "role": "development",
+    "clauses": [
+      "Implement pickup_delivery_cost(arg). Arg additionally has vehicle. Serve every request with that vehicle. Return the minimum feasible route monetary cost, or null if no feasible route exists.",
+      "All values use exact built-in JSON types; integers exclude booleans. Preserve the input. Arg contains time, cost, requests and the additional fields stated below, with no others. Time and cost are square matrices of size N, 1 <= N <= 9; entries are integers from 0 to 20 with zero diagonals. Matrices are directed and need not satisfy a triangle inequality. Entries give direct travel duration and direct monetary cost; they are independent quantities.",
+      "Requests is an ordered list of 0 to 4 distinct request occurrences (identical objects still count separately). Each request has pick and drop node indices in [0,N), load in [1,3], pw and dw as [earliest,latest] service-start windows with integer 0 <= earliest <= latest <= 80, and ps and ds as pickup and delivery service durations in [0,5]. Only the reward contract additionally has reward, an integer from 0 to 30. Pickup and delivery nodes may coincide, including with vehicle endpoints.",
+      "Each vehicle object has exactly start, end (node indices), capacity (integer 1 to 5), release and deadline (integers with 0 <= release <= deadline <= 100). It starts empty at start at release, visits exactly one pickup and one delivery event for each request assigned to it, and finishes empty at end by deadline inclusive. Each pickup must precede its own delivery, even at identical nodes. No unassigned events, extra waypoint visits, request transfers, or split loads are allowed.",
+      "For each event, travel directly from the previous node, then start service at the maximum of arrival time and its window earliest. Start must be at most window latest inclusive. Waiting is permitted and has no monetary cost. Service finishes after ps or ds time units; the next trip starts then. Load changes by +load at pickup and -load at delivery and must stay between zero and capacity inclusive. Finish time includes direct travel from the last event to end; an empty route travels directly from start to end. Extra waiting cannot improve feasibility and is allowed only if all these constraints remain satisfied.",
+      "Route monetary cost is the sum of cost entries for every traveled leg, including the initial leg and the final leg to end, and excluding waiting and service durations. A correct return uses an integer optimum, or null exactly where specified. No invalid-input behavior is required."
+    ],
+    "cases": [
+      [
+        {
+          "time": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                0,
+                0
+              ],
+              "dw": [
+                1,
+                2
+              ],
+              "ps": 3,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 0,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 20
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                5,
+                5
+              ],
+              "dw": [
+                0,
+                3
+              ],
+              "ps": 0,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 0,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 20
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              3,
+              4,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2,
+              8
+            ],
+            [
+              8,
+              0,
+              6
+            ],
+            [
+              5,
+              6,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 10
+          }
+        },
+        8
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              2,
+              1
+            ],
+            [
+              3,
+              0,
+              2
+            ],
+            [
+              2,
+              2,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              7,
+              2
+            ],
+            [
+              3,
+              0,
+              6
+            ],
+            [
+              7,
+              0,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 2,
+              "pw": [
+                1,
+                7
+              ],
+              "dw": [
+                3,
+                10
+              ],
+              "ps": 1,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 2,
+            "release": 1,
+            "deadline": 11
+          }
+        },
+        13
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              4
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              4,
+              0
+            ],
+            [
+              5,
+              0,
+              8
+            ],
+            [
+              5,
+              8,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 3,
+              "pw": [
+                2,
+                8
+              ],
+              "dw": [
+                3,
+                11
+              ],
+              "ps": 2,
+              "ds": 0
+            },
+            {
+              "pick": 1,
+              "drop": 2,
+              "load": 1,
+              "pw": [
+                2,
+                8
+              ],
+              "dw": [
+                3,
+                11
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 3,
+            "release": 0,
+            "deadline": 12
+          }
+        },
+        12
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              4,
+              0,
+              1
+            ],
+            [
+              4,
+              4,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2,
+              7
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 4,
+            "release": 1,
+            "deadline": 13
+          }
+        },
+        7
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              2,
+              4
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              5,
+              8
+            ],
+            [
+              7,
+              0,
+              6
+            ],
+            [
+              5,
+              7,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 2,
+              "pw": [
+                0,
+                10
+              ],
+              "dw": [
+                3,
+                13
+              ],
+              "ps": 1,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 5,
+            "release": 0,
+            "deadline": 14
+          }
+        },
+        11
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1,
+              3
+            ],
+            [
+              2,
+              0,
+              3
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2,
+              7
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              8,
+              5,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 3,
+              "pw": [
+                1,
+                6
+              ],
+              "dw": [
+                3,
+                14
+              ],
+              "ps": 2,
+              "ds": 0
+            },
+            {
+              "pick": 1,
+              "drop": 2,
+              "load": 1,
+              "pw": [
+                1,
+                6
+              ],
+              "dw": [
+                3,
+                14
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 1,
+            "release": 1,
+            "deadline": 15
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              3,
+              2,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              5,
+              8
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              1,
+              5,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 2,
+            "release": 0,
+            "deadline": 16
+          }
+        },
+        8
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              3,
+              2
+            ],
+            [
+              3,
+              0,
+              4
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              6,
+              4,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 2,
+              "pw": [
+                3,
+                8
+              ],
+              "dw": [
+                3,
+                16
+              ],
+              "ps": 1,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 3,
+            "release": 1,
+            "deadline": 17
+          }
+        },
+        8
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1,
+              4
+            ],
+            [
+              2,
+              0,
+              2
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              4,
+              4
+            ],
+            [
+              6,
+              0,
+              0
+            ],
+            [
+              5,
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 3,
+              "pw": [
+                0,
+                9
+              ],
+              "dw": [
+                3,
+                17
+              ],
+              "ps": 2,
+              "ds": 0
+            },
+            {
+              "pick": 1,
+              "drop": 2,
+              "load": 1,
+              "pw": [
+                0,
+                9
+              ],
+              "dw": [
+                3,
+                17
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 4,
+            "release": 0,
+            "deadline": 18
+          }
+        },
+        4
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              3,
+              3
+            ],
+            [
+              4,
+              0,
+              2
+            ],
+            [
+              4,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              8,
+              0
+            ],
+            [
+              5,
+              0,
+              3
+            ],
+            [
+              7,
+              8,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 5,
+            "release": 1,
+            "deadline": 19
+          }
+        },
+        0
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              3,
+              1
+            ],
+            [
+              4,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              0,
+              7
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 2,
+              "pw": [
+                2,
+                6
+              ],
+              "dw": [
+                3,
+                10
+              ],
+              "ps": 1,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 20
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              4
+            ],
+            [
+              4,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              7,
+              0,
+              1
+            ],
+            [
+              4,
+              3,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 3,
+              "pw": [
+                3,
+                7
+              ],
+              "dw": [
+                3,
+                11
+              ],
+              "ps": 2,
+              "ds": 0
+            },
+            {
+              "pick": 1,
+              "drop": 2,
+              "load": 1,
+              "pw": [
+                3,
+                7
+              ],
+              "dw": [
+                3,
+                11
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 2,
+            "release": 1,
+            "deadline": 21
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              4,
+              2,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              6,
+              3
+            ],
+            [
+              1,
+              0,
+              3
+            ],
+            [
+              8,
+              0,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 3,
+            "release": 0,
+            "deadline": 22
+          }
+        },
+        3
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              2
+            ],
+            [
+              1,
+              0,
+              2
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              8,
+              2
+            ],
+            [
+              5,
+              0,
+              7
+            ],
+            [
+              6,
+              7,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 2,
+              "pw": [
+                1,
+                9
+              ],
+              "dw": [
+                3,
+                13
+              ],
+              "ps": 1,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 4,
+            "release": 1,
+            "deadline": 23
+          }
+        },
+        15
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              3
+            ],
+            [
+              2,
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              4,
+              8
+            ],
+            [
+              8,
+              0,
+              8
+            ],
+            [
+              0,
+              7,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 3,
+              "pw": [
+                2,
+                10
+              ],
+              "dw": [
+                3,
+                14
+              ],
+              "ps": 2,
+              "ds": 0
+            },
+            {
+              "pick": 1,
+              "drop": 2,
+              "load": 1,
+              "pw": [
+                2,
+                10
+              ],
+              "dw": [
+                3,
+                14
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 5,
+            "release": 0,
+            "deadline": 24
+          }
+        },
+        12
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              4,
+              2
+            ],
+            [
+              3,
+              0,
+              1
+            ],
+            [
+              3,
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              6,
+              2
+            ],
+            [
+              3,
+              0,
+              7
+            ],
+            [
+              3,
+              7,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 2,
+            "capacity": 1,
+            "release": 1,
+            "deadline": 25
+          }
+        },
+        2
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              7
+            ],
+            [
+              4,
+              0
+            ]
+          ],
+          "requests": [],
+          "vehicle": {
+            "start": 0,
+            "end": 1,
+            "capacity": 1,
+            "release": 1,
+            "deadline": 3
+          }
+        },
+        7
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              2
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                5,
+                5
+              ],
+              "dw": [
+                8,
+                8
+              ],
+              "ps": 2,
+              "ds": 1
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 0,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 10
+          }
+        },
+        7
+      ],
+      [
+        {
+          "time": [
+            [
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 0,
+              "load": 2,
+              "pw": [
+                0,
+                0
+              ],
+              "dw": [
+                0,
+                0
+              ],
+              "ps": 0,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 0,
+            "capacity": 1,
+            "release": 0,
+            "deadline": 0
+          }
+        },
+        null
+      ],
+      [
+        {
+          "time": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              0
+            ]
+          ],
+          "requests": [
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                0,
+                2
+              ],
+              "dw": [
+                1,
+                3
+              ],
+              "ps": 0,
+              "ds": 0
+            },
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                0,
+                2
+              ],
+              "dw": [
+                1,
+                3
+              ],
+              "ps": 0,
+              "ds": 0
+            },
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                0,
+                2
+              ],
+              "dw": [
+                1,
+                3
+              ],
+              "ps": 0,
+              "ds": 0
+            },
+            {
+              "pick": 0,
+              "drop": 1,
+              "load": 1,
+              "pw": [
+                0,
+                2
+              ],
+              "dw": [
+                1,
+                3
+              ],
+              "ps": 0,
+              "ds": 0
+            }
+          ],
+          "vehicle": {
+            "start": 0,
+            "end": 0,
+            "capacity": 4,
+            "release": 0,
+            "deadline": 4
+          }
+        },
+        5
+      ]
+    ],
+    "reference": "\ndef _route(arg, vehicle, indices):\n    requests = arg['requests']\n    best = None\n    def visit(node, time, load, picked, done, cost):\n        nonlocal best\n        if len(done) == len(indices):\n            if time + arg['time'][node][vehicle['end']] <= vehicle['deadline']:\n                total = cost + arg['cost'][node][vehicle['end']]\n                if best is None or total < best:\n                    best = total\n            return\n        for i in indices:\n            r = requests[i]\n            if i in done:\n                continue\n            delivery = i in picked\n            target = r['drop'] if delivery else r['pick']\n            window = r['dw'] if delivery else r['pw']\n            newload = load + (-r['load'] if delivery else r['load'])\n            start = max(time + arg['time'][node][target], window[0])\n            if newload > vehicle['capacity'] or start > window[1]:\n                continue\n            duration = r['ds'] if delivery else r['ps']\n            visit(target, start + duration, newload, picked | {i},\n                  done | {i} if delivery else done, cost + arg['cost'][node][target])\n    visit(vehicle['start'], vehicle['release'], 0, set(), set(), 0)\n    return best\n\ndef pickup_delivery_cost(arg):\n    return _route(arg, arg['vehicle'], list(range(len(arg['requests']))))\n\ndef fleet_assignment_cost(arg):\n    from itertools import product\n    best = None\n    vehicles = arg['vehicles']\n    for assignment in product(range(len(vehicles)), repeat=len(arg['requests'])):\n        total = 0\n        for j, vehicle in enumerate(vehicles):\n            cost = _route(arg, vehicle, [i for i, v in enumerate(assignment) if v == j])\n            if cost is None:\n                break\n            total += cost\n        else:\n            if best is None or total < best:\n                best = total\n    return best\n\ndef reward_delivery_selection(arg):\n    best = 0\n    for mask in range(1 << len(arg['requests'])):\n        indices = [i for i in range(len(arg['requests'])) if mask >> i & 1]\n        cost = _route(arg, arg['vehicle'], indices)\n        if cost is not None and cost <= arg['budget']:\n            best = max(best, sum(arg['requests'][i]['reward'] for i in indices))\n    return best\n"
+  },
+  {
+    "id": "automaton_route_cost",
+    "function": "automaton_route_cost",
+    "family": "F5",
+    "role": "development",
+    "clauses": [
+      "The function takes one dictionary a and must not mutate it. All numbers are exact integers (not booleans). Keys are n, edges, start, goal, state, delta, accept, budget; budget_route_strategy additionally has owners. There are no other keys.",
+      "n is 1..8. start and goal are vertex indices 0..n-1. delta is a rectangular list with 1..5 rows and 1..3 columns, each entry a state index 0..len(delta)-1; state is an initial state index. accept is a list of distinct state indices, possibly empty.",
+      "edges is a list of 0..20 lists [source, destination, label, resource, cost]. Vertices are in 0..n-1, label is a column index in delta, resource is 1..8, cost is -20..20. budget is 0..24. Parallel entries, self loops, and repeated entries are legal.",
+      "A walk starts at start in state with resource use zero and cost zero. Taking an edge at the current vertex adds its resource and cost, moves to its destination, and replaces state q by delta[q][label]. Total resource may not exceed budget. An accepted ending has vertex goal and state in accept. The empty walk is allowed. Reaching an accepted ending does not prevent taking further edges.",
+      "Return the minimum cost of any accepted walk using at most budget resource, as an integer, or None if no accepted walk exists."
+    ],
+    "cases": [
+      [
+        {
+          "n": 1,
+          "edges": [],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 0
+        },
+        0
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "accept": [],
+          "budget": 2
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              1,
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              3
+            ]
+          ],
+          "start": 0,
+          "goal": 1,
+          "state": 0,
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 1
+        },
+        3
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              1,
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              -5
+            ]
+          ],
+          "start": 0,
+          "goal": 1,
+          "state": 0,
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 3
+        },
+        -7
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [
+            [
+              0,
+              0,
+              0,
+              1,
+              -2
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "accept": [
+            1
+          ],
+          "budget": 4
+        },
+        -6
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              1,
+              0,
+              1,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              9
+            ]
+          ],
+          "start": 0,
+          "goal": 1,
+          "state": 0,
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 1
+        },
+        2
+      ],
+      [
+        {
+          "n": 3,
+          "edges": [
+            [
+              1,
+              0,
+              0,
+              1,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              2
+            ]
+          ],
+          "start": 1,
+          "goal": 2,
+          "state": 1,
+          "delta": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "accept": [
+            1
+          ],
+          "budget": 2
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              0,
+              0,
+              3,
+              4
+            ],
+            [
+              0,
+              1,
+              1,
+              3,
+              -4
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "accept": [],
+          "budget": 3
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [
+            [
+              0,
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              3
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [
+            1
+          ],
+          "budget": 0
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              1,
+              0,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              -5
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              -2
+            ],
+            [
+              1,
+              0,
+              1,
+              1,
+              -2
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 1,
+          "delta": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [],
+          "budget": 5
+        },
+        null
+      ],
+      [
+        {
+          "n": 3,
+          "edges": [
+            [
+              1,
+              2,
+              0,
+              2,
+              0
+            ]
+          ],
+          "start": 1,
+          "goal": 1,
+          "state": 0,
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [
+            0,
+            1
+          ],
+          "budget": 0
+        },
+        0
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              0,
+              1,
+              1,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              1,
+              3,
+              5
+            ],
+            [
+              1,
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              0,
+              0,
+              2,
+              5
+            ]
+          ],
+          "start": 0,
+          "goal": 1,
+          "state": 0,
+          "delta": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 4
+        },
+        null
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              1,
+              1,
+              1,
+              3,
+              -4
+            ],
+            [
+              0,
+              1,
+              1,
+              1,
+              4
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 1,
+          "delta": [
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 2
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [
+            [
+              0,
+              0,
+              1,
+              3,
+              -1
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              1
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 3
+        },
+        -1
+      ],
+      [
+        {
+          "n": 2,
+          "edges": [
+            [
+              1,
+              0,
+              1,
+              2,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              2,
+              -3
+            ]
+          ],
+          "start": 0,
+          "goal": 1,
+          "state": 1,
+          "delta": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "accept": [
+            0,
+            1
+          ],
+          "budget": 2
+        },
+        -3
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [
+            [
+              0,
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              1,
+              5
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              -2
+            ],
+            [
+              0,
+              0,
+              1,
+              3,
+              3
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [
+            0
+          ],
+          "budget": 3
+        },
+        -2
+      ],
+      [
+        {
+          "n": 3,
+          "edges": [
+            [
+              2,
+              1,
+              1,
+              1,
+              -5
+            ],
+            [
+              2,
+              0,
+              1,
+              2,
+              -2
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 0,
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "accept": [],
+          "budget": 0
+        },
+        null
+      ],
+      [
+        {
+          "n": 1,
+          "edges": [
+            [
+              0,
+              0,
+              0,
+              2,
+              -5
+            ],
+            [
+              0,
+              0,
+              0,
+              3,
+              -3
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              2
+            ]
+          ],
+          "start": 0,
+          "goal": 0,
+          "state": 1,
+          "delta": [
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "accept": [],
+          "budget": 6
+        },
+        null
+      ],
+      [
+        {
+          "n": 8,
+          "edges": [
+            [
+              0,
+              7,
+              0,
+              8,
+              -20
+            ]
+          ],
+          "start": 0,
+          "goal": 7,
+          "state": 0,
+          "delta": [
+            [
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              4,
+              4
+            ]
+          ],
+          "accept": [
+            4
+          ],
+          "budget": 24
+        },
+        -20
+      ]
+    ],
+    "reference": "from functools import lru_cache\n\ndef automaton_route_cost(a):\n    n = a['n']; budget = a['budget']; accept = set(a['accept'])\n    outgoing = [[] for _ in range(n)]\n    for u,v,label,r,c in a['edges']:\n        outgoing[u].append((v,label,r,c))\n    @lru_cache(None)\n    def solve(v,q,left):\n        values = [0] if v == a['goal'] and q in accept else []\n        for w,label,r,c in outgoing[v]:\n            if r <= left:\n                sub = solve(w,a['delta'][q][label],left-r)\n                if sub is not None: values.append(c+sub)\n        return min(values,default=None)\n    return solve(a['start'],a['state'],budget)\n"
+  },
+  {
+    "id": "constrained_edit_cost",
+    "function": "constrained_edit_cost",
+    "family": "F6",
+    "role": "development",
+    "clauses": [
+      "The function takes one dictionary a and must not mutate it. Integer fields contain exact integers, not booleans. alphabet is a list of 1..3 distinct strings, each exactly one Unicode code point. All text strings contain only characters in alphabet. String lengths count Unicode code points.",
+      "delta is a rectangular list of 1..5 rows and len(alphabet) columns containing state indices 0..len(delta)-1. state is an initial state index. accept is a list of distinct state indices, possibly empty. An output is accepted when starting at state and replacing q with delta[q][alphabet.index(c)] for each output character c leaves q in accept. The empty output is tested at state.",
+      "max_output is an integer 0..12. Only outputs of length at most max_output are permitted.",
+      "The exact keys are alphabet, delta, state, accept, max_output, text, mode, next_mode, cost, max_ops. text has length 0..12. next_mode is a list of 1..4 rows of three mode indices. cost has the same dimensions with each entry an integer 1..20. mode is an initial mode index. max_ops is an integer 0..24.",
+      "A script reads text once from left to right and emits its output from left to right. Operation index 0 inserts any one alphabet character without consuming input. Operation index 1 deletes the next input character and emits nothing. Operation index 2 consumes the next input character and emits any one alphabet character, including the identical character. Delete and substitute require an unconsumed input character. There is no free copy operation.",
+      "Each operation at mode m adds cost[m][operation] and then sets the mode to next_mode[m][operation]. Character choice does not affect this mode update or cost. The initial cost is zero. A successful script consumes all of text, emits an accepted output, and uses at most max_ops operations. It may continue inserting after consuming all input. The empty script is allowed. No acceptance condition is imposed on the final edit mode.",
+      "Return the minimum total cost among successful scripts as an integer, or None if there are none."
+    ],
+    "cases": [
+      [
+        {
+          "text": "",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 0,
+          "max_ops": 0,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        0
+      ],
+      [
+        {
+          "text": "a",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 1,
+          "max_ops": 1,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        1
+      ],
+      [
+        {
+          "text": "a",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [],
+          "max_output": 1,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "a",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              1
+            ],
+            [
+              1
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            1
+          ],
+          "max_output": 1,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              5,
+              4
+            ],
+            [
+              9,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        2
+      ],
+      [
+        {
+          "text": "ab",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            1
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        2
+      ],
+      [
+        {
+          "text": "é",
+          "alphabet": [
+            "é",
+            "🦊"
+          ],
+          "delta": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            1
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        1
+      ],
+      [
+        {
+          "text": "",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            1
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        1
+      ],
+      [
+        {
+          "text": "aa",
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 0,
+          "max_ops": 1,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "bb",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 0,
+          "max_ops": 0,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              2,
+              2
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "aa",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [],
+          "max_output": 1,
+          "max_ops": 2,
+          "mode": 0,
+          "cost": [
+            [
+              3,
+              2,
+              5
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "a",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            1
+          ],
+          "max_output": 0,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              5,
+              2,
+              4
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "a",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "state": 2,
+          "accept": [
+            0,
+            1
+          ],
+          "max_output": 2,
+          "max_ops": 2,
+          "mode": 0,
+          "cost": [
+            [
+              3,
+              2,
+              2
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        2
+      ],
+      [
+        {
+          "text": "bb",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ],
+          "state": 1,
+          "accept": [
+            0
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        5
+      ],
+      [
+        {
+          "text": "bb",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "state": 2,
+          "accept": [
+            0,
+            1
+          ],
+          "max_output": 1,
+          "max_ops": 0,
+          "mode": 0,
+          "cost": [
+            [
+              5,
+              2,
+              5
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "bb",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ]
+          ],
+          "state": 1,
+          "accept": [
+            1
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              2,
+              1,
+              4
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        2
+      ],
+      [
+        {
+          "text": "ab",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "state": 0,
+          "accept": [],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              2,
+              4,
+              3
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "ba",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 2,
+          "max_ops": 1,
+          "mode": 0,
+          "cost": [
+            [
+              3,
+              1,
+              4
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        null
+      ],
+      [
+        {
+          "text": "b",
+          "alphabet": [
+            "a",
+            "b"
+          ],
+          "delta": [
+            [
+              0,
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 2,
+          "max_ops": 3,
+          "mode": 0,
+          "cost": [
+            [
+              1,
+              3,
+              5
+            ]
+          ],
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ]
+        },
+        3
+      ],
+      [
+        {
+          "alphabet": [
+            "a"
+          ],
+          "delta": [
+            [
+              0
+            ]
+          ],
+          "state": 0,
+          "accept": [
+            0
+          ],
+          "max_output": 0,
+          "text": "aaaaaaaaaaaa",
+          "mode": 0,
+          "next_mode": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "cost": [
+            [
+              20,
+              20,
+              20
+            ]
+          ],
+          "max_ops": 24
+        },
+        240
+      ]
+    ],
+    "reference": "def constrained_edit_cost(a):\n    # Each layer contains all prefixes of a fixed operation count.\n    layer = {(0,0,a['state'],a['mode']):(0,1)}\n    best = None; count = 0\n    for step in range(a['max_ops']+1):\n        following = {}\n        for (i,length,q,m),(value,ways) in layer.items():\n            if i == len(a['text']) and q in a['accept']:\n                if best is None or value < best: best,count = value,ways\n                elif value == best: count = (count+ways)%1000000007\n            if step == a['max_ops']: continue\n            for op in range(3):\n                if op != 0 and i == len(a['text']): continue\n                emissions = [None] if op == 1 else range(len(a['alphabet']))\n                for c in emissions:\n                    size = length+(c is not None)\n                    if size > a['max_output']: continue\n                    target = (i+(op!=0),size,q if c is None else a['delta'][q][c],a['next_mode'][m][op])\n                    candidate = value+a['cost'][m][op]\n                    old = following.get(target)\n                    if old is None or candidate < old[0]: following[target] = (candidate,ways)\n                    elif candidate == old[0]: following[target] = (candidate,(old[1]+ways)%1000000007)\n        layer = following\n    return best\n"
+  }
+]

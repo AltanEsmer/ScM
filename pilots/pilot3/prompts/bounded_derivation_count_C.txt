@@ -1,0 +1,18 @@
+Implement the Python function bounded_derivation_count taking one argument.
+
+<requirements>
+<clause>The argument is a dictionary with exactly n, start, rules, budget, and text; all numeric fields are integers, not booleans.</clause>
+<clause>There are n nonterminal symbols numbered 0 through n-1, where 1 &lt;= n &lt;= 3, and start is one of those symbols.</clause>
+<clause>Rules is a list of zero through six lists [lhs, rhs, resource, cost], where lhs is a nonterminal, resource is 1 through 3, and cost is -5 through 5.</clause>
+<clause>Each rhs is either an empty list, a one-element list containing the terminal string &quot;a&quot; or &quot;b&quot;, a one-element list containing a nonterminal integer, or a two-element list of nonterminal integers.</clause>
+<clause>Budget is between 0 and 16 inclusive; text is a string of zero through seven characters, all from &quot;ab&quot;.</clause>
+<clause>A derivation is a finite ordered tree rooted at start; every nonterminal occurrence chooses one rule with that lhs, and the rhs gives its ordered children, with an empty rhs producing the empty string.</clause>
+<clause>A tree yield is its terminal leaves read left to right; its resource and cost are the respective sums of resource and cost over all rule occurrences, including empty and unary rules.</clause>
+<clause>A permitted tree has total resource at most budget; a nonterminal root always needs a rule occurrence, so budget zero permits no tree.</clause>
+<clause>Recursive rules, nullable cycles, unused nonterminals, and duplicate rule entries are allowed; positions in rules distinguish rule identities.</clause>
+<clause>Return as an integer the number of permitted trees whose yield equals text exactly, reduced modulo 1000000007; return zero if there is no such tree.</clause>
+<clause>Two trees are distinct if their ordered tree structures or the rule identity at any corresponding occurrence differ; identical duplicate entries still give distinct choices, and costs have no effect on counting.</clause>
+<clause>Do not modify the argument or any nested object.</clause>
+</requirements>
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

@@ -1,0 +1,212 @@
+[
+  {
+    "trial_id": "budget_parse_cost_B0_04",
+    "task": "budget_parse_cost",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "store_program_result_B0_04",
+    "task": "store_program_result",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/store_program_result_B0.txt"
+  },
+  {
+    "trial_id": "automaton_route_cost_B0_03",
+    "task": "automaton_route_cost",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/automaton_route_cost_B0.txt"
+  },
+  {
+    "trial_id": "budget_parse_cost_B0_02",
+    "task": "budget_parse_cost",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "store_program_result_B0_05",
+    "task": "store_program_result",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/store_program_result_B0.txt"
+  },
+  {
+    "trial_id": "constrained_edit_cost_B0_02",
+    "task": "constrained_edit_cost",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/constrained_edit_cost_B0.txt"
+  },
+  {
+    "trial_id": "versioned_circulation_costs_B0_02",
+    "task": "versioned_circulation_costs",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/versioned_circulation_costs_B0.txt"
+  },
+  {
+    "trial_id": "automaton_route_cost_B0_01",
+    "task": "automaton_route_cost",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/automaton_route_cost_B0.txt"
+  },
+  {
+    "trial_id": "pickup_delivery_cost_B0_05",
+    "task": "pickup_delivery_cost",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/pickup_delivery_cost_B0.txt"
+  },
+  {
+    "trial_id": "budget_parse_cost_B0_01",
+    "task": "budget_parse_cost",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "constrained_edit_cost_B0_03",
+    "task": "constrained_edit_cost",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/constrained_edit_cost_B0.txt"
+  },
+  {
+    "trial_id": "constrained_edit_cost_B0_04",
+    "task": "constrained_edit_cost",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/constrained_edit_cost_B0.txt"
+  },
+  {
+    "trial_id": "budget_parse_cost_B0_05",
+    "task": "budget_parse_cost",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "automaton_route_cost_B0_05",
+    "task": "automaton_route_cost",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/automaton_route_cost_B0.txt"
+  },
+  {
+    "trial_id": "constrained_edit_cost_B0_05",
+    "task": "constrained_edit_cost",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/constrained_edit_cost_B0.txt"
+  },
+  {
+    "trial_id": "pickup_delivery_cost_B0_02",
+    "task": "pickup_delivery_cost",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/pickup_delivery_cost_B0.txt"
+  },
+  {
+    "trial_id": "store_program_result_B0_01",
+    "task": "store_program_result",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/store_program_result_B0.txt"
+  },
+  {
+    "trial_id": "store_program_result_B0_02",
+    "task": "store_program_result",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/store_program_result_B0.txt"
+  },
+  {
+    "trial_id": "pickup_delivery_cost_B0_04",
+    "task": "pickup_delivery_cost",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/pickup_delivery_cost_B0.txt"
+  },
+  {
+    "trial_id": "automaton_route_cost_B0_04",
+    "task": "automaton_route_cost",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/automaton_route_cost_B0.txt"
+  },
+  {
+    "trial_id": "versioned_circulation_costs_B0_01",
+    "task": "versioned_circulation_costs",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/versioned_circulation_costs_B0.txt"
+  },
+  {
+    "trial_id": "versioned_circulation_costs_B0_03",
+    "task": "versioned_circulation_costs",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/versioned_circulation_costs_B0.txt"
+  },
+  {
+    "trial_id": "pickup_delivery_cost_B0_03",
+    "task": "pickup_delivery_cost",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/pickup_delivery_cost_B0.txt"
+  },
+  {
+    "trial_id": "store_program_result_B0_03",
+    "task": "store_program_result",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/store_program_result_B0.txt"
+  },
+  {
+    "trial_id": "pickup_delivery_cost_B0_01",
+    "task": "pickup_delivery_cost",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/pickup_delivery_cost_B0.txt"
+  },
+  {
+    "trial_id": "versioned_circulation_costs_B0_05",
+    "task": "versioned_circulation_costs",
+    "variant": "B0",
+    "repeat": 5,
+    "prompt_file": "prompts/versioned_circulation_costs_B0.txt"
+  },
+  {
+    "trial_id": "automaton_route_cost_B0_02",
+    "task": "automaton_route_cost",
+    "variant": "B0",
+    "repeat": 2,
+    "prompt_file": "prompts/automaton_route_cost_B0.txt"
+  },
+  {
+    "trial_id": "budget_parse_cost_B0_03",
+    "task": "budget_parse_cost",
+    "variant": "B0",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_parse_cost_B0.txt"
+  },
+  {
+    "trial_id": "constrained_edit_cost_B0_01",
+    "task": "constrained_edit_cost",
+    "variant": "B0",
+    "repeat": 1,
+    "prompt_file": "prompts/constrained_edit_cost_B0.txt"
+  },
+  {
+    "trial_id": "versioned_circulation_costs_B0_04",
+    "task": "versioned_circulation_costs",
+    "variant": "B0",
+    "repeat": 4,
+    "prompt_file": "prompts/versioned_circulation_costs_B0.txt"
+  }
+]

@@ -1,0 +1,9 @@
+Implement the Python function automaton_route_cost taking one argument.
+
+The function takes one dictionary a and must not mutate it. All numbers are exact integers (not booleans). Keys are n, edges, start, goal, state, delta, accept, budget; budget_route_strategy additionally has owners. There are no other keys.
+n is 1..8. start and goal are vertex indices 0..n-1. delta is a rectangular list with 1..5 rows and 1..3 columns, each entry a state index 0..len(delta)-1; state is an initial state index. accept is a list of distinct state indices, possibly empty.
+edges is a list of 0..20 lists [source, destination, label, resource, cost]. Vertices are in 0..n-1, label is a column index in delta, resource is 1..8, cost is -20..20. budget is 0..24. Parallel entries, self loops, and repeated entries are legal.
+A walk starts at start in state with resource use zero and cost zero. Taking an edge at the current vertex adds its resource and cost, moves to its destination, and replaces state q by delta[q][label]. Total resource may not exceed budget. An accepted ending has vertex goal and state in accept. The empty walk is allowed. Reaching an accepted ending does not prevent taking further edges.
+Return the minimum cost of any accepted walk using at most budget resource, as an integer, or None if no accepted walk exists.
+
+Return only Python 3.12 code using the standard library. Define the requested function. Do not include Markdown fences, explanations, tests, or executable input/output code.

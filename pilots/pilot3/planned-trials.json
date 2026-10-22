@@ -1,0 +1,2522 @@
+[
+  {
+    "trial_id": "bounded_derivation_count_A_03",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_03",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_03",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_10",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_10",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_10",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_02",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_02",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_02",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_01",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_01",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_01",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_04",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_04",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_04",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_02",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_02",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_02",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_02",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_02",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_02",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_03",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_03",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_03",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_01",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_01",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_01",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_06",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_06",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_06",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_02",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_02",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_02",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_09",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_09",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_09",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_03",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_03",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_03",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_09",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_09",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_09",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_06",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_06",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_06",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_04",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_04",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_04",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_05",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_05",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_05",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_10",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_10",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_10",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_08",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_08",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_08",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_10",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_10",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_10",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_08",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_08",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_08",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_07",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_07",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_07",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_05",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_05",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_05",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_03",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_03",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_03",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_07",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_07",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_07",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_03",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_03",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_03",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_05",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_05",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_05",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_08",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_08",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_08",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_01",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_01",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_01",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_04",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_04",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_04",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_10",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_10",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_10",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_05",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_05",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_05",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_10",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_10",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_10",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_10",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_10",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_10",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_04",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_04",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_04",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_08",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_08",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_08",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_02",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_02",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_02",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_06",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_06",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_06",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_02",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_02",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_02",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_09",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_09",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_09",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_08",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_08",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_08",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_03",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_03",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_03",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_01",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_01",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_01",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_08",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_08",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_08",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_10",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_10",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_10",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_02",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_02",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_02",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_04",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_04",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_04",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_07",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_07",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_07",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_06",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_06",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_06",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_06",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_06",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_06",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_05",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_05",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_05",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_08",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_08",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_08",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_A_07",
+    "task": "inventory_transfer_cost",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/inventory_transfer_cost_A.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_B_07",
+    "task": "inventory_transfer_cost",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/inventory_transfer_cost_B.txt"
+  },
+  {
+    "trial_id": "inventory_transfer_cost_C_07",
+    "task": "inventory_transfer_cost",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/inventory_transfer_cost_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_04",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_04",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_04",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_10",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_10",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_10",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_07",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_07",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_07",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_03",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_03",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_03",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_01",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_01",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_01",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_02",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_02",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_02",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_07",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_07",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_07",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_09",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_09",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_09",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_07",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_07",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_07",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_08",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_08",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_08",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_02",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_02",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_02",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_04",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_04",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_04",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_10",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_10",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_10",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_06",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_06",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_06",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_07",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_07",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_07",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_02",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_02",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_02",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_06",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_06",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_06",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_03",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_03",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_03",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_07",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_07",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_07",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_09",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_09",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_09",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_05",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_05",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_05",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_07",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_07",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_07",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_05",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_05",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_05",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_03",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_03",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_03",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_01",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_01",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_01",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_08",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_08",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_08",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_10",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_10",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_10",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_03",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_03",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_03",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_09",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_09",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_09",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_09",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_09",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_09",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_04",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_04",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_04",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_09",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_09",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_09",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_05",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_05",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_05",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_06",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_06",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_06",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_10",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_10",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_10",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_08",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_08",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_08",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_01",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_01",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_01",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_A_04",
+    "task": "optimal_edit_script_count",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/optimal_edit_script_count_A.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_C_04",
+    "task": "optimal_edit_script_count",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/optimal_edit_script_count_C.txt"
+  },
+  {
+    "trial_id": "optimal_edit_script_count_B_04",
+    "task": "optimal_edit_script_count",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/optimal_edit_script_count_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_04",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_04",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_04",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_03",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_03",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_03",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_05",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_05",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_05",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_B_09",
+    "task": "single_failure_costs",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/single_failure_costs_B.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_C_09",
+    "task": "single_failure_costs",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/single_failure_costs_C.txt"
+  },
+  {
+    "trial_id": "single_failure_costs_A_09",
+    "task": "single_failure_costs",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/single_failure_costs_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_05",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_05",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_05",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_02",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_02",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_02",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_06",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_06",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_06",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_01",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_01",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_01",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_05",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_05",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_05",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_07",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_07",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_07",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_06",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_06",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_06",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_05",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_05",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_05",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 5,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_09",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_09",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_09",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_03",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_03",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_03",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 3,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_08",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_08",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_08",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_C_01",
+    "task": "bounded_store_equivalence",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_store_equivalence_C.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_B_01",
+    "task": "bounded_store_equivalence",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_store_equivalence_B.txt"
+  },
+  {
+    "trial_id": "bounded_store_equivalence_A_01",
+    "task": "bounded_store_equivalence",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_store_equivalence_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_A_09",
+    "task": "accepted_walk_counts",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/accepted_walk_counts_A.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_C_09",
+    "task": "accepted_walk_counts",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/accepted_walk_counts_C.txt"
+  },
+  {
+    "trial_id": "accepted_walk_counts_B_09",
+    "task": "accepted_walk_counts",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/accepted_walk_counts_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_01",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_01",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_01",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_04",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_04",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_04",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_01",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_01",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_01",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_C_06",
+    "task": "forked_store_observations",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/forked_store_observations_C.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_B_06",
+    "task": "forked_store_observations",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/forked_store_observations_B.txt"
+  },
+  {
+    "trial_id": "forked_store_observations_A_06",
+    "task": "forked_store_observations",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/forked_store_observations_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_C_01",
+    "task": "bounded_derivation_count",
+    "variant": "C",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_derivation_count_C.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_A_01",
+    "task": "bounded_derivation_count",
+    "variant": "A",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_derivation_count_A.txt"
+  },
+  {
+    "trial_id": "bounded_derivation_count_B_01",
+    "task": "bounded_derivation_count",
+    "variant": "B",
+    "repeat": 1,
+    "prompt_file": "prompts/bounded_derivation_count_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_B_10",
+    "task": "joint_text_repair_cost",
+    "variant": "B",
+    "repeat": 10,
+    "prompt_file": "prompts/joint_text_repair_cost_B.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_A_10",
+    "task": "joint_text_repair_cost",
+    "variant": "A",
+    "repeat": 10,
+    "prompt_file": "prompts/joint_text_repair_cost_A.txt"
+  },
+  {
+    "trial_id": "joint_text_repair_cost_C_10",
+    "task": "joint_text_repair_cost",
+    "variant": "C",
+    "repeat": 10,
+    "prompt_file": "prompts/joint_text_repair_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_08",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_08",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_08",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 8,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_B_07",
+    "task": "fleet_assignment_cost",
+    "variant": "B",
+    "repeat": 7,
+    "prompt_file": "prompts/fleet_assignment_cost_B.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_A_07",
+    "task": "fleet_assignment_cost",
+    "variant": "A",
+    "repeat": 7,
+    "prompt_file": "prompts/fleet_assignment_cost_A.txt"
+  },
+  {
+    "trial_id": "fleet_assignment_cost_C_07",
+    "task": "fleet_assignment_cost",
+    "variant": "C",
+    "repeat": 7,
+    "prompt_file": "prompts/fleet_assignment_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_04",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_04",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_04",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 4,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_A_02",
+    "task": "reward_delivery_selection",
+    "variant": "A",
+    "repeat": 2,
+    "prompt_file": "prompts/reward_delivery_selection_A.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_B_02",
+    "task": "reward_delivery_selection",
+    "variant": "B",
+    "repeat": 2,
+    "prompt_file": "prompts/reward_delivery_selection_B.txt"
+  },
+  {
+    "trial_id": "reward_delivery_selection_C_02",
+    "task": "reward_delivery_selection",
+    "variant": "C",
+    "repeat": 2,
+    "prompt_file": "prompts/reward_delivery_selection_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_A_06",
+    "task": "budget_route_strategy",
+    "variant": "A",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_route_strategy_A.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_C_06",
+    "task": "budget_route_strategy",
+    "variant": "C",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_route_strategy_C.txt"
+  },
+  {
+    "trial_id": "budget_route_strategy_B_06",
+    "task": "budget_route_strategy",
+    "variant": "B",
+    "repeat": 6,
+    "prompt_file": "prompts/budget_route_strategy_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_B_09",
+    "task": "budget_grammar_edit_cost",
+    "variant": "B",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_grammar_edit_cost_B.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_A_09",
+    "task": "budget_grammar_edit_cost",
+    "variant": "A",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_grammar_edit_cost_A.txt"
+  },
+  {
+    "trial_id": "budget_grammar_edit_cost_C_09",
+    "task": "budget_grammar_edit_cost",
+    "variant": "C",
+    "repeat": 9,
+    "prompt_file": "prompts/budget_grammar_edit_cost_C.txt"
+  }
+]
