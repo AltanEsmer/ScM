@@ -19,6 +19,7 @@ The pilot has ten responses per task and format: A prose, B unordered list, and 
 Use Python 3.12+ and a running Docker engine. From the repository root:
 
 ```sh
+docker pull python@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
 python3.12 calibration/round2/run.py self-test
 python3.12 calibration/round2/run.py verify --require-complete
 python3.12 calibration/round2/run.py grade

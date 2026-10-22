@@ -29,3 +29,11 @@ Test contracts were committed in `a8c1e5f`, implementation in `b928b1f`, and the
 All 30 first responses were collected from unique fresh native sessions at the requested model and effort, in schedule order, with a maximum of two candidate sessions concurrently. There were no retries, follow-ups, repairs, interim grading or missing responses. Raw records were committed in `79fda31` before the first grading run.
 
 That run evaluated all 30 responses successfully: 30 all-case passes, 595/595 case checks, no functional failures, execution errors, exclusions or infrastructure failures. Every family scored 5/5. Selection records zero eligible families and `not_run_insufficient_eligible_families`. No qualifying-failure review was necessary, and no pilot-3 candidate generation occurred. Frozen inputs still match the manifest.
+
+## Final acceptance
+
+A fresh `git clone --no-local` of `523f99c` passed all 89 tests: 12 root tests, 16 pilot-2 tests, 27 round-1 tests, five uncertainty-helper tests, and 29 new composite tests. All four collected studies passed complete verification: 45, 45, 18 and 30 responses respectively. Regrading round 2 and recomputing selection in that clone produced identical tracked files, including the CSV, report and no-launch decision. The host already had the pinned Docker image. [The final verification log](results/final-verification.txt) records commands and exit codes.
+
+Final Standards review found one documentation issue: the standalone reproduction block omitted the required image pull because the grader uses `--pull=never`. The explicit digest-pinned pull command was added. No material code or evidence findings remained. Final Spec review found no missing requirements or incorrect claims. Both reviews used separate AI sessions and do not constitute independent human validation.
+
+All earlier frozen experiment files and the historical pilot-3 design/draft are unchanged from `a562a4f`. New frozen inputs remain unchanged from `7141a52`. The verified publication remote is `https://github.com/AltanEsmer/ScM.git`; no course files, scratch capture files, credentials or unrelated local material are included.
