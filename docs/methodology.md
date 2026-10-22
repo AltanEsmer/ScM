@@ -30,7 +30,7 @@ The primary outcome is whether a generation passes all predefined cases. Report 
 
 The extractor accepts bare Python source or one complete Python code fence without surrounding prose. Other text is parsed unchanged. Syntax errors, runtime errors, timeouts, and incorrect results are unsuccessful generations. Missing trials and infrastructure errors remain separate and do not silently enter the success denominator.
 
-Generated Python runs in a digest-pinned Docker container with no network, a read-only filesystem, a non-root user, and resource limits. Expected values and reference solutions stay on the host. The host compares returned observations and never accepts a candidate-declared pass status. The runner shares the candidate interpreter, so input-mutation and identity observations are not secure attestations against malicious code. This grader targets ordinary generated solutions, not an adversarial competition.
+Generated Python runs in a digest-pinned Docker container with no network, a read-only filesystem, a non-root user, and resource limits. Expected values and reference solutions stay on the host. The host compares returned observations and never accepts a candidate-declared pass status. The runner shares the candidate interpreter. All returned observations, including values, types, input mutation, and identity, could be fabricated by deliberately malicious code that tampers with the interpreter or result transport. This grader targets ordinary generated solutions, not an adversarial competition.
 
 ## Analysis and limits
 

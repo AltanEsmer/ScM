@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "hashes": {
+    "scm.py": "6d163bd2b684e667bc4ac7daa96e96392eaf34da1d8f63a0f33f486fd6774441",
+    "grading.py": "38f9ecb9ad99209b20eb7dadbd525068db95545ce934850d78ebc1d9924d7c17",
+    "experiment/protocol.json": "b265a05f881a7d21d673959491aaa5250b050c81c61a98b6a306793f1364a48e",
+    "experiment/tasks.json": "6417fcd7471e91e233fe4cfb49347a429d0dc2e00c4bbf1598a43f0ca3334e78",
+    "experiment/trials.json": "0cbf8736b59d37d3e3b5d20100b67d89729d4c11a0e6eb15e3e73acc6b1d413e",
+    "prompts/deduplicate_A.txt": "87daec1eaa50a9fc2598b70c1ccf071badbc03c67ad145b19ce7c528faf1cba6",
+    "prompts/deduplicate_B.txt": "3c31df9df886ca71198205734bd987caca1c829068f62f84cd6517eb88a57460",
+    "prompts/deduplicate_C.txt": "d080713798b061bcd4e9d78e5530771982c95fa095361be175359b26d01fb277",
+    "prompts/merge_intervals_A.txt": "07002b2d28c4875ad5e73703880d68d86389096fd0b2a124c0eccd758768a15c",
+    "prompts/merge_intervals_B.txt": "c16911cefba4977d4b8f8f5255f498a3f70c9e9637b8512209366f22202b7531",
+    "prompts/merge_intervals_C.txt": "9504839c2ecb33da12300c414e3d84267c3d80fd88f49d6b1c31d7b8568090c9",
+    "prompts/word_counts_A.txt": "0f0ca9be43aa8fc143e2c25f561ef3815f9695712d9de7bdf9a239816048406c",
+    "prompts/word_counts_B.txt": "54c95909b8fc8dc628f005f35c3d6fb098227bee4f19bb064af985f8365d3f38",
+    "prompts/word_counts_C.txt": "43176877c0830bfb85e66e8d193e3d96dd49ef9f748ea74cda3aeb3f3519fce6",
+    "scripts/capture.py": "4d03f6853587c2a7126ee6b512ca5776ac30ad76b0e348f2a35507082c5feaae"
+  }
+}

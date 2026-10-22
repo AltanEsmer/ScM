@@ -48,6 +48,26 @@ class PilotTests(unittest.TestCase):
                             capture_method='coordinator copied returned final message')
             (directory / 'evidence.json').write_text(json.dumps(evidence))
             self.assertEqual(scm.verify(root)[0].status, 'collected')
+            second = scm.trials(root)[1]
+            duplicate = root / 'records' / second.trial_id
+            duplicate.mkdir()
+            (duplicate / 'answer.txt').write_bytes(answer)
+            second_evidence = dict(evidence, trial_id=second.trial_id,
+                                   prompt_sha256=scm.sha(root / second.prompt_file))
+            (duplicate / 'evidence.json').write_text(json.dumps(second_evidence))
+            with self.assertRaisesRegex(ValueError, 'duplicate session'):
+                scm.verify(root)
+            shutil.rmtree(duplicate)
+            (directory / 'evidence.json').unlink()
+            with self.assertRaisesRegex(ValueError, 'incomplete'):
+                scm.verify(root)
+            (directory / 'evidence.json').write_text(json.dumps(evidence))
+            prompt = root / trial.prompt_file
+            original_prompt = prompt.read_bytes()
+            prompt.write_text('changed')
+            with self.assertRaisesRegex(ValueError, 'frozen inputs'):
+                scm.verify(root)
+            prompt.write_bytes(original_prompt)
             (directory / 'answer.txt').write_text('altered')
             with self.assertRaises(ValueError):
                 scm.verify(root)
@@ -81,6 +101,8 @@ class DockerTests(unittest.TestCase):
     def test_mutants(self):
         mutants = [
             (0, 'def deduplicate(values): return sorted(set(values))'),
+            (0, 'def deduplicate(values): return tuple(dict.fromkeys(values))'),
+            (1, self.tasks[1]['reference'].replace('return out', 'return [tuple(x) for x in out]')),
             (0, 'def deduplicate(values): return values'),
             (0, 'def deduplicate(values):\n values[:] = list(dict.fromkeys(values))\n return values[:]'),
             (1, self.tasks[1]['reference'].replace('a <=', 'a <')),
@@ -94,10 +116,28 @@ class DockerTests(unittest.TestCase):
             with self.subTest(code=code):
                 self.check_code(self.tasks[i], code, 'fail')
 
+    def test_forged_results_and_exit_codes(self):
+        task = self.tasks[0]
+        forged = {'results': [{'actual': grading.typed(expected), 'input_after': grading.typed(argument),
+                               'same_object': False} for argument, expected in task['cases']]}
+        self.check_code(task, 'print(' + repr(json.dumps(forged)) + ')\nraise SystemExit(0)', 'runtime_error')
+
+    def test_exit_codes_remain_candidate_failures(self):
+        for code in ('raise SystemExit(125)', 'import os\nos._exit(125)'):
+            with self.subTest(code=code):
+                self.check_code(self.tasks[0], code, 'runtime_error')
+
+    def test_unavailable_image_is_infrastructure_error(self):
+        status, _, _ = grading.evaluate(self.tasks[0], self.tasks[0]['reference'], 'python@sha256:' + '0' * 64)
+        self.assertEqual(status, 'infrastructure_error')
+
+    def test_named_builtin_subclass_rejected(self):
+        self.check_code(self.tasks[0], 'import builtins\nclass int(builtins.int): pass\ndef deduplicate(values): return [int(x) for x in dict.fromkeys(values)]', 'runtime_error')
+
     def test_errors_and_isolation(self):
         task = self.tasks[0]
         self.check_code(task, 'this is not python!', 'syntax_error')
-        self.check_code(task, 'print(\'{"status":"pass"}\')\nraise SystemExit', 'invalid_output')
+        self.check_code(task, 'print(\'{"status":"pass"}\')\nraise SystemExit', 'runtime_error')
         self.check_code(task, 'while True: pass', 'timeout')
         self.check_code(task, 'print("x" * 200000)', 'output_limit')
         self.check_code(task, 'open("/tmp/denied", "w").write("x")', 'runtime_error')
