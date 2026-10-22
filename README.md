@@ -10,6 +10,8 @@ Two Scientific Methods pilots investigate whether equivalent prompt variations c
 
 **Composite calibration round 2:** six new development functions, five responses each. All 30 passed all 595 case checks. The twelve distinct held-out functions were frozen before collection, but zero families qualified. Read [round 2 findings](calibration/round2/findings.md) and [reproduction instructions](calibration/round2/README.md).
 
+**Post-hoc robustness audit:** the same 30 composite answers passed 4,770/4,770 checks on 954 unique inputs, including 952 absent from the original tests. No new model responses were collected. Read the [audit findings and next-experiment recommendation](audits/composite-robustness/findings.md) and [reproduction instructions](audits/composite-robustness/README.md). Original results remain unchanged.
+
 **Pilot 3:** [not run](pilots/pilot3/README.md), because the frozen gate required at least three qualifying families. See [how strong the findings are for the report](docs/evidence-strength.md), including suggested report wording.
 
 The requested model is `gpt-6.1-sol` with medium reasoning. This is a pilot collected through native Codex subagents. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.

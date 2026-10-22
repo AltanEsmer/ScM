@@ -4,6 +4,8 @@ This post-hoc robustness audit applies new tests to the 30 saved responses from 
 
 The audit asks whether broader tests expose errors that the original finite tests missed. It cannot estimate prompt sensitivity because the saved sample contains one prompt per function. The suite is designed after observing the original ceiling and inspecting some answers during diagnosis. Separate test authors are instructed not to inspect saved answers while constructing their suites. This is not a preregistered or blinded confirmatory study.
 
+Completed: **30/30 saved answers pass, 4,770/4,770 audit checks.** Read the [findings and readiness recommendation](findings.md) and [verification evidence](verification.md).
+
 ## Scope and acceptance
 
 Audit all five saved responses for each of the six development functions. Apply the same valid cases to every response for a function. Test only inputs allowed by the original contract. More demanding inputs must remain within the original bounds; changing those bounds would test a different requirement.
