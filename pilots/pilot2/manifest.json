@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "hashes": {
+    "../../grading.py": "38f9ecb9ad99209b20eb7dadbd525068db95545ce934850d78ebc1d9924d7c17",
+    "run.py": "240a41e3ead0c996741fa5cf683210207bdbdb96377ea92ce17a8dcb58c5a47d",
+    "tasks.json": "5e89e446d63f87b355debff0dd226e0341bc4bf9d3932ff9ffdb417f1b204998",
+    "protocol.json": "35ba138231c8d533174cdc1e0c18a010ed2f94a22655fafd1cc805094833273e",
+    "trials.json": "bef295bafa7231bf71f13947a5e531ebbc934421af6c92009e4cff35a029cf5b",
+    "build_cases.py": "9e73dd5bb4fd6b523f166bfb1c49729a861f77ba528b6cf51a687d28061e17d7",
+    "equivalence.md": "dddd8a764775620243916cf94a4b4774839cc05e855750f6dbd35e780e580421",
+    "prompts/best_itinerary_A.txt": "fd19b21a7f71eb3456a5564c254e06e9be9e704eb3a14ccfbc77c23c34c50386",
+    "prompts/best_itinerary_B.txt": "2849274ab35f2707ec8e05e9fdd6da9a2bff834340a1829e0665f1f1753049c1",
+    "prompts/best_itinerary_C.txt": "af094301aa9f93ea5b16132211bf2f770acfc99cc36cd1bce2db2c82a097fb2f",
+    "prompts/match_path_A.txt": "0b7168f9d67ea9366ea16ad1a79ca0c90c1d8a9b4175d3a46819e356c17d8b14",
+    "prompts/match_path_B.txt": "c65874a842135db5d510b4adac7d12c40005761b9a8e26537fb53734d6a5ae61",
+    "prompts/match_path_C.txt": "8059e81388953036004ea8706e6372b3f52ae94b8e4ab19b646530abedf56390",
+    "prompts/select_jobs_A.txt": "129c2488e69aaffbe83e046f3c217dff01314826bf286625c7e6dd2d304b9da9",
+    "prompts/select_jobs_B.txt": "47fb89c41c4c049fae44eeda1017b02f9463fa08f8efacfec1b1102e67e64f05",
+    "prompts/select_jobs_C.txt": "951c5ae776ca167639c64e97a248bb0f1eaa1e049b40cb77f4074f72d7d4b343"
+  },
+  "frozen_observed_utc": "2026-10-22T16:15:00.345774+00:00"
+}
