@@ -1,12 +1,14 @@
-# Prompt sensitivity pilot
+# Prompt sensitivity pilots
 
-A Scientific Methods pilot measures whether three introductory phrasings change the correctness of generated Python functions. The study has three tasks and five repetitions per phrasing, for 45 planned fresh-session responses.
+Two Scientific Methods pilots investigate whether equivalent prompt variations change the correctness of generated Python functions. Each pilot has three tasks, three variants, and five repetitions per variant, for 45 fresh-session responses.
 
-**Result:** all 45 responses passed the frozen tests. Read [pilot findings](docs/findings.md) for interpretation and limits.
+**Pilot 1:** introductory phrasing changes on three simple tasks; all 45 responses passed. Read [pilot 1 findings](docs/findings.md).
+
+**Pilot 2:** harder tasks with interacting rules and full-specification paraphrases; all 45 responses passed 1,620 case checks. Read [pilot 2 findings](pilots/pilot2/findings.md) and its [reproduction instructions](pilots/pilot2/README.md). Pilot 1 data and frozen inputs are preserved.
 
 The requested model is `gpt-6.1-sol` with medium reasoning. This is a pilot collected through native Codex subagents. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
 
-## Reproduce the analysis
+## Reproduce pilot 1
 
 You need Python 3.12 or newer and a running Docker engine. No Python packages are required for the CLI.
 

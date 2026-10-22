@@ -1,0 +1,12 @@
+{
+  "host_python": "3.12.13",
+  "host_platform": "macOS-27.0-arm64-arm-64bit",
+  "docker_server": "29.8.2",
+  "docker_image": "python@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "observed_model": null,
+  "collection_freeze_commit": "32b1be1cfc56f14440698b2463bb51d731061da6",
+  "pilot1_baseline_commit": "582e8eba3ec6d10b11c7c74a69e2a7ff1f6a44b1",
+  "raw_records_commit": "ed5f229"
+}
