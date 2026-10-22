@@ -1,0 +1,5 @@
+Implement the following specification as a Python function.
+
+Define word_counts(text). The input is a string containing only ASCII characters. A word is a maximal contiguous sequence of ASCII letters A-Z or a-z. Treat all other characters, including digits, underscores, apostrophes and hyphens, as separators. Match words case-insensitively. Return a dictionary mapping each lowercase word to its number of occurrences. Dictionary order does not matter. An input with no words returns an empty dictionary.
+
+Use Python 3.12 and only the standard library. Return only Python source code, without Markdown fences, explanations, or example calls.

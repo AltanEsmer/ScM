@@ -1,0 +1,5 @@
+Create a Python function with the behavior specified below.
+
+Define deduplicate(values). The input is a list of integers. Return a new list containing each distinct integer once, in order of its first appearance. Do not modify the input. An empty list returns an empty list.
+
+Use Python 3.12 and only the standard library. Return only Python source code, without Markdown fences, explanations, or example calls.

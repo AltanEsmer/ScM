@@ -1,0 +1,5 @@
+Write a Python function that satisfies the following specification.
+
+Define merge_intervals(intervals). The input is a list of two-element lists [start, end] with integer endpoints and start <= end. Treat intervals as closed: intervals sharing an endpoint must merge. Return their union as a list of two-element lists, sorted by start, with no overlapping or touching intervals. Do not modify the input or its nested lists. An empty list returns an empty list.
+
+Use Python 3.12 and only the standard library. Return only Python source code, without Markdown fences, explanations, or example calls.
