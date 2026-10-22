@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "hashes": {
+    "../../grading.py": "38f9ecb9ad99209b20eb7dadbd525068db95545ce934850d78ebc1d9924d7c17",
+    "run.py": "ffe2920f478e16b69fd8159d103c1bc0b018ee07024edd04b59fd0c3c2220356",
+    "tasks.json": "ede047c9fbeaec88e32d9648710f2c83498a091ead80a3b88b3eff4240d8daa5",
+    "protocol.json": "a700b407893c0e848be7654bfe08060f12cfb8bcdac5f14d42770c18955e54e0",
+    "trials.json": "1eb13bae1d5e7f12c75480dafcf9067f69be09b0c13960eaf8f77be70eb0168a",
+    "build_cases.py": "690e64838857bc73d082a046a1a4db77a5723fbef5fa45fd4061a19a505d3382",
+    "pool_algorithms.py": "c40e0cd9c367ea8fb09bcc5b7bbf9db4f3f197bdf6c0579bad2f7edb71d33664",
+    "pool_semantics.py": "be73d863bf1992a27886a61a7f5b94d15141614693d9bd2e88868403245baab5",
+    "prompts/damerau_distance_B0.txt": "cdc060b67ebdfc93811121dac4153849948517d698ffb2079184fc021aad6554",
+    "prompts/eval_lexical_B0.txt": "85ffc45edcc8b89d822442a4050d132b1bb4e2ef6adb009b584cd7c147b7168e",
+    "prompts/min_cost_circulation_B0.txt": "3b485e7101f442a5f759794162dfa97597391d12cf15be893c7e08028ddab5dc",
+    "prompts/min_parse_cost_B0.txt": "5dab677281f232f3a848b0d8757a4fedec6f8a47e76d36584740a6955fbc852f",
+    "prompts/min_resource_route_B0.txt": "8c1954d0d51382305052a19eea07e493aadd81fa5b0572520fd66551f6c65f23",
+    "prompts/minimum_arborescence_B0.txt": "962a3531b067581a139616e93d8014f77cd7b68a110ff087079ce67cb60e2376"
+  },
+  "frozen_observed_utc": "2026-10-22T16:52:57.313908+00:00"
+}
