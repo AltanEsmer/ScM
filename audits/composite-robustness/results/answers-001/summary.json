@@ -1,0 +1,316 @@
+{
+  "all_pass": true,
+  "trials": [
+    {
+      "task": "versioned_circulation_costs",
+      "trial": "versioned_circulation_costs_B0_01",
+      "family": "F1",
+      "passed": 142,
+      "total": 142,
+      "status_counts": {
+        "pass": 18
+      }
+    },
+    {
+      "task": "versioned_circulation_costs",
+      "trial": "versioned_circulation_costs_B0_02",
+      "family": "F1",
+      "passed": 142,
+      "total": 142,
+      "status_counts": {
+        "pass": 18
+      }
+    },
+    {
+      "task": "versioned_circulation_costs",
+      "trial": "versioned_circulation_costs_B0_03",
+      "family": "F1",
+      "passed": 142,
+      "total": 142,
+      "status_counts": {
+        "pass": 18
+      }
+    },
+    {
+      "task": "versioned_circulation_costs",
+      "trial": "versioned_circulation_costs_B0_04",
+      "family": "F1",
+      "passed": 142,
+      "total": 142,
+      "status_counts": {
+        "pass": 18
+      }
+    },
+    {
+      "task": "versioned_circulation_costs",
+      "trial": "versioned_circulation_costs_B0_05",
+      "family": "F1",
+      "passed": 142,
+      "total": 142,
+      "status_counts": {
+        "pass": 18
+      }
+    },
+    {
+      "task": "budget_parse_cost",
+      "trial": "budget_parse_cost_B0_01",
+      "family": "F2",
+      "passed": 169,
+      "total": 169,
+      "status_counts": {
+        "pass": 22
+      }
+    },
+    {
+      "task": "budget_parse_cost",
+      "trial": "budget_parse_cost_B0_02",
+      "family": "F2",
+      "passed": 169,
+      "total": 169,
+      "status_counts": {
+        "pass": 22
+      }
+    },
+    {
+      "task": "budget_parse_cost",
+      "trial": "budget_parse_cost_B0_03",
+      "family": "F2",
+      "passed": 169,
+      "total": 169,
+      "status_counts": {
+        "pass": 22
+      }
+    },
+    {
+      "task": "budget_parse_cost",
+      "trial": "budget_parse_cost_B0_04",
+      "family": "F2",
+      "passed": 169,
+      "total": 169,
+      "status_counts": {
+        "pass": 22
+      }
+    },
+    {
+      "task": "budget_parse_cost",
+      "trial": "budget_parse_cost_B0_05",
+      "family": "F2",
+      "passed": 169,
+      "total": 169,
+      "status_counts": {
+        "pass": 22
+      }
+    },
+    {
+      "task": "store_program_result",
+      "trial": "store_program_result_B0_01",
+      "family": "F3",
+      "passed": 160,
+      "total": 160,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "store_program_result",
+      "trial": "store_program_result_B0_02",
+      "family": "F3",
+      "passed": 160,
+      "total": 160,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "store_program_result",
+      "trial": "store_program_result_B0_03",
+      "family": "F3",
+      "passed": 160,
+      "total": 160,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "store_program_result",
+      "trial": "store_program_result_B0_04",
+      "family": "F3",
+      "passed": 160,
+      "total": 160,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "store_program_result",
+      "trial": "store_program_result_B0_05",
+      "family": "F3",
+      "passed": 160,
+      "total": 160,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "pickup_delivery_cost",
+      "trial": "pickup_delivery_cost_B0_01",
+      "family": "F4",
+      "passed": 158,
+      "total": 158,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "pickup_delivery_cost",
+      "trial": "pickup_delivery_cost_B0_02",
+      "family": "F4",
+      "passed": 158,
+      "total": 158,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "pickup_delivery_cost",
+      "trial": "pickup_delivery_cost_B0_03",
+      "family": "F4",
+      "passed": 158,
+      "total": 158,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "pickup_delivery_cost",
+      "trial": "pickup_delivery_cost_B0_04",
+      "family": "F4",
+      "passed": 158,
+      "total": 158,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "pickup_delivery_cost",
+      "trial": "pickup_delivery_cost_B0_05",
+      "family": "F4",
+      "passed": 158,
+      "total": 158,
+      "status_counts": {
+        "pass": 20
+      }
+    },
+    {
+      "task": "automaton_route_cost",
+      "trial": "automaton_route_cost_B0_01",
+      "family": "F5",
+      "passed": 147,
+      "total": 147,
+      "status_counts": {
+        "pass": 19
+      }
+    },
+    {
+      "task": "automaton_route_cost",
+      "trial": "automaton_route_cost_B0_02",
+      "family": "F5",
+      "passed": 147,
+      "total": 147,
+      "status_counts": {
+        "pass": 19
+      }
+    },
+    {
+      "task": "automaton_route_cost",
+      "trial": "automaton_route_cost_B0_03",
+      "family": "F5",
+      "passed": 147,
+      "total": 147,
+      "status_counts": {
+        "pass": 19
+      }
+    },
+    {
+      "task": "automaton_route_cost",
+      "trial": "automaton_route_cost_B0_04",
+      "family": "F5",
+      "passed": 147,
+      "total": 147,
+      "status_counts": {
+        "pass": 19
+      }
+    },
+    {
+      "task": "automaton_route_cost",
+      "trial": "automaton_route_cost_B0_05",
+      "family": "F5",
+      "passed": 147,
+      "total": 147,
+      "status_counts": {
+        "pass": 19
+      }
+    },
+    {
+      "task": "constrained_edit_cost",
+      "trial": "constrained_edit_cost_B0_01",
+      "family": "F6",
+      "passed": 178,
+      "total": 178,
+      "status_counts": {
+        "pass": 23
+      }
+    },
+    {
+      "task": "constrained_edit_cost",
+      "trial": "constrained_edit_cost_B0_02",
+      "family": "F6",
+      "passed": 178,
+      "total": 178,
+      "status_counts": {
+        "pass": 23
+      }
+    },
+    {
+      "task": "constrained_edit_cost",
+      "trial": "constrained_edit_cost_B0_03",
+      "family": "F6",
+      "passed": 178,
+      "total": 178,
+      "status_counts": {
+        "pass": 23
+      }
+    },
+    {
+      "task": "constrained_edit_cost",
+      "trial": "constrained_edit_cost_B0_04",
+      "family": "F6",
+      "passed": 178,
+      "total": 178,
+      "status_counts": {
+        "pass": 23
+      }
+    },
+    {
+      "task": "constrained_edit_cost",
+      "trial": "constrained_edit_cost_B0_05",
+      "family": "F6",
+      "passed": 178,
+      "total": 178,
+      "status_counts": {
+        "pass": 23
+      }
+    }
+  ],
+  "family_trial_counts": {
+    "F1": 5,
+    "F2": 5,
+    "F3": 5,
+    "F4": 5,
+    "F5": 5,
+    "F6": 5
+  },
+  "batches_sha256": "4e2275ca0e1d4c6deab1c9f51d2a7b8aa5ab626f4cb686bb458755187bff1b65",
+  "finished_utc": "2026-10-22T19:23:33.140454+00:00",
+  "manifest_sha256": "375e1389cb4a252e959c38d68b8d29eee9208954c139ce0f085e06451835b89d"
+}

@@ -1,0 +1,7 @@
+{
+  "mode": "grade",
+  "review_note": "Suite committed1614df0 before evaluation; Standards and Spec reviews clear; 954/954 reference preflight passed. User authorized post-hoc audit of saved answers.",
+  "created_utc": "2026-10-22T19:20:27.884448+00:00",
+  "preflight_path": "audits/composite-robustness/results/reference-001",
+  "manifest_sha256": "375e1389cb4a252e959c38d68b8d29eee9208954c139ce0f085e06451835b89d"
+}
