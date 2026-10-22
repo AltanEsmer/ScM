@@ -1,0 +1,15 @@
+{
+  "trial_id": "word_counts_B_05",
+  "session_id": "/root/python_033",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T12:34:20.611272+00:00",
+  "completion_observed_utc": "2026-10-22T12:34:59.817869+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "54c95909b8fc8dc628f005f35c3d6fb098227bee4f19bb064af985f8365d3f38",
+  "response_sha256": "9b76d5ff2d999e0d75cfad3b9736205945c0e1632de0d27e5d3d3830e0fe9297",
+  "capture_method": "coordinator copied returned final message"
+}

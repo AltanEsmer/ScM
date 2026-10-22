@@ -1,0 +1,9 @@
+import re
+
+
+def word_counts(text):
+    counts = {}
+    for word in re.findall(r"[A-Za-z]+", text):
+        word = word.lower()
+        counts[word] = counts.get(word, 0) + 1
+    return counts

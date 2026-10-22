@@ -1,0 +1,15 @@
+{
+  "trial_id": "merge_intervals_A_02",
+  "session_id": "/root/python_021",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T12:32:30.357106+00:00",
+  "completion_observed_utc": "2026-10-22T12:33:20.501864+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "07002b2d28c4875ad5e73703880d68d86389096fd0b2a124c0eccd758768a15c",
+  "response_sha256": "79e8c0653fe37b5c984b055eaa5d1fadccf058658531809070ad60c5946b2e63",
+  "capture_method": "coordinator copied returned final message"
+}
