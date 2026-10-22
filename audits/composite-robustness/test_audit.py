@@ -34,7 +34,7 @@ class AuditTests(unittest.TestCase):
 
     def test_preservation(self):
         paths=run.subprocess.check_output(['git','ls-tree','-r','--name-only',run.BASE],cwd=run.ROOT,text=True).splitlines()
-        protected={p:run.hashlib.sha256(run.subprocess.check_output(['git','show',run.BASE+':'+p],cwd=run.ROOT)).hexdigest() for p in paths if p!='README.md' and not p.startswith('docs/')}
+        protected={p:run.hashlib.sha256(run.subprocess.check_output(['git','show',run.BASE+':'+p],cwd=run.ROOT)).hexdigest() for p in paths if p not in ('README.md','docs/evidence-strength.md')}
         for path,expected in protected.items():
             if path=='grading.py' or path.startswith(('calibration/','pilots/','experiments/')):
                 self.assertEqual(run.digest(run.ROOT/path),expected,path)
@@ -78,6 +78,15 @@ class AuditTests(unittest.TestCase):
                 self.assertEqual(execute.call_count,3)
             self.assertEqual(len(list((root/'results').glob('reference-*.json'))),2)
             self.assertFalse(json.loads((root/'results/summary.json').read_text())['all_pass'])
+
+    def test_complete_exact_trial_case_coverage(self):
+        fixture=dict(id='task',family='F5',cases=[dict(id='one'),dict(id='two')])
+        records=[dict(task='task',family='F5',trial=f'task_B0_{i:02}',case_ids=['one','two'],status='pass',passed=2,total=2) for i in range(1,6)]
+        self.assertEqual(len(run.validate_completion(records,[fixture],'grade')),5)
+        for bad in [records[:-1],records+records[:1]]:
+            with self.assertRaises(ValueError): run.validate_completion(bad,[fixture],'grade')
+        bad=copy.deepcopy(records);bad[0]['case_ids']=['one','one']
+        with self.assertRaises(ValueError): run.validate_completion(bad,[fixture],'grade')
 
     def test_invalid_family56(self):
         module=run.modules()[2]
