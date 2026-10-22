@@ -1,0 +1,38 @@
+def automaton_route_cost(a):
+    n = a["n"]
+    delta = a["delta"]
+    budget = a["budget"]
+    state_count = len(delta)
+
+    outgoing = [[] for _ in range(n)]
+    for source, destination, label, resource, cost in a["edges"]:
+        outgoing[source].append((destination, label, resource, cost))
+
+    dp = [
+        [[None] * state_count for _ in range(n)]
+        for _ in range(budget + 1)
+    ]
+    dp[0][a["start"]][a["state"]] = 0
+
+    answer = None
+    for used in range(budget + 1):
+        for q in a["accept"]:
+            cost = dp[used][a["goal"]][q]
+            if cost is not None and (answer is None or cost < answer):
+                answer = cost
+
+        for vertex in range(n):
+            for q, current_cost in enumerate(dp[used][vertex]):
+                if current_cost is None:
+                    continue
+                for destination, label, resource, edge_cost in outgoing[vertex]:
+                    next_used = used + resource
+                    if next_used > budget:
+                        continue
+                    next_state = delta[q][label]
+                    candidate = current_cost + edge_cost
+                    previous = dp[next_used][destination][next_state]
+                    if previous is None or candidate < previous:
+                        dp[next_used][destination][next_state] = candidate
+
+    return answer

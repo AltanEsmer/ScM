@@ -1,0 +1,57 @@
+def constrained_edit_cost(a):
+    n = len(a["text"])
+    max_output = a["max_output"]
+    max_ops = a["max_ops"]
+    next_mode = a["next_mode"]
+    cost = a["cost"]
+    accept = set(a["accept"])
+    destinations = [tuple(set(row)) for row in a["delta"]]
+
+    current = {(0, 0, a["state"], a["mode"]): 0}
+    best = None
+
+    for used in range(max_ops + 1):
+        following = {}
+
+        for (i, length, state, mode), total in current.items():
+            if i == n and state in accept:
+                if best is None or total < best:
+                    best = total
+
+            if used == max_ops or (best is not None and total >= best):
+                continue
+            if n - i > max_ops - used:
+                continue
+
+            def relax(key, value):
+                if best is not None and value >= best:
+                    return
+                previous = following.get(key)
+                if previous is None or value < previous:
+                    following[key] = value
+
+            if length < max_output:
+                insert_cost = total + cost[mode][0]
+                insert_mode = next_mode[mode][0]
+                for destination in destinations[state]:
+                    relax((i, length + 1, destination, insert_mode), insert_cost)
+
+            if i < n:
+                relax(
+                    (i + 1, length, state, next_mode[mode][1]),
+                    total + cost[mode][1],
+                )
+                if length < max_output:
+                    substitute_cost = total + cost[mode][2]
+                    substitute_mode = next_mode[mode][2]
+                    for destination in destinations[state]:
+                        relax(
+                            (i + 1, length + 1, destination, substitute_mode),
+                            substitute_cost,
+                        )
+
+        current = following
+        if not current:
+            break
+
+    return best

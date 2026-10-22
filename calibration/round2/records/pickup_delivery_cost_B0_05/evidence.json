@@ -1,0 +1,15 @@
+{
+  "trial_id": "pickup_delivery_cost_B0_05",
+  "session_id": "/root/composite_workflow/code_009",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T18:43:21.604348+00:00",
+  "completion_observed_utc": "2026-10-22T18:43:58.828660+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "cbbd76728f3ce815e5c408f4500b334a4580a7579c41e1c08f8abb7775045137",
+  "response_sha256": "672db296b1ca7ac0ab17e8d5bae7370421bac54739cbd8f7debcdc5512b8a47a",
+  "capture_method": "coordinator copied returned final message"
+}

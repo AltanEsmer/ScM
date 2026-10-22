@@ -1,0 +1,59 @@
+def pickup_delivery_cost(arg):
+    travel_time = arg["time"]
+    travel_cost = arg["cost"]
+    requests = arg["requests"]
+    vehicle = arg["vehicle"]
+    capacity = vehicle["capacity"]
+    deadline = vehicle["deadline"]
+    end = vehicle["end"]
+    complete = (1 << len(requests)) - 1
+    best = None
+
+    def search(node, time, load, picked, delivered, cost):
+        nonlocal best
+
+        if time > deadline or (best is not None and cost >= best):
+            return
+
+        if delivered == complete:
+            if time + travel_time[node][end] <= deadline:
+                total = cost + travel_cost[node][end]
+                if best is None or total < best:
+                    best = total
+            return
+
+        for i, request in enumerate(requests):
+            bit = 1 << i
+            if delivered & bit:
+                continue
+
+            if picked & bit:
+                target = request["drop"]
+                window = request["dw"]
+                duration = request["ds"]
+                next_load = load - request["load"]
+                next_picked = picked
+                next_delivered = delivered | bit
+            else:
+                next_load = load + request["load"]
+                if next_load > capacity:
+                    continue
+                target = request["pick"]
+                window = request["pw"]
+                duration = request["ps"]
+                next_picked = picked | bit
+                next_delivered = delivered
+
+            service_start = max(time + travel_time[node][target], window[0])
+            if service_start <= window[1]:
+                search(
+                    target,
+                    service_start + duration,
+                    next_load,
+                    next_picked,
+                    next_delivered,
+                    cost + travel_cost[node][target],
+                )
+
+    search(vehicle["start"], vehicle["release"], 0, 0, 0, 0)
+    return best

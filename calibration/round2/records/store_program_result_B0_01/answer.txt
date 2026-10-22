@@ -1,0 +1,64 @@
+def store_program_result(arg):
+    store = []
+
+    def evaluate(expr, env):
+        if type(expr) is int:
+            return expr
+
+        op = expr[0]
+
+        if op == "var":
+            return env[expr[1]]
+        if op == "let":
+            value = evaluate(expr[2], env)
+            extended = env.copy()
+            extended[expr[1]] = value
+            return evaluate(expr[3], extended)
+        if op == "fn":
+            return ("closure", expr[1], expr[2], env.copy())
+        if op == "call":
+            function = evaluate(expr[1], env)
+            argument = evaluate(expr[2], env)
+            extended = function[3].copy()
+            extended[function[1]] = argument
+            return evaluate(function[2], extended)
+        if op == "seq":
+            evaluate(expr[1], env)
+            return evaluate(expr[2], env)
+        if op == "if":
+            condition = evaluate(expr[1], env)
+            return evaluate(expr[2] if condition != 0 else expr[3], env)
+        if op == "add":
+            left = evaluate(expr[1], env)
+            right = evaluate(expr[2], env)
+            return left + right
+        if op == "sub":
+            left = evaluate(expr[1], env)
+            right = evaluate(expr[2], env)
+            return left - right
+        if op == "ref":
+            value = evaluate(expr[1], env)
+            handle = ("cell", len(store))
+            store.append(value)
+            return handle
+        if op == "get":
+            handle = evaluate(expr[1], env)
+            return store[handle[1]]
+        if op == "set":
+            handle = evaluate(expr[1], env)
+            value = evaluate(expr[2], env)
+            store[handle[1]] = value
+            return value
+        if op == "snap":
+            return ("snapshot", tuple(store))
+        if op == "restore":
+            snapshot = evaluate(expr[1], env)
+            store[:] = snapshot[1]
+            return evaluate(expr[2], env)
+
+    environment = {}
+    for name, expression in arg["bindings"]:
+        environment[name] = evaluate(expression, environment)
+
+    value = evaluate(arg["program"], environment)
+    return {"value": value, "store": store}

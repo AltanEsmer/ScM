@@ -1,0 +1,57 @@
+def constrained_edit_cost(a):
+    n = len(a["text"])
+    limit = a["max_output"]
+    delta = a["delta"]
+    next_mode = a["next_mode"]
+    cost = a["cost"]
+    accept = set(a["accept"])
+    width = len(a["alphabet"])
+
+    current = {(0, 0, a["state"], a["mode"]): 0}
+    best = None
+
+    for used in range(a["max_ops"] + 1):
+        following = {}
+
+        for (i, length, state, mode), total in current.items():
+            if i == n and state in accept:
+                if best is None or total < best:
+                    best = total
+
+            if used == a["max_ops"] or (best is not None and total >= best):
+                continue
+            if n - i > a["max_ops"] - used:
+                continue
+
+            if i < n:
+                key = (i + 1, length, state, next_mode[mode][1])
+                value = total + cost[mode][1]
+                previous = following.get(key)
+                if previous is None or value < previous:
+                    following[key] = value
+
+            if length < limit:
+                insert_total = total + cost[mode][0]
+                insert_mode = next_mode[mode][0]
+                substitute_total = total + cost[mode][2]
+                substitute_mode = next_mode[mode][2]
+
+                for column in range(width):
+                    target = delta[state][column]
+
+                    key = (i, length + 1, target, insert_mode)
+                    previous = following.get(key)
+                    if previous is None or insert_total < previous:
+                        following[key] = insert_total
+
+                    if i < n:
+                        key = (i + 1, length + 1, target, substitute_mode)
+                        previous = following.get(key)
+                        if previous is None or substitute_total < previous:
+                            following[key] = substitute_total
+
+        if not following:
+            break
+        current = following
+
+    return best

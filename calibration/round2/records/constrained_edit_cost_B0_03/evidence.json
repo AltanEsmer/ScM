@@ -1,0 +1,15 @@
+{
+  "trial_id": "constrained_edit_cost_B0_03",
+  "session_id": "/root/composite_workflow/code_011",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T18:43:58.908186+00:00",
+  "completion_observed_utc": "2026-10-22T18:44:39.493687+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "7c7135b2df947ce16227b99c24f5130a4f8be74311a1a7f7b7e3d67381e514fd",
+  "response_sha256": "1128ae2414d2ccb969bfb25a50270ba1dc646a0ce3318cfbfb9fa05a292d4320",
+  "capture_method": "coordinator copied returned final message"
+}

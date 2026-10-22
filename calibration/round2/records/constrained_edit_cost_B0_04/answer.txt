@@ -1,0 +1,73 @@
+def constrained_edit_cost(a):
+    alphabet_size = len(a["alphabet"])
+    delta = a["delta"]
+    next_mode = a["next_mode"]
+    cost = a["cost"]
+    n = len(a["text"])
+    max_output = a["max_output"]
+    accepted = set(a["accept"])
+
+    if not accepted:
+        return None
+
+    current = {(0, 0, a["state"], a["mode"]): 0}
+    best = None
+
+    for operations in range(a["max_ops"] + 1):
+        following = {}
+        for (position, length, state, mode), total in current.items():
+            if best is not None and total >= best:
+                continue
+
+            if position == n and state in accepted:
+                best = total
+                continue
+
+            if operations == a["max_ops"]:
+                continue
+
+            remaining_ops = a["max_ops"] - operations
+            if n - position > remaining_ops:
+                continue
+
+            def relax(key, value):
+                if best is not None and value >= best:
+                    return
+                previous = following.get(key)
+                if previous is None or value < previous:
+                    following[key] = value
+
+            if length < max_output:
+                value = total + cost[mode][0]
+                new_mode = next_mode[mode][0]
+                for character in range(alphabet_size):
+                    relax(
+                        (position, length + 1, delta[state][character], new_mode),
+                        value,
+                    )
+
+            if position < n:
+                relax(
+                    (position + 1, length, state, next_mode[mode][1]),
+                    total + cost[mode][1],
+                )
+
+                if length < max_output:
+                    value = total + cost[mode][2]
+                    new_mode = next_mode[mode][2]
+                    for character in range(alphabet_size):
+                        relax(
+                            (
+                                position + 1,
+                                length + 1,
+                                delta[state][character],
+                                new_mode,
+                            ),
+                            value,
+                        )
+
+        current = following
+        if not current:
+            break
+
+    return best

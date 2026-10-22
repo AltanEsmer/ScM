@@ -1,0 +1,29 @@
+from itertools import product
+
+
+def versioned_circulation_costs(data):
+    n = data["n"]
+    states = [tuple(tuple(arc) for arc in data["arcs"])]
+
+    for parent, arc_index, lower, upper, cost in data["versions"]:
+        arcs = list(states[parent])
+        u, v = arcs[arc_index][:2]
+        arcs[arc_index] = (u, v, lower, upper, cost)
+        states.append(tuple(arcs))
+
+    results = []
+    for arcs in states:
+        best = None
+        ranges = [range(lower, upper + 1) for _, _, lower, upper, _ in arcs]
+        for flows in product(*ranges):
+            balance = [0] * n
+            total_cost = 0
+            for flow, (u, v, _, _, cost) in zip(flows, arcs):
+                balance[u] -= flow
+                balance[v] += flow
+                total_cost += flow * cost
+            if not any(balance) and (best is None or total_cost < best):
+                best = total_cost
+        results.append(best)
+
+    return results

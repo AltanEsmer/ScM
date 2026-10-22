@@ -1,0 +1,67 @@
+def constrained_edit_cost(a):
+    alphabet_size = len(a["alphabet"])
+    delta = a["delta"]
+    next_mode = a["next_mode"]
+    cost = a["cost"]
+    accepted = set(a["accept"])
+    input_length = len(a["text"])
+    max_output = a["max_output"]
+    max_ops = a["max_ops"]
+
+    if not accepted or input_length > max_ops:
+        return None
+
+    transitions = [
+        tuple(set(row[c] for c in range(alphabet_size)))
+        for row in delta
+    ]
+
+    current = {(0, 0, a["state"], a["mode"]): 0}
+    best = None
+
+    for operations in range(max_ops + 1):
+        following = {}
+
+        for (consumed, emitted, state, mode), total in current.items():
+            if consumed == input_length and state in accepted:
+                if best is None or total < best:
+                    best = total
+
+            if operations == max_ops or (best is not None and total >= best):
+                continue
+
+            remaining = max_ops - operations - 1
+
+            if emitted < max_output and input_length - consumed <= remaining:
+                new_total = total + cost[mode][0]
+                if best is None or new_total < best:
+                    new_mode = next_mode[mode][0]
+                    for new_state in transitions[state]:
+                        key = (consumed, emitted + 1, new_state, new_mode)
+                        previous = following.get(key)
+                        if previous is None or new_total < previous:
+                            following[key] = new_total
+
+            if consumed < input_length and input_length - consumed - 1 <= remaining:
+                new_total = total + cost[mode][1]
+                if best is None or new_total < best:
+                    key = (consumed + 1, emitted, state, next_mode[mode][1])
+                    previous = following.get(key)
+                    if previous is None or new_total < previous:
+                        following[key] = new_total
+
+                if emitted < max_output:
+                    new_total = total + cost[mode][2]
+                    if best is None or new_total < best:
+                        new_mode = next_mode[mode][2]
+                        for new_state in transitions[state]:
+                            key = (consumed + 1, emitted + 1, new_state, new_mode)
+                            previous = following.get(key)
+                            if previous is None or new_total < previous:
+                                following[key] = new_total
+
+        current = following
+        if not current:
+            break
+
+    return best

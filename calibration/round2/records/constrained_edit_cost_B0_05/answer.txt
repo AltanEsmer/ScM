@@ -1,0 +1,69 @@
+def constrained_edit_cost(a):
+    alphabet_size = len(a["alphabet"])
+    delta = a["delta"]
+    next_mode = a["next_mode"]
+    costs = a["cost"]
+    input_length = len(a["text"])
+    max_output = a["max_output"]
+    max_ops = a["max_ops"]
+    accepting = set(a["accept"])
+
+    if not accepting or input_length > max_ops:
+        return None
+
+    current = {(0, 0, a["state"], a["mode"]): 0}
+    best = None
+
+    for used in range(max_ops + 1):
+        following = {}
+        remaining = max_ops - used
+
+        for (consumed, emitted, state, mode), total in current.items():
+            if consumed == input_length and state in accepting:
+                if best is None or total < best:
+                    best = total
+
+            if remaining == 0 or (best is not None and total >= best):
+                continue
+
+            def relax(key, value):
+                if best is not None and value >= best:
+                    return
+                previous = following.get(key)
+                if previous is None or value < previous:
+                    following[key] = value
+
+            if emitted < max_output and input_length - consumed < remaining:
+                value = total + costs[mode][0]
+                new_mode = next_mode[mode][0]
+                for character in range(alphabet_size):
+                    relax(
+                        (consumed, emitted + 1, delta[state][character], new_mode),
+                        value,
+                    )
+
+            if consumed < input_length:
+                relax(
+                    (consumed + 1, emitted, state, next_mode[mode][1]),
+                    total + costs[mode][1],
+                )
+
+                if emitted < max_output:
+                    value = total + costs[mode][2]
+                    new_mode = next_mode[mode][2]
+                    for character in range(alphabet_size):
+                        relax(
+                            (
+                                consumed + 1,
+                                emitted + 1,
+                                delta[state][character],
+                                new_mode,
+                            ),
+                            value,
+                        )
+
+        current = following
+        if not current:
+            break
+
+    return best

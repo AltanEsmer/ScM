@@ -1,0 +1,69 @@
+def budget_parse_cost(data):
+    n = data["n"]
+    start = data["start"]
+    rules = data["rules"]
+    budget = data["budget"]
+    text = data["text"]
+    length = len(text)
+    infinity = float("inf")
+
+    dp = [
+        [
+            [[infinity] * (length + 1) for _ in range(length + 1)]
+            for _ in range(n)
+        ]
+        for _ in range(budget + 1)
+    ]
+
+    for resource in range(1, budget + 1):
+        for lhs, rhs, rule_resource, rule_cost in rules:
+            remaining = resource - rule_resource
+            if remaining < 0:
+                continue
+
+            target = dp[resource][lhs]
+
+            if not rhs:
+                if remaining == 0:
+                    for i in range(length + 1):
+                        target[i][i] = min(target[i][i], rule_cost)
+
+            elif len(rhs) == 1 and isinstance(rhs[0], str):
+                if remaining == 0:
+                    for i, character in enumerate(text):
+                        if character == rhs[0]:
+                            target[i][i + 1] = min(
+                                target[i][i + 1], rule_cost
+                            )
+
+            elif len(rhs) == 1:
+                if remaining >= 1:
+                    child = dp[remaining][rhs[0]]
+                    for i in range(length + 1):
+                        for j in range(i, length + 1):
+                            target[i][j] = min(
+                                target[i][j], rule_cost + child[i][j]
+                            )
+
+            else:
+                left_symbol, right_symbol = rhs
+                for left_resource in range(1, remaining):
+                    left = dp[left_resource][left_symbol]
+                    right = dp[remaining - left_resource][right_symbol]
+                    for i in range(length + 1):
+                        for split in range(i, length + 1):
+                            left_cost = left[i][split]
+                            if left_cost == infinity:
+                                continue
+                            for j in range(split, length + 1):
+                                target[i][j] = min(
+                                    target[i][j],
+                                    rule_cost + left_cost + right[split][j],
+                                )
+
+    answer = min(
+        (dp[resource][start][0][length]
+         for resource in range(1, budget + 1)),
+        default=infinity,
+    )
+    return None if answer == infinity else answer

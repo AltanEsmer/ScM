@@ -1,0 +1,77 @@
+def budget_parse_cost(arg):
+    n = arg["n"]
+    start = arg["start"]
+    rules = arg["rules"]
+    budget = arg["budget"]
+    text = arg["text"]
+    length = len(text)
+
+    dp = [
+        [
+            [[None] * (length + 1) for _ in range(length + 1)]
+            for _ in range(n)
+        ]
+        for _ in range(budget + 1)
+    ]
+
+    for used in range(1, budget + 1):
+        for lhs, rhs, resource, cost in rules:
+            remaining = used - resource
+            if remaining < 0:
+                continue
+
+            target = dp[used][lhs]
+
+            if not rhs:
+                if remaining == 0:
+                    for i in range(length + 1):
+                        current = target[i][i]
+                        if current is None or cost < current:
+                            target[i][i] = cost
+
+            elif len(rhs) == 1 and isinstance(rhs[0], str):
+                if remaining == 0:
+                    for i, char in enumerate(text):
+                        if char == rhs[0]:
+                            current = target[i][i + 1]
+                            if current is None or cost < current:
+                                target[i][i + 1] = cost
+
+            elif len(rhs) == 1:
+                if remaining >= 1:
+                    child = dp[remaining][rhs[0]]
+                    for i in range(length + 1):
+                        for j in range(i, length + 1):
+                            value = child[i][j]
+                            if value is not None:
+                                candidate = cost + value
+                                current = target[i][j]
+                                if current is None or candidate < current:
+                                    target[i][j] = candidate
+
+            else:
+                left_symbol, right_symbol = rhs
+                for left_resource in range(1, remaining):
+                    right_resource = remaining - left_resource
+                    left = dp[left_resource][left_symbol]
+                    right = dp[right_resource][right_symbol]
+                    for i in range(length + 1):
+                        for split in range(i, length + 1):
+                            left_cost = left[i][split]
+                            if left_cost is None:
+                                continue
+                            for j in range(split, length + 1):
+                                right_cost = right[split][j]
+                                if right_cost is None:
+                                    continue
+                                candidate = cost + left_cost + right_cost
+                                current = target[i][j]
+                                if current is None or candidate < current:
+                                    target[i][j] = candidate
+
+    answer = None
+    for used in range(1, budget + 1):
+        value = dp[used][start][0][length]
+        if value is not None and (answer is None or value < answer):
+            answer = value
+    return answer

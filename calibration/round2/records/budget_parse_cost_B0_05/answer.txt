@@ -1,0 +1,76 @@
+def budget_parse_cost(arg):
+    n = arg["n"]
+    start = arg["start"]
+    rules = arg["rules"]
+    budget = arg["budget"]
+    text = arg["text"]
+    length = len(text)
+
+    dp = [
+        [
+            [[None] * (length + 1) for _ in range(length + 1)]
+            for _ in range(n)
+        ]
+        for _ in range(budget + 1)
+    ]
+
+    for total in range(1, budget + 1):
+        for lhs, rhs, resource, cost in rules:
+            remaining = total - resource
+            if remaining < 0:
+                continue
+
+            target = dp[total][lhs]
+
+            if not rhs:
+                if remaining == 0:
+                    for i in range(length + 1):
+                        previous = target[i][i]
+                        if previous is None or cost < previous:
+                            target[i][i] = cost
+
+            elif len(rhs) == 1:
+                child = rhs[0]
+                if isinstance(child, str):
+                    if remaining == 0:
+                        for i, terminal in enumerate(text):
+                            if terminal == child:
+                                previous = target[i][i + 1]
+                                if previous is None or cost < previous:
+                                    target[i][i + 1] = cost
+                elif remaining >= 1:
+                    source = dp[remaining][child]
+                    for i in range(length + 1):
+                        for j in range(i, length + 1):
+                            value = source[i][j]
+                            if value is not None:
+                                candidate = cost + value
+                                previous = target[i][j]
+                                if previous is None or candidate < previous:
+                                    target[i][j] = candidate
+
+            else:
+                left, right = rhs
+                for left_resource in range(1, remaining):
+                    left_table = dp[left_resource][left]
+                    right_table = dp[remaining - left_resource][right]
+                    for i in range(length + 1):
+                        for k in range(i, length + 1):
+                            left_cost = left_table[i][k]
+                            if left_cost is None:
+                                continue
+                            for j in range(k, length + 1):
+                                right_cost = right_table[k][j]
+                                if right_cost is None:
+                                    continue
+                                candidate = cost + left_cost + right_cost
+                                previous = target[i][j]
+                                if previous is None or candidate < previous:
+                                    target[i][j] = candidate
+
+    answer = None
+    for total in range(1, budget + 1):
+        value = dp[total][start][0][length]
+        if value is not None and (answer is None or value < answer):
+            answer = value
+    return answer

@@ -1,0 +1,15 @@
+{
+  "trial_id": "versioned_circulation_costs_B0_05",
+  "session_id": "/root/composite_workflow/code_026",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T18:48:42.263629+00:00",
+  "completion_observed_utc": "2026-10-22T18:49:14.166911+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "60d3578b4f6422b10d4f564f78e1073fbd0a0280029565f03fe683f2e596a0a7",
+  "response_sha256": "ceed2659bd1951ba75059993846865518031dbc8067299f642286bb45815bc28",
+  "capture_method": "coordinator copied returned final message"
+}

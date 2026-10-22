@@ -1,0 +1,15 @@
+{
+  "trial_id": "automaton_route_cost_B0_02",
+  "session_id": "/root/composite_workflow/code_027",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T18:48:58.100527+00:00",
+  "completion_observed_utc": "2026-10-22T18:49:29.254998+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "20b76d0c160e2f51955a3f0c7948da908e828d314b80a277352f97cc1cac4caf",
+  "response_sha256": "aa5695971f5352561fc96f53b94d1e4e19c7817bb92ce5e13240d906a5dc6b20",
+  "capture_method": "coordinator copied returned final message"
+}

@@ -1,0 +1,15 @@
+{
+  "trial_id": "budget_parse_cost_B0_04",
+  "session_id": "/root/composite_workflow/code_001",
+  "requested_model": "gpt-6.1-sol",
+  "requested_reasoning": "medium",
+  "fork_turns": "none",
+  "dispatch_observed_utc": "2026-10-22T18:41:02.864689+00:00",
+  "completion_observed_utc": "2026-10-22T18:41:36.047822+00:00",
+  "backend": "collaboration.spawn_agent",
+  "observed_model": null,
+  "tool_trace_available": false,
+  "prompt_sha256": "8e89887716ea54aa0b3aa1fd023e75c7b50a613992d250abc86a93dc9408db05",
+  "response_sha256": "4d859696f861348f6d5429405706a708b07c532e497672aeba7eb6623fb691a3",
+  "capture_method": "coordinator copied returned final message"
+}
