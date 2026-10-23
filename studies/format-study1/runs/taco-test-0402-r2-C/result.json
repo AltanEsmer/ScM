@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\n\n\ndef main():\n    values = list(map(int, sys.stdin.buffer.read().split()))\n    vertex_count, limit = values[0], values[1]\n    cats = values[2:vertex_count + 2]\n    adjacency = [[] for _ in range(vertex_count)]\n\n    for index in range(vertex_count + 2, len(values), 2):\n        first = values[index] - 1\n        second = values[index + 1] - 1\n        adjacency[first].append(second)\n        adjacency[second].append(first)\n\n    restaurants = 0\n    stack = [(0, -1, cats[0])]\n\n    while stack:\n        vertex, parent, consecutive = stack.pop()\n        if consecutive > limit:\n            continue\n\n        if vertex != 0 and len(adjacency[vertex]) == 1:\n            restaurants += 1\n            continue\n\n        for neighbor in adjacency[vertex]:\n            if neighbor != parent:\n                next_consecutive = consecutive + 1 if cats[neighbor] else 0\n                stack.append((neighbor, vertex, next_consecutive))\n\n    print(restaurants)\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a16782-9cad-7251-8902-bed1116350c9",
+  "completed_at_utc": "2026-10-23T06:46:21.863366+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0402-r2-C",
+  "prompt_sha256": "717b8155a793b15abc02d88e19884e44f3bb06c72dafba67dd113d83b06fe940",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

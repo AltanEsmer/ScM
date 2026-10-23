@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\n\n\ndef main():\n    data = iter(map(int, sys.stdin.buffer.read().split()))\n    n = next(data)\n    q = next(data)\n    values = [next(data) for _ in range(n)]\n\n    block_size = 512\n    block_count = (n + block_size - 1) // block_size\n    prefixes = [0] * n\n    frequencies = [{} for _ in range(block_count)]\n    lazy = [0] * block_count\n\n    current = 0\n    for index, value in enumerate(values):\n        current ^= value\n        prefixes[index] = current\n        counts = frequencies[index // block_size]\n        counts[current] = counts.get(current, 0) + 1\n\n    answers = []\n\n    for _ in range(q):\n        operation = next(data)\n        position = next(data) - 1\n        argument = next(data)\n\n        block = position // block_size\n        start = block * block_size\n        end = min(start + block_size, n)\n\n        if operation == 1:\n            difference = values[position] ^ argument\n            if difference == 0:\n                continue\n            values[position] = argument\n\n            counts = frequencies[block]\n            if position - start < end - position:\n                lazy[block] ^= difference\n                change_start = start\n                change_end = position\n            else:\n                change_start = position\n                change_end = end\n\n            for index in range(change_start, change_end):\n                old = prefixes[index]\n                remaining = counts[old] - 1\n                if remaining:\n                    counts[old] = remaining\n                else:\n                    del counts[old]\n\n                new = old ^ difference\n                prefixes[index] = new\n                counts[new] = counts.get(new, 0) + 1\n\n            for later_block in range(block + 1, block_count):\n                lazy[later_block] ^= difference\n\n        else:\n            answer = 0\n            for earlier_block in range(block):\n                target = argument ^ lazy[earlier_block]\n                answer += frequencies[earlier_block].get(target, 0)\n\n            target = argument ^ lazy[block]\n            stop = position + 1\n\n            if stop - start <= end - stop:\n                answer += prefixes[start:stop].count(target)\n            else:\n                answer += frequencies[block].get(target, 0)\n                answer -= prefixes[stop:end].count(target)\n\n            answers.append(str(answer))\n\n    sys.stdout.write(\"\\n\".join(answers))\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a1676d-cd37-7632-a2a8-8f17b840ff02",
+  "completed_at_utc": "2026-10-23T06:24:17.169239+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0466-r2-C",
+  "prompt_sha256": "a02d58a2e6cd7deedb30d83cf4eba041718b627361419f32960fbdbec1be281e",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\nfrom collections import Counter\nfrom math import isqrt\n\n\ndef main():\n    readline = sys.stdin.buffer.readline\n    n, q = map(int, readline().split())\n    array = list(map(int, readline().split()))\n\n    block_size = isqrt(3 * n) + 1\n    blocks = []\n    prefix = 0\n    current = []\n\n    for value in array:\n        prefix ^= value\n        current.append(prefix)\n        if len(current) == block_size:\n            blocks.append(current)\n            current = []\n\n    if current:\n        blocks.append(current)\n\n    frequencies = [Counter(block) for block in blocks]\n    lazy = [0] * len(blocks)\n    block_count = len(blocks)\n    output = []\n\n    for _ in range(q):\n        query_type, index, value = map(int, readline().split())\n\n        if query_type == 1:\n            index -= 1\n            difference = array[index] ^ value\n            if difference == 0:\n                continue\n\n            array[index] = value\n            block_index, offset = divmod(index, block_size)\n\n            if offset:\n                block = blocks[block_index]\n                block[offset:] = [\n                    element ^ difference for element in block[offset:]\n                ]\n                frequencies[block_index] = Counter(block)\n                block_index += 1\n\n            for affected in range(block_index, block_count):\n                lazy[affected] ^= difference\n\n        else:\n            complete_blocks, remainder = divmod(index, block_size)\n            answer = 0\n\n            for block_index in range(complete_blocks):\n                answer += frequencies[block_index].get(\n                    value ^ lazy[block_index], 0\n                )\n\n            if remainder:\n                target = value ^ lazy[complete_blocks]\n                answer += blocks[complete_blocks][:remainder].count(target)\n\n            output.append(str(answer))\n\n    sys.stdout.write(\"\\n\".join(output))\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a1676b-1924-7001-8fa9-1e5b7a37abcc",
+  "completed_at_utc": "2026-10-23T06:21:19.814504+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0466-r1-B",
+  "prompt_sha256": "81b3ff47d9821a2c995c49c46e3f6530cee3bf8b8ae8649b15662b70885fdf5a",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

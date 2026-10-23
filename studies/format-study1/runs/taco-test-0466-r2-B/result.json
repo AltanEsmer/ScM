@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\nfrom collections import Counter\n\n\ndef main():\n    data = list(map(int, sys.stdin.buffer.read().split()))\n    n, q = data[0], data[1]\n    values = data[2:2 + n]\n\n    block_size = 512\n    blocks = []\n    frequencies = []\n    totals = []\n\n    for start in range(0, n, block_size):\n        prefixes = []\n        current = 0\n        for value in values[start:start + block_size]:\n            current ^= value\n            prefixes.append(current)\n        blocks.append(prefixes)\n        frequencies.append(Counter(prefixes))\n        totals.append(current)\n\n    answers = []\n    position = n + 2\n\n    for _ in range(q):\n        operation = data[position]\n        index = data[position + 1] - 1\n        argument = data[position + 2]\n        position += 3\n\n        block_index, offset = divmod(index, block_size)\n\n        if operation == 1:\n            difference = values[index] ^ argument\n            if difference == 0:\n                continue\n\n            values[index] = argument\n            prefixes = blocks[block_index]\n            prefixes[offset:] = [\n                value ^ difference for value in prefixes[offset:]\n            ]\n            frequencies[block_index] = Counter(prefixes)\n            totals[block_index] ^= difference\n        else:\n            target = argument\n            answer = 0\n\n            for current_block in range(block_index):\n                answer += frequencies[current_block].get(target, 0)\n                target ^= totals[current_block]\n\n            prefixes = blocks[block_index]\n            if offset + 1 == len(prefixes):\n                answer += frequencies[block_index].get(target, 0)\n            else:\n                answer += prefixes[:offset + 1].count(target)\n\n            answers.append(str(answer))\n\n    sys.stdout.write(\"\\n\".join(answers))\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a1676d-6241-7ab1-ad7e-1f43574a54ce",
+  "completed_at_utc": "2026-10-23T06:23:30.662575+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0466-r2-B",
+  "prompt_sha256": "81b3ff47d9821a2c995c49c46e3f6530cee3bf8b8ae8649b15662b70885fdf5a",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

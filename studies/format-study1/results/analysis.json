@@ -1,0 +1,348 @@
+{
+  "task_count": 12,
+  "scheduled_trials": 72,
+  "received_outcomes": 72,
+  "complete": true,
+  "unavailable": [],
+  "per_task": [
+    {
+      "task_id": "taco-test-0074",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0152",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0250",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0320",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0339",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0402",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0466",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0472",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0581",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0760",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0799",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    },
+    {
+      "task_id": "taco-test-0979",
+      "cells": {
+        "A": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "B": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        },
+        "C": {
+          "planned": 2,
+          "evaluable": 2,
+          "successes": 2,
+          "unavailable": [],
+          "mean": 1.0
+        }
+      },
+      "B_minus_A": 0.0,
+      "C_minus_A": 0.0
+    }
+  ],
+  "interpretation": "Descriptive only; summary contrasts require all 72 evaluable trials. No significance or equivalence claim.",
+  "mean_B_minus_A": 0.0,
+  "mean_C_minus_A": 0.0
+}

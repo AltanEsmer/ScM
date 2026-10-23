@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\nfrom math import isqrt\n\n\ndef main():\n    read = sys.stdin.buffer.readline\n    n, q = map(int, read().split())\n    values = list(map(int, read().split()))\n\n    block_size = max(1, isqrt(2 * n))\n    block_count = (n + block_size - 1) // block_size\n\n    prefixes = []\n    frequencies = []\n    totals = []\n    lazy = [0] * block_count\n\n    for start in range(0, n, block_size):\n        block = []\n        counts = {}\n        current = 0\n        for position in range(start, min(start + block_size, n)):\n            current ^= values[position]\n            block.append(current)\n            counts[current] = counts.get(current, 0) + 1\n        prefixes.append(block)\n        frequencies.append(counts)\n        totals.append(current)\n\n    answers = []\n\n    for _ in range(q):\n        query_type, index, value = map(int, read().split())\n\n        if query_type == 1:\n            position = index - 1\n            difference = values[position] ^ value\n            if difference == 0:\n                continue\n            values[position] = value\n\n            block_index, offset = divmod(position, block_size)\n            block = prefixes[block_index]\n            counts = frequencies[block_index]\n            length = len(block)\n            totals[block_index] ^= difference\n\n            if offset < length - offset:\n                lazy[block_index] ^= difference\n                start, end = 0, offset\n            else:\n                start, end = offset, length\n\n            for position in range(start, end):\n                old = block[position]\n                new = old ^ difference\n                remaining = counts[old] - 1\n                if remaining:\n                    counts[old] = remaining\n                else:\n                    del counts[old]\n                counts[new] = counts.get(new, 0) + 1\n                block[position] = new\n\n        else:\n            full_blocks, remainder = divmod(index, block_size)\n            accumulated = 0\n            answer = 0\n\n            for block_index in range(full_blocks):\n                target = value ^ accumulated ^ lazy[block_index]\n                answer += frequencies[block_index].get(target, 0)\n                accumulated ^= totals[block_index]\n\n            if remainder:\n                block = prefixes[full_blocks]\n                target = value ^ accumulated ^ lazy[full_blocks]\n                length = len(block)\n\n                if remainder <= length - remainder:\n                    for position in range(remainder):\n                        if block[position] == target:\n                            answer += 1\n                else:\n                    answer += frequencies[full_blocks].get(target, 0)\n                    for position in range(remainder, length):\n                        if block[position] == target:\n                            answer -= 1\n\n            answers.append(str(answer))\n\n    sys.stdout.write(\"\\n\".join(answers))\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a1676b-ce33-7e62-9ea9-f9e9931b2b7e",
+  "completed_at_utc": "2026-10-23T06:21:57.794809+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0466-r1-A",
+  "prompt_sha256": "f59336509c6341c848735220f57fc4dc834ceb7820ca4453abec8b50fbc8921e",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

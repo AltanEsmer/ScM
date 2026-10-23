@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\n\n\ndef main():\n    input_line = sys.stdin.buffer.readline\n    n = int(input_line())\n    stack = []\n    expected = 1\n    reorders = 0\n\n    for _ in range(2 * n):\n        command = input_line().split()\n        if command[0] == b\"add\":\n            stack.append(int(command[1]))\n        else:\n            if stack:\n                if stack[-1] == expected:\n                    stack.pop()\n                else:\n                    reorders += 1\n                    stack.clear()\n            expected += 1\n\n    print(reorders)\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a1677f-8668-7f93-a18e-3d9716ef23c4",
+  "completed_at_utc": "2026-10-23T06:42:58.180228+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0074-r2-C",
+  "prompt_sha256": "c28cd16a928e4d968439a15980487d5959081366e4e714c563644936c6ec8f5e",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

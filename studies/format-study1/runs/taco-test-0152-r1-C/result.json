@@ -1,0 +1,24 @@
+{
+  "answer": "import sys\nfrom collections import deque\n\n\ndef main():\n    data = map(int, sys.stdin.buffer.read().split())\n    try:\n        n = next(data)\n        m = next(data)\n    except StopIteration:\n        return\n\n    adjacency = [[] for _ in range(n)]\n    factory_present = bytearray(n)\n    weights = []\n\n    for _ in range(m):\n        airport = next(data) - 1\n        factory = next(data) - 1\n        days = next(data)\n        adjacency[airport].append((days, factory))\n        factory_present[factory] = 1\n        weights.append(days)\n\n    if m < n or not all(factory_present) or any(not row for row in adjacency):\n        print(-1)\n        return\n\n    for row in adjacency:\n        row.sort()\n\n    weights = sorted(set(weights))\n    sys.setrecursionlimit(max(1000, 2 * n + 100))\n\n    def feasible(limit):\n        airport_match = [-1] * n\n        factory_match = [-1] * n\n        distance = [0] * n\n        matched = 0\n        infinity = n + 1\n\n        while matched < n:\n            queue = deque()\n            for airport in range(n):\n                if airport_match[airport] == -1:\n                    distance[airport] = 0\n                    queue.append(airport)\n                else:\n                    distance[airport] = infinity\n\n            shortest = infinity\n            while queue:\n                airport = queue.popleft()\n                next_distance = distance[airport] + 1\n                if next_distance > shortest:\n                    continue\n\n                for days, factory in adjacency[airport]:\n                    if days > limit:\n                        break\n                    partner = factory_match[factory]\n                    if partner == -1:\n                        shortest = next_distance\n                    elif next_distance < shortest and distance[partner] == infinity:\n                        distance[partner] = next_distance\n                        queue.append(partner)\n\n            if shortest == infinity:\n                return False\n\n            cursor = [0] * n\n\n            def augment(airport):\n                row = adjacency[airport]\n                next_distance = distance[airport] + 1\n\n                while cursor[airport] < len(row):\n                    days, factory = row[cursor[airport]]\n                    if days > limit:\n                        break\n                    cursor[airport] += 1\n                    partner = factory_match[factory]\n\n                    if partner == -1:\n                        if next_distance != shortest:\n                            continue\n                    elif distance[partner] != next_distance or not augment(partner):\n                        continue\n\n                    airport_match[airport] = factory\n                    factory_match[factory] = airport\n                    return True\n\n                distance[airport] = infinity\n                return False\n\n            for airport in range(n):\n                if airport_match[airport] == -1 and augment(airport):\n                    matched += 1\n\n        return True\n\n    if not feasible(weights[-1]):\n        print(-1)\n        return\n\n    left = 0\n    right = len(weights) - 1\n    while left < right:\n        middle = (left + right) // 2\n        if feasible(weights[middle]):\n            right = middle\n        else:\n            left = middle + 1\n\n    print(weights[left])\n\n\nif __name__ == \"__main__\":\n    main()",
+  "thread_id": "01a16778-1891-7741-88e6-e68976ed8b88",
+  "completed_at_utc": "2026-10-23T06:35:25.250959+00:00",
+  "requested_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "reported_model": "gpt-6.1-sol",
+  "identity_note": "Provider-reported identity; not independent model attestation.",
+  "tools": [],
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "status": "generated",
+  "trial_id": "taco-test-0152-r1-C",
+  "prompt_sha256": "369646dc47e385ae09c2d2178fd933eca60567c6d3f6219585ed198ba4917c82",
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e"
+}

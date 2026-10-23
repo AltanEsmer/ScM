@@ -1,0 +1,28 @@
+{
+  "trial_id": "taco-test-0402-r1-A",
+  "task_id": "taco-test-0402",
+  "variant": "A",
+  "repetition": 1,
+  "freeze_sha256": "b435538e8c83ff065dbb2ecb8fd4db679ea1d80c70f08c26a12f3c4d0d2c3f4e",
+  "prompt_sha256": "2f4694bf8a43ef890dcaa7497a1a9c53bdb6f4211b1b3e79553f1738ea289927",
+  "answer_sha256": "ad1c7b2fb028731f1926baac1648a851e372891c4e23c27b4894cce41cf67610",
+  "dispatch_sha256": "623cf99ad8c5fd89b6bdb8ffedd8a2acccbb893d38e6752999dcd2b679b84cfc",
+  "generation_sha256": "640f297a21ff41a042ea63fbe98873a4da9c12113e0cce4f245fee701dfc223e",
+  "requested_model": "gpt-6.1-sol",
+  "reported_model": "gpt-6.1-sol",
+  "effort": "medium",
+  "thread_id": "01a1676f-5ba0-7cd3-aa9f-09ac6efcee57",
+  "image_id": "sha256:f71e1bcef67eb5499429a0c4543e9ccf1d4ee5e4f3d1f47f7cb38738e066b86d",
+  "source_sha256": {
+    "run.py": "4fbb2d29ae508bff4f8fa06a62d939196dccc43b01f1ab7603ff519580c78191",
+    "test_live_transport.mjs": "41fa1176d608acfa59d010a531d49484e1ab1a3d06e943cb3d53ef6e9de6b262",
+    "Dockerfile": "25111fe3a34e04a7efffdc91b266dd5cd05bd11515d931c74864baf84104814c",
+    "test_run.py": "6e7a03edc7de06d7cda1e73030c8d0ae53cb29fa007384b9ffe91f2b7c2ea67e",
+    "client.mjs": "ecd9f71beabecad915a0b2ed440405bf02ae1aa7c8942ec1336fd12d5d157a4b",
+    "relay.mjs": "470b3a300247b30f021ba52cd58090eba7de5acbedd7408cc952a1e5b97847cf",
+    "live_transport.mjs": "7af64746950d4420437f183f8933fff797fc16320008ba1aa5cf5086d9517622"
+  },
+  "grader_sha256": "aa38d119fcc2e80dfedef09882c92a371c880eb295c24ba0884c3a327706c040",
+  "status": "grading_attempted_no_retry",
+  "started_at_utc": "2026-10-23T06:51:56.705193+00:00"
+}
