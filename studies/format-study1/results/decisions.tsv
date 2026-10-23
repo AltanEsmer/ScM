@@ -1,0 +1,5 @@
+ts	phase	decision	why	evidence	result
+2026-10-23T06:19:37Z	live gate	Accepted the synthetic live canary and began collection	The request used the frozen model and medium effort with no tools; the reported alias matched	runs/live-canary.json	PASS
+2026-10-23T06:48:53Z	collection	Closed the scheduled collection at 72 distinct first responses	Every dispatch completed once in frozen order	runs/ and results/verification.md	72 of 72 generated
+2026-10-23T07:20:39Z	grading	Accepted the unchanged frozen grader's complete case records	All saved answers were present and bound to the freeze before grading	results/outcomes.json	72 of 72 all-case passes
+2026-10-23T07:22:53Z	interpretation	Reported a ceiling rather than format equivalence	All three formats scored 24 of 24 and both planned contrasts were zero	results/analysis.json and results/findings.md	Descriptive result; general effect unresolved

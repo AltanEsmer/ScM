@@ -14,7 +14,7 @@ Two Scientific Methods pilots investigate whether equivalent prompt variations c
 
 **Pilot 3:** [not run](pilots/pilot3/README.md), because the frozen gate required at least three qualifying families. See [how strong the findings are for the report](docs/evidence-strength.md), including suggested report wording.
 
-**Independent format study:** preparation for 12 externally authored competition tasks, three equivalent formats, and two repetitions per format (72 planned responses). The study preserves 2,339 source cases and uses a separately indexed, statement-validated subset of 2,178. Read the [preparation status](studies/format-study1/README.md) and [frozen protocol](studies/format-study1/PROTOCOL.md). No study responses have been collected.
+**Independent format study:** 12 externally authored competition tasks, three equivalent formats, and two repetitions per format produced 72/72 all-case passes and 13,068/13,068 successful case checks. The frozen analysis found zero observed B−A and C−A differences. Every cell reached the correctness ceiling, so the study cannot establish format equivalence or general robustness. The study preserves 2,339 source cases and uses a separately indexed, statement-validated subset of 2,178. Read the [findings](studies/format-study1/results/findings.md), [protocol](studies/format-study1/PROTOCOL.md), and [verification](studies/format-study1/results/verification.md).
 
 The requested model is `gpt-6.1-sol` with medium reasoning. The earlier pilots were collected through native Codex subagents; the new independent format study uses a separately isolated collection workflow. [Methodology](docs/methodology.md) explains the context controls and unavailable backend evidence.
 
@@ -52,4 +52,4 @@ Create a separately named experiment or repository branch for changes to tasks, 
 
 This repository contains the pilot and its evidence. The literature review, citation screenshots, IEEE LaTeX paper, and presentation remain separate work. See [AI assistance disclosure](docs/ai-disclosure.md) and [acceptance contract](docs/spec.md).
 
-Existing local lecture files are excluded from Git. They are not needed to reproduce this pilot.
+Existing local lecture files are excluded from Git. They are not needed to reproduce this pilot. The [preliminary paper plan](docs/preliminary-paper-plan.md) records the course requirements from the first two Scientific Methods lectures and a bounded research question for this project.

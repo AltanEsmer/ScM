@@ -1,8 +1,8 @@
-# Independent prompt-format study: frozen, not run
+# Independent prompt-format study: completed
 
-This study fixes twelve externally authored programming problems, three equivalent presentation formats, and two fresh responses per task/format: **72 planned model responses; zero collected**. It requests **`gpt-6.1-sol` with `medium` reasoning**, matching the earlier pilots. It is a new study, `format-study1`; the earlier pilot-3 no-launch decision is unchanged.
+This study fixed twelve externally authored programming problems, three equivalent presentation formats, and two fresh responses per task/format. **All 72 responses were collected and all 72 passed their retained task suites.** It requested **`gpt-6.1-sol` with `medium` reasoning**, matching the earlier pilots. The reported model alias matched the request. It is a separate study, `format-study1`; the earlier pilot-3 no-launch decision is unchanged.
 
-Read the [protocol](PROTOCOL.md), [verification evidence](verification.md), and [source provenance and attribution](NOTICE.md). The freeze covers source records, original and curated tests, references, prompts, allocation, analysis, grader, and isolation controls. A later live backend canary must pass before collection; preparation has made no inference-provider calls.
+Read the [protocol](PROTOCOL.md), [preparation verification](verification.md), [collected findings](results/findings.md), [run verification](results/verification.md), and [source provenance and attribution](NOTICE.md). The freeze covers source records, original and curated tests, references, prompts, allocation, analysis, grader, and isolation controls. A synthetic live backend canary passed before collection; its record is under `runs/`.
 
 ## Task pool and frozen tests
 
@@ -31,9 +31,9 @@ The preparation audit also found damaged statements and contradictory or malform
 
 A renders the canonical blocks as prose, B as a numbered list, and C as XML. All 36 prompts reconstruct the same question and contain identical implementation/output requirements. The 72-row [schedule](trials.json) balances all six format orders four times, with seed `20261022`. This seed controls allocation only.
 
-Each future candidate runs in a fresh container without host mounts, references, tests, previous answers, credentials, execution tools, or direct internet access. The real pinned Codex client has been exercised offline against a synthetic provider; the captured request uses the requested model, medium reasoning, and `tools: []`. The relay controls the sole provider route. Read [isolation evidence and the future live gate](isolation/README.md).
+Each candidate ran in a fresh container without host mounts, references, tests, previous answers, credentials, execution tools, or direct internet access. The real pinned Codex client was exercised offline against a synthetic provider before the live canary; the captured request used the requested model, medium reasoning, and `tools: []`. The relay controlled the sole provider route. Read the [isolation controls and live gate](isolation/README.md).
 
-The primary outcome is passing every retained test under the frozen grader. B−A and C−A are averaged equally across tasks only after all 72 responses have evaluable results. Missing/infrastructure outcomes stay explicit. There is no significance test, equivalence claim, or post-result task replacement.
+The primary outcome is passing every retained test under the frozen grader. All 72 responses were evaluable and passed, giving 13,068/13,068 successful case checks. A, B, and C each scored 24/24 all-case passes. Both prespecified equal-task mean contrasts, B−A and C−A, were zero. There is no significance test, equivalence claim, or post-result task replacement.
 
 ## Verify the preparation
 
@@ -49,10 +49,10 @@ node studies/format-study1/isolation/test_live_transport.mjs
 
 These checks do not call an inference provider. The saved [reference report](reference-validation.json) and [first-attempt per-case log](reference-validation.cases.jsonl) provide the pre-freeze Docker execution evidence. A Docker cleanup interruption on task 0320 triggered a separately logged [full-task recovery](reference-recovery.cases.jsonl), with the failed attempt retained in `reference-attempts/attempt-1/`. The final report links the contributing attempts explicitly. Reproducing acquisition, export, build, or reference validation must use a separate unfrozen copy; do not overwrite this freeze. See [acquisition instructions](source/ACQUISITION.md).
 
-## What this preparation can support
+## What the completed study can support
 
-The design improves external task authorship, prompt-content equivalence, test provenance, allocation, and reference isolation. It does **not yet provide evidence of prompt sensitivity**: no model observations exist.
+The design improves external task authorship, prompt-content equivalence, test provenance, allocation, and reference isolation. It gives a complete observation of **no detected correctness difference** among the three formats on these frozen suites. Because every format reached the endpoint ceiling, it gives little information about correctness sensitivity on tasks where failures are possible.
 
 The external tests are mostly small. Task 0339 reaches n=30 against a statement limit of 500,000; task 0760 reaches n=20 against 100,000. Inefficient programs may pass, and another ceiling remains possible. The endpoint is finite-suite correctness, not full contest acceptance or algorithmic efficiency. The public problems may also have appeared in model training. Twelve filtered tasks and two repetitions per format support an exploratory result, not a broad claim about model robustness.
 
-The remaining collection gate is a synthetic live canary confirming provider compatibility and reported model identity under the frozen controls. It has not been run. An unavailable alias or incompatible backend blocks collection; no fallback is allowed. Provider-reported identity is not independent attestation of provider internals.
+The synthetic live canary passed with the requested alias and medium reasoning. No fallback was used. Provider-reported identity is not independent attestation of provider internals. The [saved collection and analysis](results/findings.md) preserve the completed result.
