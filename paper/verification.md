@@ -40,4 +40,18 @@ The evidence check passes for ten source records, exactly ten citation occurrenc
 
 ## Remaining work
 
-This is a focused literature package, not a systematic literature review or a finished paper. Draft the IEEE manuscript, review the sources personally, add the appropriate dataset citation and attribution, and reconcile every final citation occurrence with the appendix. The outline's current ten citations are covered. New or broader claims need new evidence. Confirm topic agreement and any course instructions issued after the two supplied lectures. The detailed AI disclosure must travel with the final paper.
+This is a focused literature package, not a systematic literature review. The IEEE draft and dataset attribution have now been added as recorded below. Review the sources personally and preserve the mapping between every final citation occurrence and its appendix evidence. The outline's current ten citations are covered. New or broader claims need new evidence. Confirm topic agreement and any course instructions issued after the two supplied lectures. The detailed AI disclosure must travel with the final paper.
+
+## Compiled IEEE draft verification
+
+The preliminary manuscript was compiled with Tectonic 0.17.0 using IEEEtran 1.8b conference format, A4, ten-point text, and two columns. The saved PDF has four main pages including references and twelve appendix pages, for sixteen total. The appendix contains its cover, the ten unchanged publisher evidence pages, and one added first-party dataset evidence page. The original ten-page publisher appendix retains its previous hash.
+
+The manuscript cites each of the ten verified proceedings papers once in the outline's order and adds one dataset-record citation. C11 is not represented as peer-reviewed. Its native browser screenshot was captured at the frozen dataset revision's official Hugging Face page. The locally highlighted description supports the dataset attribution. Its publication year was omitted because the card did not establish one.
+
+The build regenerates all twelve results-table rows from the saved analysis and retained fixtures. The manuscript verifier reconciles the eleven occurrence IDs and bibliography keys, compiled bibliography numbers, all evidence labels, dataset evidence hashes, source-to-output build hashes, table counts, and page limits. It passed with four main pages, sixteen total pages, eleven mapped citations, and twelve matching task rows. The original evidence verifier and 196-artifact study freeze verifier also passed.
+
+The desktop editor compiled successfully when opened at the `paper/` project root with `manuscript/main.tex` selected. The nested source folder alone is too narrow for its parent evidence paths. Terminal compilation saves the exported PDF and keeps intermediate logs outside the tracked source tree.
+
+All four main pages were rendered and inspected for reading order, tables, bibliography, clipping, and overlap. The appendix cover and evidence pages were checked for citation tags and intact source screenshots. A separate reviewer checked scientific scope and rendered output. Final TeX logs contain no unresolved citations, unresolved references, or overfull text boxes; some underfull-box warnings from line justification remain and were visually checked. They do not indicate missing text.
+
+The manuscript is explicitly a preliminary AI-assisted draft for author review. Topic approval, later course instructions, personal review, and submission are not attested by compilation or automated validation. No study tasks, model settings, protocol, test cases, or outcomes were changed during drafting.

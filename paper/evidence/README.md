@@ -20,3 +20,7 @@ The machine-readable [source manifest](sources.json) records publisher URLs, one
 Printed pagination differs by series. ACL screenshots show proceedings page numbers. The ICML first page does not print its proceedings page number, so its record gives the proceedings start page and says so. ICLR and NeurIPS conference PDFs use internal page 1, while their publisher BibTeX gives proceedings ranges 25055 to 25083 and 69022 to 69042, respectively. Use the visible publisher-PDF locator consistently.
 
 Background source discussion is in the [source review](../source-review.md). These screenshots support the bounded claims listed here. They do not license broader claims about our model, code-generation tasks, or all prompt interventions.
+
+## Additional dataset attribution
+
+The manuscript adds C11 / S11 as reference [11] for the [official pinned BAAI/TACO dataset card](https://huggingface.co/datasets/BAAI/TACO/blob/d593ed0a2becbbc952230bb89be09189bf1056dc/README.md). This is a first-party data record, not another peer-reviewed paper. The [captured browser screenshot](C11-S11-dataset-card.png), [highlighted evidence page](dataset-evidence.pdf), and [provenance record](dataset-record.json) preserve the description cited in the draft. The compiled manuscript appends that evidence after the ten publisher-article pages.

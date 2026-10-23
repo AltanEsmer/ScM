@@ -50,6 +50,6 @@ Create a separately named experiment or repository branch for changes to tasks, 
 
 ## Course scope
 
-This repository contains the experiments and their evidence. The [preliminary paper materials](paper/README.md) now include ten verified peer-reviewed sources, highlighted publisher screenshots, a citation appendix, and a results-centered outline. The IEEE LaTeX manuscript and presentation remain to be written. See [AI assistance disclosure](docs/ai-disclosure.md) and [acceptance contract](docs/spec.md).
+This repository contains the experiments and their evidence. The [preliminary paper materials](paper/README.md) now include a [compiled IEEE preliminary paper](paper/output/preliminary-paper.pdf), LaTeX source, ten verified peer-reviewed sources, a separate dataset attribution, and highlighted citation evidence. The draft has four main pages and twelve appendix pages. Author review and the presentation remain outstanding. See [AI assistance disclosure](docs/ai-disclosure.md) and [acceptance contract](docs/spec.md).
 
 Existing local lecture files are excluded from Git. They are not needed to reproduce this pilot. The [preliminary paper plan](docs/preliminary-paper-plan.md) records the course requirements from the first two Scientific Methods lectures and a bounded research question for this project.

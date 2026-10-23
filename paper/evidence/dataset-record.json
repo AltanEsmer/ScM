@@ -1,0 +1,18 @@
+{
+  "source_id": "S11",
+  "occurrence_id": "C11",
+  "reference_number": 11,
+  "bibkey": "taco-dataset",
+  "source_type": "first-party dataset record, not peer-reviewed",
+  "publisher_url": "https://huggingface.co/datasets/BAAI/TACO/blob/d593ed0a2becbbc952230bb89be09189bf1056dc/README.md",
+  "accessed_utc": "2026-10-23",
+  "screenshot_sha256": "8c3784e05d76163025a67eb37d084364aefc7e5d398af09fdcf07a22b681eb83",
+  "evidence_pdf_sha256": "3c711c9aabfd46d71592f6c6765a166f6cd44c671fd7a0794348d7ca8ce530e6",
+  "highlight_pixel_rectangle": [
+    30,
+    368,
+    420,
+    480
+  ],
+  "supported_claim": "The official dataset record describes code generation from natural-language specifications."
+}

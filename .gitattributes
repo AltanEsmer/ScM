@@ -1,2 +1,3 @@
 *.csv whitespace=cr-at-eol
 paper/output/*.pdf binary
+paper/evidence/*.pdf binary

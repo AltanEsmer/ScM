@@ -13,3 +13,7 @@ An efficient 3 to 6 page structure follows the second lecture's suggested order:
 ## Literature and outline prepared on 23 October 2026
 
 The [paper package](../paper/README.md) now contains a focused review of ten verified peer-reviewed proceedings papers, publisher-derived BibTeX, ten highlighted publisher screenshots, a combined annotated appendix, and a results-centered outline. This completes source preparation for the outline's current ten citation occurrences. Draft the IEEE LaTeX manuscript next, check the sources personally, and maintain one matching highlighted screenshot for every citation occurrence as the text changes.
+
+## IEEE preliminary draft compiled
+
+The [compiled draft](../paper/output/preliminary-paper.pdf) and [LaTeX source](../paper/manuscript/main.tex) now implement the outline. The main paper has four pages including eleven references, with ten peer-reviewed papers and one first-party dataset record. Twelve appendix pages cover all citation occurrences. The [build instructions](../paper/README.md) describe compilation and verification. The next writing step is the author's personal review of sources, evidence, argument, and AI disclosure before submission.

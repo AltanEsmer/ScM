@@ -1,0 +1,17 @@
+{
+  "compiler": "Tectonic 0.17.0",
+  "document_class": "IEEEtran conference, A4, 10pt, two columns",
+  "inputs": {
+    "paper/manuscript/main.tex": "3f7a4d153071f983d812b6df9e519fa9068ab54f80f2fa984c9811374d0cd207",
+    "paper/manuscript/results-table.tex": "6207deb116e554313e06c29609a1a7ae88fb8016cc65d7ead470b6b92aaad465",
+    "paper/references.bib": "dfe897fe15f93fa053a534c07b4039f141362209eaefd916b65b9b4114868104",
+    "paper/manuscript/additional-references.bib": "a49ec047fc14ace313e7475038d1801aeb7779fc4aa63847a202c2b998421c65",
+    "paper/output/citation-appendix.pdf": "d75d8bee5ff52ff26c1fc3885fd38da394e6e0924c6cb8584069494956b1d87b",
+    "paper/evidence/dataset-evidence.pdf": "3c711c9aabfd46d71592f6c6765a166f6cd44c671fd7a0794348d7ca8ce530e6",
+    "paper/evidence/dataset-record.json": "c2b9acd27dee597be7e27405823e9aded4da9df53591b952c91b49d1de380d50",
+    "studies/format-study1/results/analysis.json": "596e6a958a06fb6011da966c7ef4058c92ec512663a3428f86ceb99ff8227e91"
+  },
+  "pdf": "paper/output/preliminary-paper.pdf",
+  "pdf_sha256": "464b67aab8ad58c16906420d566c99b8f8ef043f93ca8df22ad73b46b5dd7082",
+  "tex_log_sha256": "5f8ddfc1815c6b153acc2883984d8272847e3c77a03295330fe577661f2a5a70"
+}
