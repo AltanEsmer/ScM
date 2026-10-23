@@ -1,0 +1,201 @@
+[
+  {
+    "source_id": "S01",
+    "occurrence_id": "C01",
+    "title": "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design or: How I learned to start worrying about prompt formatting",
+    "publisher_page_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/6c0e99d736da621403018ca7b32b1a4d-Abstract-Conference.html",
+    "publisher_pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/6c0e99d736da621403018ca7b32b1a4d-Paper-Conference.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "1",
+    "section": "Abstract",
+    "highlight_excerpt": "performance differences of up to 76 accuracy points when evaluated using LLaMA-2-13B.",
+    "source_pdf_sha256": "ddb9861003dd3aad3ee01fa5bb873e12cd8bf83fb12866e9bd910daad9cc7d56",
+    "publisher_html_sha256": "3a83116c81232023c6cad8f70ea87eaff5ea9d1a6c063fbfb05d745136fc3c33",
+    "planned_reference_number": 1,
+    "highlight_excerpts": [
+      "performance differences of up to 76 accuracy points when evaluated using LLaMA-2-13B."
+    ],
+    "supported_claim": "Formatting choices produced accuracy variation in the reported few-shot setting."
+  },
+  {
+    "source_id": "S02",
+    "occurrence_id": "C02",
+    "title": "Fantastically Ordered Prompts and Where to Find Them: Overcoming Few-Shot Prompt Order Sensitivity",
+    "publisher_page_url": "https://aclanthology.org/2022.acl-long.556/",
+    "publisher_pdf_url": "https://aclanthology.org/2022.acl-long.556.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "8086",
+    "section": "Abstract",
+    "highlight_excerpt": "order in which the samples are provided can make the difference between near state-of-the-art and random guess performance",
+    "source_pdf_sha256": "2535437fd05477046953a04d0e03e93a933f46c98357d7ee3d575ee5781af6c4",
+    "publisher_html_sha256": "65c13695169d1a9f6da6ab6de364a10d4d100895d8a1d8bb798fa222e6d6b4d3",
+    "planned_reference_number": 2,
+    "highlight_excerpts": [
+      "order in which the samples are provided can make the difference between near state-of-the-art and random guess performance"
+    ],
+    "supported_claim": "Changing demonstration order changed performance in the evaluated few-shot setting."
+  },
+  {
+    "source_id": "S03",
+    "occurrence_id": "C03",
+    "title": "Flaw or Artifact? Rethinking Prompt Sensitivity in Evaluating LLMs",
+    "publisher_page_url": "https://aclanthology.org/2025.emnlp-main.1006/",
+    "publisher_pdf_url": "https://aclanthology.org/2025.emnlp-main.1006.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "19889",
+    "section": "Abstract",
+    "highlight_excerpt": "prompt sensitivity stems from heuristic evaluation methods",
+    "source_pdf_sha256": "4319e91f1bcb8788207428e410915791e71d29b202f99394dae293cdeda495ed",
+    "publisher_html_sha256": "ae463e97f92ff1825c0cd038dda0ee8be63cfd162b973691205855a8e930e9c8",
+    "planned_reference_number": 4,
+    "highlight_excerpts": [
+      "prompt sensitivity stems from heuristic evaluation methods"
+    ],
+    "supported_claim": "Heuristic scoring contributed to measured prompt sensitivity in the evaluated benchmarks."
+  },
+  {
+    "source_id": "S04",
+    "occurrence_id": "C04",
+    "title": "ProSA: Assessing and Understanding the Prompt Sensitivity of LLMs",
+    "publisher_page_url": "https://aclanthology.org/2024.findings-emnlp.108/",
+    "publisher_pdf_url": "https://aclanthology.org/2024.findings-emnlp.108.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "1950",
+    "section": "Abstract",
+    "highlight_excerpt": "prompt sensitivity fluctuates across datasets and models",
+    "source_pdf_sha256": "fe0a8647320a0e6a57a24707ad76ebbdf626acaa7caa45e70a09040137c10f67",
+    "publisher_html_sha256": "5493161fcb8bb8e3b2cb26203f21d172f7d96ec06a78ab5b0b22cab936345d44",
+    "planned_reference_number": 5,
+    "highlight_excerpts": [
+      "prompt sensitivity fluctuates across datasets and models",
+      "instance-level prompt variations",
+      "we introduce ProSA, a framework designed to evaluate and comprehend prompt sensitivity in LLMs."
+    ],
+    "supported_claim": "ProSA studies instance-level prompt variation and reports variation across models and datasets."
+  },
+  {
+    "source_id": "S05",
+    "occurrence_id": "C05",
+    "title": "POSIX: A Prompt Sensitivity Index For Large Language Models",
+    "publisher_page_url": "https://aclanthology.org/2024.findings-emnlp.852/",
+    "publisher_pdf_url": "https://aclanthology.org/2024.findings-emnlp.852.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "14550",
+    "section": "Abstract",
+    "highlight_excerpt": "relative change in loglikelihood of a given response",
+    "source_pdf_sha256": "5a926e64928fa0b675c8388169545a4d0457b50cbba05dde357da00ccacd7528",
+    "publisher_html_sha256": "f451f0b4664524c396ffc661c00c2c5fb73e60de8a1d498dea65b1db05a12191",
+    "planned_reference_number": 6,
+    "highlight_excerpts": [
+      "relative change in loglikelihood of a given response"
+    ],
+    "supported_claim": "POSIX measures response likelihood changes under prompt variation, a different endpoint from program correctness."
+  },
+  {
+    "source_id": "S06",
+    "occurrence_id": "C06",
+    "title": "Prompt Perturbation Consistency Learning for Robust Language Models",
+    "publisher_page_url": "https://aclanthology.org/2024.findings-eacl.91/",
+    "publisher_pdf_url": "https://aclanthology.org/2024.findings-eacl.91.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "1357",
+    "section": "Abstract",
+    "highlight_excerpt": "performance deterioration of those fine-tuned models due to three distinct yet relevant types of input perturbations",
+    "source_pdf_sha256": "5100b1257d080f80d2c49706cad3d981b6726ff6a28db72b36c30ed1dd8b54ed",
+    "publisher_html_sha256": "772bc88c7000a5eb355c64ea276e956fbe14441757ff3e2a19d293bfd9ae8ffe",
+    "planned_reference_number": 8,
+    "highlight_excerpts": [
+      "performance deterioration of those fine-tuned models due to three distinct yet relevant types of input perturbations",
+      "intent classification and slot filling",
+      "we propose an efficient mitigation approach, prompt perturbation consistency learning (PPCL)"
+    ],
+    "supported_claim": "The authors study perturbations in intent classification and slot filling and propose consistency learning."
+  },
+  {
+    "source_id": "S07",
+    "occurrence_id": "C07",
+    "title": "How are Prompts Different in Terms of Sensitivity?",
+    "publisher_page_url": "https://aclanthology.org/2024.naacl-long.325/",
+    "publisher_pdf_url": "https://aclanthology.org/2024.naacl-long.325.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "5833",
+    "section": "Abstract",
+    "highlight_excerpt": "sensitivity is an unsupervised proxy for model performance",
+    "source_pdf_sha256": "8e058fcb405f13aeb780bf97cc2e4265e900d99fd7af7ba6ee541bf9b08a9292",
+    "publisher_html_sha256": "1e38061080b8e9274a97b66da441f95a24d95e3f3cc9a0a810f63dbd4cff5d44",
+    "planned_reference_number": 7,
+    "highlight_excerpts": [
+      "sensitivity is an unsupervised proxy for model performance"
+    ],
+    "supported_claim": "The authors use sensitivity as a performance proxy in their evaluated setting."
+  },
+  {
+    "source_id": "S08",
+    "occurrence_id": "C08",
+    "title": "Calibrate Before Use: Improving Few-shot Performance of Language Models",
+    "publisher_page_url": "https://proceedings.mlr.press/v139/zhao21c.html",
+    "publisher_pdf_url": "https://proceedings.mlr.press/v139/zhao21c/zhao21c.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "12697 (proceedings pagination; not printed on PDF first page)",
+    "section": "Abstract",
+    "highlight_excerpt": "choice of prompt format, training examples, and even the order of the training examples can cause accuracy",
+    "source_pdf_sha256": "e94f3e10fd0c94a1555e1e2f2603ee3be7b704a458baa258094618e456ba2274",
+    "publisher_html_sha256": "fbbcbdc2870d8045ad2b485dc93a632ee643b8fabb7ec51ebc7c679eac4f6c52",
+    "planned_reference_number": 3,
+    "highlight_excerpts": [
+      "choice of prompt format, training examples, and even the order of the training examples can cause accuracy",
+      "this contextual calibration procedure substantially improves",
+      "and reduces variance across different choices of the prompt."
+    ],
+    "supported_claim": "The authors report few-shot prompt instability and reduce variance using contextual calibration."
+  },
+  {
+    "source_id": "S09",
+    "occurrence_id": "C09",
+    "title": "On the Worst Prompt Performance of Large Language Models",
+    "publisher_page_url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/7fa5a377b7ffabcce43cd00231bb3f9c-Abstract-Conference.html",
+    "publisher_pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/7fa5a377b7ffabcce43cd00231bb3f9c-Paper-Conference.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "1 (conference PDF pagination)",
+    "section": "Abstract",
+    "highlight_excerpt": "semantically equivalent case-level queries",
+    "source_pdf_sha256": "25d16f1dbececa1d2c47a11ac1786afcaa88d5975cdae4b621874f4bfb89c2bf",
+    "publisher_html_sha256": "13fe12289ac1f35440f14c5c7702c32053788fa037d6ad9406af9d95ec9fae70",
+    "planned_reference_number": 9,
+    "highlight_excerpts": [
+      "semantically equivalent case-level queries"
+    ],
+    "supported_claim": "RobustAlpacaEval studies semantically equivalent case-level queries, a different intervention from fixed formats."
+  },
+  {
+    "source_id": "S10",
+    "occurrence_id": "C10",
+    "title": "Same Question, Different Words: A Latent Adversarial Framework for Prompt Robustness",
+    "publisher_page_url": "https://aclanthology.org/2025.emnlp-main.1595/",
+    "publisher_pdf_url": "https://aclanthology.org/2025.emnlp-main.1595.pdf",
+    "accessed_utc": "2026-10-23",
+    "pdf_page": 1,
+    "printed_page": "31305",
+    "section": "Abstract",
+    "highlight_excerpt": "Latent Adversarial Paraphrasing (LAP)",
+    "source_pdf_sha256": "4a30b8efea57c1a6b2b4a558d53042644c196406f5c3a3749e112a1514dceaf7",
+    "publisher_html_sha256": "5d72cdfa03b5e40ff391e6f93de04b381ce9bd6d6c56dc6dd9eedbf941572ba4",
+    "planned_reference_number": 10,
+    "highlight_excerpts": [
+      "Latent Adversarial Paraphrasing (LAP)",
+      "a trainable perturbation",
+      "latent continuous paraphrase",
+      "language model performance on these perturbations iteratively."
+    ],
+    "supported_claim": "Latent Adversarial Paraphrasing optimizes trainable latent perturbations and model performance."
+  }
+]
